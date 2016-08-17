@@ -1,6 +1,6 @@
 # LibHessian
 
-[![as](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laravel/laravel)
+![license-MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 php作为客户端简化使用hessian的方法
 
