@@ -1,0 +1,25 @@
+# LibHessian
+
+[![as](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laravel/laravel)
+
+php作为客户端简化使用hessian的方法
+
+## 快速开始
+
+### 1. 添加依赖
+
+```shell
+$ composer require store59/LibHessian
+```
+
+### 2. 调用
+
+```php
+// use LibHessian\HessianHelpers;
+$url = 'http://xxx.xx.xx.xx:8080/dormservice/dorm';
+
+$dormId = 218;
+HessianHelpers::query($url, 'getDorm', [dormId], $options) // 返回的是result
+
+$client = HessianHelpers::getClient($url, $options); // 获取HessianClient实例
+```
