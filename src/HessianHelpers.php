@@ -1,6 +1,6 @@
 <?php
 
-namespace LibHessian\Helpers;
+namespace LibHessian;
 
 use DateTime;
 use Exception;
@@ -13,7 +13,7 @@ use LibHessian\Hessian\HessianClient;
  * HessianPHP 简化使用
  *
  */
-class Hessian {
+class HessianHelpers {
 
     protected static $hessianClients = [];
 

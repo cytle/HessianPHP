@@ -1,6 +1,6 @@
 <?php
 
-namespace LibHessian\Libraries\Hessian;
+namespace LibHessian\Hessian;
 
 
 include_once __DIR__ . '/HessianPHP_v2.0.3/src/HessianInterfaces.php';
