@@ -3,7 +3,7 @@
     "description": "对hessian存在的问题，以及简化使用",
     "type": "library",
     "require-dev": {
-        "phpunit/phpunit": "^4.8"
+        "phpunit/phpunit": "~4.0"
     },
     "license": "MIT",
     "authors": [
@@ -12,5 +12,10 @@
             "email": "chensp@59store.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "LibHessian\\": "src"
+        }
+    }
 }
