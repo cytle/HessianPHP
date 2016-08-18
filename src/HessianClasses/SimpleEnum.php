@@ -1,6 +1,6 @@
 <?php
 
-namespace LibHessian\Libraries\HessianClasses;
+namespace LibHessian\HessianClasses;
 
 /**
 * 普通枚举类
