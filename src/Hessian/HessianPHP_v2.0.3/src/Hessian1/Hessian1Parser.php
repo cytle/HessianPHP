@@ -1,7 +1,7 @@
 <?php
 /*
  * This file is part of the HessianPHP package.
- * (c) 2004-2010 Manuel G�mez
+ * (c) 2004-2010 Manuel Gómez
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -17,7 +17,7 @@ class Hessian1Parser{
 	var $options;
 	var $refs;
 	var $filterContainer;
-	
+
 	function __construct($resolver, $stream = null, $options = null){
 		$this->resolver = $resolver;
 		$this->refmap = new HessianReferenceMap();
@@ -25,34 +25,34 @@ class Hessian1Parser{
 		$this->stream = $stream;
 		$this->options = $options;
 	}
-	
+
 	function logMsg($msg){
 		$this->log[] = $msg;
 	}
-	
+
 	function setTypeMap($typemap){
 		$this->typemap = $typemap;
 	}
-	
+
 	function setFilters($container){
 		$this->filterContainer = $container;
 	}
-	
+
 	function read($count=1){
 		return $this->stream->read($count);
-	} 
+	}
 
 	function readNum($count=1){
 		return ord($this->stream->read($count));
-	} 
-	
+	}
+
 	function parseCheck($code = null){
 		$value = $this->parse($code);
 		if(!HessianRef::isRef($value))
 			return $value;
 		return $this->refmap->objectlist[$value->index];
 	}
-	
+
 	function parse($code = null, $expect = false){
 		$end = true;
 		if(!$code)
@@ -68,7 +68,7 @@ class Hessian1Parser{
 				$code = $this->read();
 			} else $end = true;
 		} while(!$end);
-		
+
 		$filter = $this->filterContainer->getCallback($rule->type);
 		if($filter)
 			$value = $this->filterContainer->doCallback($filter, array($value,$this));
@@ -79,7 +79,7 @@ class Hessian1Parser{
 		}
 		return $value;
 	}
-	
+
 	function parseBinary($code, $num){
 		$end = false;
 		$data = '';
@@ -95,68 +95,75 @@ class Hessian1Parser{
 		}
 		return $data;
 	}
-	
+
 	//--- int
-	
+
 	function parseInteger($code, $num){
 		$data = unpack('N', $this->read(4));
 		return $data[1];
 	}
-	
+
 	function parseBool($code, $num){
 		return $code == 'T';
 	}
-	
+
 	function parseNull($code, $num){
 		return null;
 	}
-	
+
 	//--- datetime
-	
+
 	function parseDate($code, $num){
 		$ts = HessianUtils::timestampFromBytes64($this->read(8));
 		$this->logMsg("timestamp $ts");
 		return $ts;
 	}
-	
+
 	// double
-	
+
 	function parseDouble($code, $num){
 		$bytes = $this->read(8);
-		if(HessianUtils::$littleEndian)
+		/**
+		 * FIX 2016年08月18日10:01:37
+		 * @author 炒饭
+		 */
+		// - if(HessianUtils::$littleEndian)
+		// -	$bytes = strrev($bytes);
+		if(HessianUtils::isLittleEndian())
 			$bytes = strrev($bytes);
+
 		//$double = unpack("dflt", strrev($bytes));
 		$double = unpack("dflt", $bytes);
         return $double['flt'];
 	}
-	
+
 	// --- long
-	
+
 	function parseLong($code, $num){
-		return ($this->readNum() << 56) + 
-				($this->readNum() << 48) + 
-				($this->readNum() << 40) + 
-				($this->readNum() << 32) + 
-				($this->readNum() << 24) + 
-				($this->readNum() << 16) + 
-				($this->readNum() << 8) + 
+		return ($this->readNum() << 56) +
+				($this->readNum() << 48) +
+				($this->readNum() << 40) +
+				($this->readNum() << 32) +
+				($this->readNum() << 24) +
+				($this->readNum() << 16) +
+				($this->readNum() << 8) +
 				$this->readNum();
 	}
-			
+
 	// --- string
-	
+
 	function parseString($code, $num){
 		$end = false;
 		$string = '';
 		while(!$end) {
 			$tempLen = unpack('n',$this->read(2));
 			$len = $tempLen[1];
-		
+
 			if($code == 's' || $code == 'x') {
 				$code = $this->read(1);
 			} else
 				$end = true;
-			
+
 			$string .= $this->readUTF8Bytes($len);
 			//$end = true;
 		}
@@ -164,7 +171,7 @@ class Hessian1Parser{
 			return $string;
 		return utf8_decode($string);
 	}
-	
+
 	// Some UTF8 characters are represented with more than one byte to we need
 	// to read every character to find out if we need to read in advance.
 	function readUTF8Bytes($len){
@@ -186,12 +193,12 @@ class Hessian1Parser{
 		}
 		return $string;
 	}
-	
+
 	//-- list
 	function parseList($code, $num){
 		$code = $this->read(1);
 		// read type if exists
-		if($code == 't'){ 
+		if($code == 't'){
 			$type = $this->parseString($code, ord($code));
 			$code = $this->read(1);
 		}
@@ -202,7 +209,7 @@ class Hessian1Parser{
 			$code = $this->read(1);
 		}
 		$list = array();
-		
+
 		$this->refmap->incReference();
 		$this->refmap->objectlist[] = &$list;
 		while($code != 'z'){
@@ -211,12 +218,12 @@ class Hessian1Parser{
 				$list[] = &$this->refmap->objectlist[$item->index];
 			else
 				$list[] = $item;
-			//$list[] = $this->parse($code); 
+			//$list[] = $this->parse($code);
 			$code = $this->read(1);
 		}
 		return $list;
 	}
-			
+
 	//-- map
 	function parseMap($code, $num){
 		if($this->read(1) != 't') {
@@ -226,7 +233,7 @@ class Hessian1Parser{
 
 		$localType = $this->typemap->getLocalType($type);
 		if(!$localType)
-			$map = array();	
+			$map = array();
 		else {
 			$map = $this->objectFactory->getObject($localType);
 		}
@@ -246,7 +253,7 @@ class Hessian1Parser{
 		}
 		return $map;
 	}
-		
+
 	function parseReference($code, $num){
 		$refStruct = unpack('N', $this->read(4));
 		$numRef = $refStruct[1];
@@ -255,6 +262,6 @@ class Hessian1Parser{
 		else
 			throw new HessianParsingException("Unresolved referenced object number $numRef");
 	}
-	
-	
+
+
 }

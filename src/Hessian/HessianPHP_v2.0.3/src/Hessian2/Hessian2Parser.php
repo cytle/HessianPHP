@@ -58,6 +58,7 @@ class Hessian2Parser{
 
 	function parse($code = null, $expect = false){
 		$end = true;
+
 		if(!$code)
 			$code = $this->read();
 		do {
@@ -80,6 +81,7 @@ class Hessian2Parser{
 			if($filter)
 				$value = $this->filterContainer->doCallback($filter, array($value, $this));
 		}
+
 		return $value;
 	}
 
@@ -194,11 +196,19 @@ class Hessian2Parser{
 
 	function double64($code, $num){
 		$bytes = $this->read(8);
-		if(HessianUtils::$littleEndian)
+		/**
+		 * FIX 2016年08月18日10:01:37 修复返回浮点数出错
+		 * @author 炒饭
+		 */
+		// - if(HessianUtils::$littleEndian)
+		// -	$bytes = strrev($bytes);
+		if(HessianUtils::isLittleEndian())
 			$bytes = strrev($bytes);
+
 		//$double = unpack("dflt", strrev($bytes));
 		$double = unpack("dflt", $bytes);
-        return $double['flt'];
+
+		return $double['flt'];
 	}
 
 	// --- long
@@ -534,6 +544,7 @@ class Hessian2Parser{
 				// $item = &$this->refmap->objectlist[$item->index];
 				$item = $this->refmap->objectlist[$item->index];
 			}
+
 			$obj->$prop = $item;
 		}
 
