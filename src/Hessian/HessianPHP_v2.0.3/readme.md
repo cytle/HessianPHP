@@ -69,8 +69,57 @@ vegeta.ec(a)gmail.com
 ```
 
 
+### fix:返回浮点数（double64）错误
+2016年08月18日
 
+e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 
+原因：在paser中（Hessian2parser:203,Hessian1parser:130）unpack之前有一个是否将字节翻转的
+判断，原来的判断为`HessianUtils::$littleEndian`，实际上这个静态变量默认值为null，并且在运行中
+没有赋值，实际上只有在`HessianUtils::isLittleEndian()`这个方法中有赋值动作，并且这个方法的含义以
+及行为就是判断是否isLittleEndian，极大可能原本就应该调用此方法做为判断依据而不是直接判断属性
+`$littleEndian`，这应该又是hessianPHP一个幼稚的bug。*同理在HessianUtils有两个一样的判断，这次
+未修改，因为没法验证*。
 
+修复
+
+```php
+// Hessian2parser
+    function double64($code, $num){
+        $bytes = $this->read(8);
+        /**
+         * FIX 2016年08月18日10:01:37 修复返回浮点数出错
+         * @author 炒饭
+         */
+        // - if(HessianUtils::$littleEndian)
+        // -    $bytes = strrev($bytes);
+        if(HessianUtils::isLittleEndian())
+            $bytes = strrev($bytes);
+
+        //$double = unpack("dflt", strrev($bytes));
+        $double = unpack("dflt", $bytes);
+
+        return $double['flt'];
+    }
+```
+
+```php
+// Hessian1parser
+    function parseDouble($code, $num){
+        $bytes = $this->read(8);
+        /**
+         * FIX 2016年08月18日10:01:37
+         * @author 炒饭
+         */
+        // - if(HessianUtils::$littleEndian)
+        // -    $bytes = strrev($bytes);
+        if(HessianUtils::isLittleEndian())
+            $bytes = strrev($bytes);
+
+        //$double = unpack("dflt", strrev($bytes));
+        $double = unpack("dflt", $bytes);
+        return $double['flt'];
+    }
+```
 
 
