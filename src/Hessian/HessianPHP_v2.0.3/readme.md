@@ -29,7 +29,7 @@ vegeta.ec(a)gmail.com
 ```
 
 
-### fix:共享对象造成hessianRef问题
+### fix:共享对象造成hessianRef问题（多个相同对象，除第一个外结果都为hessianRef对象）
 2016年06月24日
 ```php
     function fillMap($index){
