@@ -1,6 +1,6 @@
 {
     "name": "store59/lib-hessian",
-    "description": "对hessian存在的问题，以及简化使用",
+    "description": "修复hessian存在的问题，以及简化使用",
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "~4.0"

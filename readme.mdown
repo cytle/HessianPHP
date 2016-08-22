@@ -1,8 +1,9 @@
 # LibHessian
 
+![HessianPHP-version](https://img.shields.io/badge/HessianPHP-v2.0.3-green.svg)
 ![license-MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-php作为客户端简化使用hessian的方法
+修复hessian存在的问题，以及简化使用
 
 ## 快速开始
 
