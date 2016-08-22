@@ -1,6 +1,6 @@
 # LibHessian
 
-![HessianPHP-version](https://img.shields.io/badge/HessianPHP-v2.0.3-green.svg)
+[![HessianPHP-version](https://img.shields.io/badge/HessianPHP-v2.0.3-green.svg)](http://code.google.com/p/hessianphp/)
 ![license-MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 修复hessian存在的问题，以及简化使用
