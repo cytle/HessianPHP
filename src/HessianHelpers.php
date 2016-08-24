@@ -54,9 +54,9 @@ class HessianHelpers {
      * @param  string $name
      * @return object
      */
-    public static function createEnum($name) {
+    public static function createEnum($name, $__type = null) {
 
-        return new SimpleEnum($name);
+        return new SimpleEnum($name, $__type);
     }
 
     /**

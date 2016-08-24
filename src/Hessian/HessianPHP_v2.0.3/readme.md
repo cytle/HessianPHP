@@ -121,5 +121,180 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
         return $double['flt'];
     }
 ```
+### fix:长整形
+
+```php
+// Hessian2Writer 修改前
+
+    function writeInt($value){
+        if($this->between($value, -16, 47)){
+            return pack('c', $value + 0x90);
+        } else
+        if($this->between($value, -2048, 2047)){
+            $b0 = 0xc8 + ($value >> 8);
+            $stream = pack('c', $b0);
+            $stream .= pack('c', $value);
+            return $stream;
+        } else
+        if($this->between($value, -262144, 262143)){
+            $b0 = 0xd4 + ($value >> 16);
+            $b1 = $value >> 8;
+            $stream = pack('c', $b0);
+            $stream .= pack('c', $b1);
+            $stream .= pack('c', $value);
+            return $stream;
+        } else {
+            $stream = 'I';
+            $stream .= pack('c', ($value >> 24));
+            $stream .= pack('c', ($value >> 16));
+            $stream .= pack('c', ($value >> 8));
+            $stream .= pack('c', $value);
+            return $stream;
+        }
+    }
+```
+
+```php
+// Hessian2Writer 修改后
+    function writeInt($value){
+        if($this->between($value, -16, 47)){
+            return pack('c', $value + 0x90);
+        } else
+        if($this->between($value, -2048, 2047)){
+            $b0 = 0xc8 + ($value >> 8);
+            $stream = pack('c', $b0);
+            $stream .= pack('c', $value);
+            return $stream;
+        } else
+        if($this->between($value, -262144, 262143)){
+            $b0 = 0xd4 + ($value >> 16);
+            $b1 = $value >> 8;
+            $stream = pack('c', $b0);
+            $stream .= pack('c', $b1);
+            $stream .= pack('c', $value);
+            return $stream;
+        } else {
+            $stream = 'L';
+            $stream .= pack('c', ($value >> 56));
+            $stream .= pack('c', ($value >> 48));
+            $stream .= pack('c', ($value >> 40));
+            $stream .= pack('c', ($value >> 32));
+            $stream .= pack('c', ($value >> 24));
+            $stream .= pack('c', ($value >> 16));
+            $stream .= pack('c', ($value >> 8));
+            $stream .= pack('c', $value);
+            return $stream;
+        }
+    }
 
 
+### change:可以在对象中传递远程类型
+
+
+```php
+// Hessian2Writer 修改后
+    function writeObjectData($value){
+        $stream = '';
+        $class = get_class($value);
+        $index = $this->refmap->getClassIndex($class);
+
+        if($index === false){
+            $classdef = new HessianClassDef();
+            $classdef->type = $class;
+            if($class == 'stdClass'){
+                $classdef->props = array_keys(get_object_vars($value));
+            } else
+                $classdef->props = array_keys(get_class_vars($class));
+            $index = $this->refmap->addClassDef($classdef);
+            $total = count($classdef->props);
+
+            $type = $this->typemap->getRemoteType($class);
+            $class = $type ? $type : $class;
+
+            $stream .= 'C';
+            $stream .= $this->writeString($class);
+            $stream .= $this->writeInt($total);
+            foreach($classdef->props as $name){
+                $stream .= $this->writeString($name);
+            }
+        }
+
+        if($index < 16){
+            $stream .= pack('c', $index + 0x60);
+        } else{
+            $stream .= 'O';
+            $stream .= $this->writeInt($index);
+        }
+
+        $this->refmap->objectlist[] = $value;
+        $classdef = $this->refmap->classlist[$index];
+        foreach($classdef->props as $key){
+            $val = $value->$key;
+            $stream .= $this->writeValue($val);
+        }
+
+        return $stream;
+    }
+```
+
+```php
+// Hessian2Writer 修改后
+    function writeObjectData($value){
+        $stream = '';
+
+        $class = get_class($value);
+
+        if (isset($value->__type) && $value->__type) {
+            $__type = $value->__type;
+        } else {
+            $__type = $class;
+        }
+
+        $index = $this->refmap->getClassIndex($__type);
+
+        if($index === false){
+
+            $classdef = new HessianClassDef();
+            $classdef->type = $__type;
+            if($class == 'stdClass'){
+                $classdef->props = array_keys(get_object_vars($value));
+            } else
+                $classdef->props = array_keys(get_class_vars($class));
+
+            $classdef->props = array_filter($classdef->props, function($item) {
+                return $item !== '__type';
+            });
+
+            $index = $this->refmap->addClassDef($classdef);
+            $total = count($classdef->props);
+
+            if ($__type === $class) {
+                $type = $this->typemap->getRemoteType($class);
+                $__type = $type ? $type : $__type;
+            }
+
+            $stream .= 'C';
+            $stream .= $this->writeString($__type);
+            $stream .= $this->writeInt($total);
+            foreach($classdef->props as $name){
+                $stream .= $this->writeString($name);
+            }
+        }
+
+        if($index < 16){
+            $stream .= pack('c', $index + 0x60);
+        } else{
+            $stream .= 'O';
+            $stream .= $this->writeInt($index);
+        }
+
+        $this->refmap->objectlist[] = $value;
+        $classdef = $this->refmap->classlist[$index];
+        foreach($classdef->props as $key){
+            $val = $value->$key;
+            $stream .= $this->writeValue($val);
+        }
+
+        return $stream;
+    }
+```
