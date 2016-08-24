@@ -122,4 +122,66 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
     }
 ```
 
+### fix:
+```php
+// Hessian2Writer 修改后
+    function writeObjectData($value){
+        $stream = '';
+
+        $class = get_class($value);
+
+        if (isset($value->__type) && $value->__type) {
+            $__type = $value->__type;
+        } else {
+            $__type = $class;
+        }
+
+        $index = $this->refmap->getClassIndex($__type);
+
+        if($index === false){
+
+            $classdef = new HessianClassDef();
+            $classdef->type = $__type;
+            if($class == 'stdClass'){
+                $classdef->props = array_keys(get_object_vars($value));
+            } else
+                $classdef->props = array_keys(get_class_vars($class));
+
+            $classdef->props = array_filter($classdef->props, function($item) {
+                return $item !== '__type';
+            });
+
+            $index = $this->refmap->addClassDef($classdef);
+            $total = count($classdef->props);
+
+            if ($__type === $class) {
+                $type = $this->typemap->getRemoteType($class);
+                $__type = $type ? $type : $__type;
+            }
+
+            $stream .= 'C';
+            $stream .= $this->writeString($__type);
+            $stream .= $this->writeInt($total);
+            foreach($classdef->props as $name){
+                $stream .= $this->writeString($name);
+            }
+        }
+
+        if($index < 16){
+            $stream .= pack('c', $index + 0x60);
+        } else{
+            $stream .= 'O';
+            $stream .= $this->writeInt($index);
+        }
+
+        $this->refmap->objectlist[] = $value;
+        $classdef = $this->refmap->classlist[$index];
+        foreach($classdef->props as $key){
+            $val = $value->$key;
+            $stream .= $this->writeValue($val);
+        }
+
+        return $stream;
+    }
+```
 

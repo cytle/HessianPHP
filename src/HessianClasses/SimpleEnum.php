@@ -8,11 +8,11 @@ namespace LibHessian\HessianClasses;
 class SimpleEnum
 {
     public $name;
-    // public $__type;
+    public $__type;
 
     function __construct($name, $__type = null)
     {
         $this->name = $name;
-        // $this->__type = $__type;
+        $this->__type = $__type;
     }
 }

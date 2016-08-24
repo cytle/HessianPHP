@@ -140,24 +140,40 @@ class Hessian2Writer{
 
 	function writeObjectData($value){
 		$stream = '';
+
 		$class = get_class($value);
-		$index = $this->refmap->getClassIndex($class);
+
+		if (isset($value->__type) && $value->__type) {
+			$__type = $value->__type;
+		} else {
+			$__type = $class;
+		}
+
+		$index = $this->refmap->getClassIndex($__type);
 
 		if($index === false){
+
 			$classdef = new HessianClassDef();
-			$classdef->type = $class;
+			$classdef->type = $__type;
 			if($class == 'stdClass'){
 				$classdef->props = array_keys(get_object_vars($value));
 			} else
 				$classdef->props = array_keys(get_class_vars($class));
+
+			$classdef->props = array_filter($classdef->props, function($item) {
+				return $item !== '__type';
+			});
+
 			$index = $this->refmap->addClassDef($classdef);
 			$total = count($classdef->props);
 
-			$type = $this->typemap->getRemoteType($class);
-			$class = $type ? $type : $class;
+			if ($__type === $class) {
+				$type = $this->typemap->getRemoteType($class);
+				$__type = $type ? $type : $__type;
+			}
 
 			$stream .= 'C';
-			$stream .= $this->writeString($class);
+			$stream .= $this->writeString($__type);
 			$stream .= $this->writeInt($total);
 			foreach($classdef->props as $name){
 				$stream .= $this->writeString($name);
