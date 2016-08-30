@@ -31,4 +31,6 @@ $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实�
 
 - isInternalUTF8 直接返回true
 - fix:共享对象造成hessianRef问题（多个相同对象，除第一个外结果都为hessianRef对象）
-- fix:返回浮点数（double64）错误
+- fix:返回浮点数(double64)错误
+- fix:传递长整形(long)
+- change:可以在对象中传递远程类型
