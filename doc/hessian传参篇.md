@@ -38,21 +38,26 @@ $sortMap = (object)['add_time' => 'desc'];
 
 ### Enum
 
-构建一个含有`name`属性的对象
+构建一个含有`name`属性的对象。（hessian的特殊写法吧。。）
+
+在传递这个枚举对象时最好带上`__type`属性，因为如果需要传递的是一个枚举对象数组，在java端是不能解析的
 
 
 #### 示例
 
 ```php
-$sortMap = (object)['name' => 'FINISH'];
+$__type = 'com.store59.dto.common.order.OrderStatusEnum';
+
+$sortMap = (object)['name' => 'FINISH', '__type' => $__type];
 ```
 
 **lib-hessian 方法**
 
 ```php
 // use LibHessian\HessianHelpers;
+$__type = 'com.store59.dto.common.order.OrderStatusEnum';
 
-$enum = HessianHelpers::createEnum('FINISH');
+$enum = HessianHelpers::createEnum('FINISH', $__type);
 ```
 
 ### Date
