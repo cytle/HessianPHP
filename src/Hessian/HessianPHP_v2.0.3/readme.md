@@ -298,3 +298,33 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
         return $stream;
     }
 ```
+
+
+### fix:返回浮点数错误（写入错误）
+2016年09月01日
+
+```php
+// self::$littleEndian => static::isLittleEndian()
+    /**
+     * Serializes a float into its 32-bit float representation considering endianess
+     * @param float $number
+     * @return string
+     */
+    public static function floatBytes($number){
+        $bytes = pack("s", $number);
+        // 修复前：return self::$littleEndian ? strrev($bytes) : $bytes;
+        return static::isLittleEndian() ? strrev($bytes) : $bytes;
+    }
+
+    /**
+     * Serializes a float into its 64-bit double representation considering endianess
+     * @param float $number
+     * @return string
+     */
+    public static function doubleBytes($number){
+        $bytes = pack("d", $number);
+        // 修复前：return self::$littleEndian ? strrev($bytes) : $bytes;
+        return static::isLittleEndian() ? strrev($bytes) : $bytes;
+    }
+
+```

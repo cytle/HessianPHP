@@ -101,7 +101,7 @@ class HessianUtils{
 	 */
 	public static function floatBytes($number){
 		$bytes = pack("s", $number);
-		return self::$littleEndian ? strrev($bytes) : $bytes;
+		return static::isLittleEndian() ? strrev($bytes) : $bytes;
 	}
 
 	/**
@@ -111,7 +111,7 @@ class HessianUtils{
 	 */
 	public static function doubleBytes($number){
 		$bytes = pack("d", $number);
-		return self::$littleEndian ? strrev($bytes) : $bytes;
+		return static::isLittleEndian() ? strrev($bytes) : $bytes;
 	}
 
 	/**
