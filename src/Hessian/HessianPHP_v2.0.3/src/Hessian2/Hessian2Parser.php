@@ -308,9 +308,12 @@ class Hessian2Parser{
 			$pass++;
 		}
 
-		if(HessianUtils::isInternalUTF8())
-			return $string;
-		return utf8_decode($string);
+		if(! HessianUtils::isInternalUTF8()){
+			$string = utf8_decode($string);
+		}
+
+		// utf8mb4忽略无法理解的编码
+		return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
 
 		/*$string = '';
 		for($i=0;$i<$len;$i++){

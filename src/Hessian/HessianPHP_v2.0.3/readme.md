@@ -328,3 +328,62 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
     }
 
 ```
+
+
+### fix:utf8mb4造成乱码（临时方案）
+
+2016年09月17日
+```php
+// Hessian2Parser@readUTF8Bytes
+    // 修改前
+    function readUTF8Bytes($len){
+        $string = $this->read($len);
+        $pos = 0;
+        $pass = 1;
+        while($pass <= $len){
+            $charCode = ord($string[$pos]);
+            if($charCode < 0x80){
+                $pos++;
+            } elseif(($charCode & 0xe0) == 0xc0){
+                $pos += 2;
+                $string .= $this->read(1);
+            } elseif (($charCode & 0xf0) == 0xe0) {
+                $pos += 3;
+                $string .= $this->read(2);
+            }
+            $pass++;
+        }
+
+        if(! HessianUtils::isInternalUTF8())
+            return $string;
+        return utf8_decode($string);
+    }
+
+
+    // 修改后
+    function readUTF8Bytes($len){
+        $string = $this->read($len);
+        $pos = 0;
+        $pass = 1;
+        while($pass <= $len){
+            $charCode = ord($string[$pos]);
+            if($charCode < 0x80){
+                $pos++;
+            } elseif(($charCode & 0xe0) == 0xc0){
+                $pos += 2;
+                $string .= $this->read(1);
+            } elseif (($charCode & 0xf0) == 0xe0) {
+                $pos += 3;
+                $string .= $this->read(2);
+            }
+            $pass++;
+        }
+
+        if(! HessianUtils::isInternalUTF8()){
+            $string = utf8_decode($string);
+        }
+
+        // utf8mb4忽略无法理解的编码
+        return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
+    }
+

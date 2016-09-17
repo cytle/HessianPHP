@@ -35,3 +35,4 @@ $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实�
 - fix:传递长整形(long)
 - change:可以在对象中传递远程类型
 - fix:返回浮点数错误（写入错误）
+- fix:utf8mb4造成乱码（临时方案）
