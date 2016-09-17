@@ -312,6 +312,7 @@ class Hessian2Parser{
 			$string = utf8_decode($string);
 		}
 
+		// utf8mb4忽略无法理解的编码
 		return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
 
 		/*$string = '';
