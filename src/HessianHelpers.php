@@ -6,6 +6,8 @@ use DateTime;
 use Exception;
 use LibHessian\Exceptions\HessianException;
 use LibHessian\HessianClasses\SimpleEnum;
+use LibHessian\HessianClasses\Basic\Long;
+use LibHessian\Configs\BasicWriteFilters;
 use LibHessian\Hessian\HessianClient;
 
 
@@ -25,15 +27,55 @@ class HessianHelpers {
      * @param  string $url
      * @return object
      */
-    public static function getClient($url, $options = []) {
-
+    public static function getClient($url, $options = [])
+    {
         if (! isset(static::$hessianClients[$url])) {
+            if (! isset($options['writeFilters'])) {
+                $options['writeFilters'] = BasicWriteFilters::getFilters();
+            } else if ($options['writeFilters']) {
+                $options['writeFilters'] = array_merge(
+                    BasicWriteFilters::getFilters(),
+                    $options['writeFilters']
+                );
+            }
+
             static::$hessianClients[$url] = static::createClient($url, $options);
         }
 
         return static::$hessianClients[$url];
-
     }
+
+    /**
+     * 使用hessian查询
+     * @author xsp
+     *
+     * @param  string $url
+     * @param  string $method
+     * @param  array $arguments
+     * @return object
+     */
+    public static function query($url, $method, array $arguments = [], $options = [])
+    {
+        try {
+
+            $hessian = static::getClient($url, $options);
+            $result = $hessian->__hessianCall($method, $arguments);
+
+            return $result;
+        } catch (Exception $e) {
+
+            $hessianException = new HessianException('Hessian execution error', 10000, $e);
+
+            $hessianException
+                ->setUrl($url)
+                ->setMethod($method)
+                ->setArguments($arguments);
+
+            throw $hessianException;
+        }
+    }
+
+
     /**
      * 实例化hessian客户端
      * @author xsp
@@ -59,6 +101,19 @@ class HessianHelpers {
         return new SimpleEnum($name, $__type);
     }
 
+
+    /**
+     * 产生long
+     * @author xsp
+     *
+     * @param  int $name
+     * @return object
+     */
+    public static function createLong($value) {
+
+        return new Long($value);
+    }
+
     /**
      * 产生一个DateTime 实例
      * @author xsp
@@ -68,35 +123,5 @@ class HessianHelpers {
      */
     public static function createDateTime($time) {
         return new DateTime($time);
-    }
-
-    /**
-     * 使用hessian查询
-     * @author xsp
-     *
-     * @param  string $url
-     * @param  string $method
-     * @param  array $arguments
-     * @return object
-     */
-    public static function query($url, $method, array $arguments = [], $options = []) {
-
-        try {
-
-            $hessian = static::getClient($url, $options);
-            $result = $hessian->__hessianCall($method, $arguments);
-
-            return $result;
-        } catch (Exception $e) {
-
-            $hessianException = new HessianException('Hessian execution error', 10000, $e);
-
-            $hessianException
-                ->setUrl($url)
-                ->setMethod($method)
-                ->setArguments($arguments);
-
-            throw $hessianException;
-        }
     }
 }
