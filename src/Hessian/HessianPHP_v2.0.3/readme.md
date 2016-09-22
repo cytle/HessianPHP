@@ -387,3 +387,53 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
         return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
     }
 
+### fix:long -2147483648 ~ -2048负值错误
+*原因* 由于64位的php 负整数表示为64位（头位为1）。然而，service端在`-2147483648 ~ -2048`范
+围内返回的数据为32位（4字节）数字，在php端解析时此数字会变为`2147483648 ~ 4294965248`范围的数
+字。当值大于32位最大值时，修改值为
+
+```php
+$value = $value - static::Long32Max - 1 + static::Long32Min;
+```
+这和在其前补32位1的效果相同
+如 -2048
+```
+11111111111111111111100000000000 // 4294965248
+1111111111111111111111111111111111111111111111111111100000000000 // -2048
+```
+
+```php
+class Hessian2Parser{
+    // ...
+    // 修复long32位负数
+    const Long32Max = 2147483647;
+    const Long32Min = -2147483648;
+
+    // ...
+
+    function parseInt($code, $num){
+        $data = unpack('N', $this->read(4));
+        $value = $data[1];
+
+        if ($value > static::Long32Max) {
+            $value = $value - static::Long32Max - 1 + static::Long32Min;
+        }
+        return $value;
+    }
+
+    function long32($code, $num){
+        $value = ($this->readNum() << 24) +
+                ($this->readNum() << 16) +
+                ($this->readNum() << 8) +
+                $this->readNum();
+
+        // 增加
+        if ($value > static::Long32Max) {
+            $value = $value - static::Long32Max - 1 + static::Long32Min;
+        }
+
+        return $value;
+    }
+}
+
+

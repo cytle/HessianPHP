@@ -20,4 +20,8 @@ class Long extends BasicWrite
         $stream .= pack('c', $value);
         return $this->getStremResult($stream);
     }
+
+    // function between($value, $min, $max){
+    //     return $min <= $value && $value <= $max;
+    // }
 }

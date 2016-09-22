@@ -16,6 +16,8 @@ class Hessian2Parser{
 	var $objectFactory;
 	var $options;
 	var $filterContainer;
+
+	// 修复long32位负数
 	const Long32Max = 2147483647;
 	const Long32Min = -2147483648;
 
@@ -325,6 +327,7 @@ class Hessian2Parser{
 			$string = utf8_decode($string);
 		}
 
+		// return $string;
 		// utf8mb4忽略无法理解的编码
 		return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
 
