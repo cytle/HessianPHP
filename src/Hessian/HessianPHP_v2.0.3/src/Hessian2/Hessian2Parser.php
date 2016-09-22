@@ -16,6 +16,8 @@ class Hessian2Parser{
 	var $objectFactory;
 	var $options;
 	var $filterContainer;
+	const Long32Max = 2147483647;
+	const Long32Min = -2147483648;
 
 	function __construct($resolver, $stream = null, $options = null){
 		$this->resolver = $resolver;
@@ -139,7 +141,12 @@ class Hessian2Parser{
 
 	function parseInt($code, $num){
 		$data = unpack('N', $this->read(4));
-		return $data[1];
+		$value = $data[1];
+
+		if ($value > static::Long32Max) {
+			$value = $value - static::Long32Max - 1 + static::Long32Min;
+		}
+		return $value;
 	}
 
 	function bool($code, $num){
@@ -230,10 +237,16 @@ class Hessian2Parser{
 	}
 
 	function long32($code, $num){
-		return ($this->readNum() << 24) +
+		$value = ($this->readNum() << 24) +
 				($this->readNum() << 16) +
 				($this->readNum() << 8) +
 				$this->readNum();
+
+		if ($value > static::Long32Max) {
+			$value = $value - static::Long32Max - 1 + static::Long32Min;
+		}
+
+		return $value;
 	}
 
 	function long64($code, $num){
