@@ -320,9 +320,9 @@ class Hessian2Parser{
 				$pos += 3;
 				$string .= $this->read(2);
 			} else {
-                $pos += 4;
-                $string .= $this->read(3);
-            }
+				$pos += 4;
+				$string .= $this->read(3);
+			}
 			$pass++;
 		}
 
