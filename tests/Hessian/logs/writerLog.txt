@@ -1,0 +1,3 @@
+call testConcatString
+dispatch writeString
+dispatch writeString

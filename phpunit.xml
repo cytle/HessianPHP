@@ -9,9 +9,12 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-
+<!--
         <testsuite name="Helpers Test Suite">
             <directory suffix="Test.php">./tests</directory>
+        </testsuite> -->
+        <testsuite name="Hessian Test Suite">
+            <directory suffix="Test.php">./tests/Hessian</directory>
         </testsuite>
     </testsuites>
     <filter>

@@ -25,95 +25,95 @@ class HessianToJavaTest extends TestCase
         'min' => -9223372036854775808,
     ];
 
-    // public function testInt()
-    // {
-    //     foreach ($this->intBoundary as $key => $value) {
-    //         $this->assertVaule($value, 'intNum', "intBoundary=>${key}");
-    //     }
-    // }
+    public function testInt()
+    {
+        foreach ($this->intBoundary as $key => $value) {
+            $this->assertVaule($value, 'intNum', "intBoundary=>${key}");
+        }
+    }
 
-    // public function testLong()
-    // {
-    //     foreach ($this->longBoundary as $key => $value) {
-    //         $this->assertVaule($value, 'longNum', "longBoundary=>${key}");
-    //     }
-    // }
+    public function testLong()
+    {
+        foreach ($this->longBoundary as $key => $value) {
+            $this->assertVaule($value, 'longNum', "longBoundary=>${key}");
+        }
+    }
 
-    // public function testCreateLong()
-    // {
-    //     foreach ($this->longBoundary as $key => $value) {
+    public function testCreateLong()
+    {
+        foreach ($this->longBoundary as $key => $value) {
 
-    //         $testModel = [
-    //             'longNum' => HessianHelpers::createLong($value)
-    //         ];
-    //         $data = $this->query($testModel);
+            $testModel = [
+                'longNum' => HessianHelpers::createLong($value)
+            ];
+            $data = $this->query($testModel);
 
-    //         $this->assertEquals($value, $data->longNum, "longBoundary=>${key}");
-    //     }
-    // }
-
-
-    // public function testLongList()
-    // {
-    //     $list = $this->longBoundary;
-
-    //     $a = $this->longBoundary['max'];
-
-    //     while ($a > 1) {
-    //         $a = intval($a / 10);
-
-    //         array_unshift($list, $a);
-
-    //         $list[] = -1 * $a;
-    //     }
+            $this->assertEquals($value, $data->longNum, "longBoundary=>${key}");
+        }
+    }
 
 
-    //     $list = array_values($list);
+    public function testLongList()
+    {
+        $list = $this->longBoundary;
 
-    //     $list = array_merge($list, array_values($this->intBoundary));
+        $a = $this->longBoundary['max'];
 
-    //     // print_r($list);
-    //     $testModel = [
-    //         // 'longList' => array_map('LibHessian\HessianHelpers::createLong', $list),
-    //         'longList' => $list,
-    //     ];
+        while ($a > 1) {
+            $a = intval($a / 10);
 
-    //     $longList = $this->query($testModel)->longList;
+            array_unshift($list, $a);
 
-    //     foreach ($list as $key => $value) {
-    //         $this->assertEquals($value, $longList[$key]);
-    //     }
-    // }
+            $list[] = -1 * $a;
+        }
 
 
+        $list = array_values($list);
 
-    // public function testIntMap()
-    // {
-    //     $value = [
-    //         'asd@' => 123
-    //     ];
-    //     $testModel = [
-    //         'intMap' => (object) $value
-    //     ];
+        $list = array_merge($list, array_values($this->intBoundary));
 
-    //     $actual = $this->query($testModel)->intMap;
+        // print_r($list);
+        $testModel = [
+            // 'longList' => array_map('LibHessian\HessianHelpers::createLong', $list),
+            'longList' => $list,
+        ];
 
-    //     print_r($actual);
+        $longList = $this->query($testModel)->longList;
+
+        foreach ($list as $key => $value) {
+            $this->assertEquals($value, $longList[$key]);
+        }
+    }
 
 
-    // }
+
+    public function testIntMap()
+    {
+        $value = [
+            'asd@' => 123
+        ];
+        $testModel = [
+            'intMap' => (object) $value
+        ];
+
+        $actual = $this->query($testModel)->intMap;
+
+        print_r($actual);
+
+
+    }
 
 
 
     public function testString()
     {
-        $testModel = [
-            // 'str' => 'aaaa🚲😝'
-        ];
+        // $testModel = [
+        //     'str' => 'za啊实打实大三'
+        // ];
 
-        $actual = $this->query($testModel);
+        // $actual = $this->query($testModel);
 
-        print_r($actual);
+        // print_r($actual);
         // echo $actual, PHP_EOL;
     }
 

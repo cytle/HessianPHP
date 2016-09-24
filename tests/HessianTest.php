@@ -7,6 +7,7 @@ use LibHessian\HessianHelpers;
 class HessianTest extends TestCase
 {
 
+    protected $orderServiceUrl = 'http://192.168.30.126:8080/orderservice/querySellerOrder';
     protected $dormServiceUrl = 'http://192.168.30.207:8080/dormservice/dorm';
     protected $purchaseOrderServiceUrl = 'http://192.168.30.200:8080/purchaseservice/purchaseorder';
 
@@ -97,6 +98,31 @@ class HessianTest extends TestCase
     //     echo PHP_EOL;
     //     $this->assertEquals(0, $dorm->status);
     // }
+
+
+    public function testOrder()
+    {
+        $url = $this->orderServiceUrl;
+
+        // $order = HessianHelpers::query($url, 'queryOrdersPaging', [(object) [
+        //     'withOrderItems' => true,
+        //     'withOrderPays'  => true,
+        //     ], 1, 1]);
+
+
+        $order = HessianHelpers::query($url, 'queryOrder', ['03605400850810982202195', (object) [
+            // 'withOrderItems' => true,
+            // 'withOrderPays'  => true,
+            ]]);
+
+        $this->assertEquals(0, $order->status);
+
+        $order = $order->data;
+
+        echo PHP_EOL;
+        echo ($order->buyerRemark);
+        echo PHP_EOL;
+    }
 
     /**
      * @expectedException     LibHessian\Exceptions\HessianException
