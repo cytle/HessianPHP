@@ -319,7 +319,10 @@ class Hessian2Parser{
 			} elseif (($charCode & 0xf0) == 0xe0) {
 				$pos += 3;
 				$string .= $this->read(2);
-			}
+			} else {
+                $pos += 4;
+                $string .= $this->read(3);
+            }
 			$pass++;
 		}
 
@@ -329,7 +332,7 @@ class Hessian2Parser{
 
 		// return $string;
 		// utf8mb4忽略无法理解的编码
-		return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
+		return iconv('GBK', 'UTF-8//TRANSLIT', iconv('UTF-8', 'GBK//IGNORE', $string));
 
 		/*$string = '';
 		for($i=0;$i<$len;$i++){
