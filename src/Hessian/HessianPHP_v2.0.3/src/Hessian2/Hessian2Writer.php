@@ -258,6 +258,11 @@ class Hessian2Writer{
 	}
 
 	function writeInt($value){
+
+		/**
+		 * FIX 2016年08月20日 支持长整形
+		 * @author 炒饭
+		 */
 		if($this->between($value, -16, 47)){
 			return pack('c', $value + 0x90);
 		} else
@@ -356,6 +361,7 @@ class Hessian2Writer{
 			$stream .= HessianUtils::floatBytes($value);
 			return $stream;
 		}
+
 		// TODO double 4 el del 0.001, revisar
 		$mills = (int) ($value * 1000);
 		/**

@@ -184,12 +184,30 @@ class Hessian2Parser{
 		if($num == 0x5c)
 			return (float)1.0;
 		$bytes = $this->read(1);
-		return (float)ord($bytes);
+
+		/**
+		 * FIX 2016年09月26日20:47:38 修复负整数情况
+		 * @author 炒饭
+		 */
+		$num = ord($bytes);
+		if ($num > 0x7f) {
+			$num = $num - 0x100;
+		}
+		return (float)$num;
 	}
 
 	function double2($code, $num){
 		$bytes = $this->read(2);
 		$b = unpack('s', strrev($bytes));
+
+		/**
+		 * FIX 2016年09月26日20:47:38 修复负整数情况
+		 * @author 炒饭
+		 */
+		if ($b[1] > 0x7fff) {
+			$b[1] = $b[1] - 0x10000;
+		}
+
 		return (float)$b[1];
 	}
 
@@ -199,6 +217,14 @@ class Hessian2Parser{
 				(ord($b[1]) << 16) +
 				(ord($b[2]) << 8) +
 				ord($b[3]);
+
+		/**
+		 * FIX 2016年09月26日20:47:38 修复负整数情况
+		 * @author 炒饭
+		 */
+		if ($num > 0x7fffffff) {
+			$num = $num - 0x100000000;
+		}
 		return 0.001 * $num;
 		// from the java implementation, this makes no sense
 		// why not just use the float bytes as any sane language and pack it like 'f'?
@@ -245,8 +271,8 @@ class Hessian2Parser{
 				($this->readNum() << 8) +
 				$this->readNum();
 
-		if ($value > static::Long32Max) {
-			$value = $value - static::Long32Max - 1 + static::Long32Min;
+		if ($num > 0x7fffffff) {
+			$num = $num - 0x100000000;
 		}
 
 		return $value;
