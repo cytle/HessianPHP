@@ -324,7 +324,7 @@ class Hessian2Parser{
 			} elseif (($charCode & 0xf0) == 0xe0) {
 				$pos += 3;
 				$string .= $this->read(2);
-			} else {
+			} elseif (($charCode & 0xf8) == 0xf0) {
 				$pos += 4;
 				$string .= $this->read(3);
 			}
