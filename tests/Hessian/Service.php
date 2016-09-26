@@ -2,6 +2,8 @@
 
 include_once '../../src/Hessian/HessianPHP_v2.0.3/src/HessianService.php';
 
+include_once 'until.php';
+
 class ParamObject{
     var $test = 'Hola hessian';
     var $stringVar = 'vaca';
@@ -23,6 +25,8 @@ class Service{
     }
 
     function testStringToLong($param){
+        nLog(__METHOD__, $param);
+
         return floatval($param);
     }
 
@@ -194,6 +198,11 @@ class Service{
 $testService = new Service();
 
 $server = new HessianService($testService, array('displayInfo' => true));
-$server->handle();
+
+try {
+    $server->handle();
+} catch (Exception $e) {
+    nLog('Service::handle', $e);
+}
 
 ?>

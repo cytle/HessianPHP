@@ -7,7 +7,7 @@ use LibHessian\Hessian\HessianOptions;
 $dirname = dirname(__FILE__);
 include_once $dirname . '/../../src/Hessian/HessianPHP_v2.0.3/src/HessianInterfaces.php';
 include_once $dirname . '/ServerManager.php';
-
+include_once $dirname . '/until.php';
 
 class ParamObject{
     var $test = 'Hola hessian';
@@ -51,20 +51,19 @@ class Interceptor implements IHessianInterceptor{
 class BaseTestCases extends TestCase {
     var $version = 2;
     var $proxy;
-    protected static $server = null;
     protected static $url;
 
     public static function setUpBeforeClass()
     {
-        self::$server = new ServerManager();
-        $isRunning = self::$server->run();
-        if (! $isRunning) {
+        $server = ServerManager::getInstance();
+
+        if (! $server->isRunning()) {
             throw new Exception("构建测试服务失败", 1);
         } else {
             // echo "成功构建测试环境" , PHP_EOL;q
         }
 
-        self::$url = 'http://' . self::$server->getUrl();
+        self::$url = 'http://' . $server->getUrl();
     }
 
     function setUp() {
@@ -76,15 +75,7 @@ class BaseTestCases extends TestCase {
 
     function tearDown() {}
 
-    public static function tearDownAfterClass()
-    {
-        if (self::$server) {
-            self::$server->terminate();
-        }
-
-        self::$url = null;
-        self::$server = null;
-    }
+    public static function tearDownAfterClass() {}
 
     // Tests if sent and received values are equal
     function testEcho(){
@@ -112,23 +103,34 @@ class BaseTestCases extends TestCase {
             //var_dump($expected);
             $this->assertEquals($str, $expected);
         }catch(Exception $e){
-            echo '<pre>';
-            // print_r($e);
-            echo '</pre>';
+            nLog(__METHOD__, $e);
             throw $e;
         }
     }
 
     function testStringToLong() {
-        $val = $this->proxy->testStringToLong('9223372036854775807');
-        $this->assertEquals(9223372036854775807, $val);
-
-        $val = $this->proxy->testStringToLong('-9223372036854775808');
-        $this->assertEquals(-9223372036854775808, $val);
-
         $val = $this->proxy->testStringToLong('5124567855432488');
+        nLog(__METHOD__, $val);
+
         $this->assertEquals(5124567855432488, $val);
     }
+
+    function testStringTo64Long() {
+        if ($this->version === 1) {
+            $this->markTestSkipped(
+              'version 1 不支持 64位数字'
+            );
+        } else {
+            $val = $this->proxy->testStringToLong('9223372036854775807');
+            $this->assertEquals(9223372036854775807, $val);
+
+            $val = $this->proxy->testStringToLong('-9223372036854775808');
+            $this->assertEquals(-9223372036854775808, $val);
+        }
+
+
+    }
+
     function testStringToBoolean() {
         // fails with other values, works only with 'true' and 'false'
         $bool = $this->proxy->testStringToBoolean('true');
