@@ -17,10 +17,6 @@ class Hessian2Parser{
 	var $options;
 	var $filterContainer;
 
-	// 修复long32位负数
-	const Long32Max = 2147483647;
-	const Long32Min = -2147483648;
-
 	function __construct($resolver, $stream = null, $options = null){
 		$this->resolver = $resolver;
 		$this->refmap = new HessianReferenceMap();
@@ -146,8 +142,8 @@ class Hessian2Parser{
 		$data = unpack('N', $this->read(4));
 		$value = $data[1];
 
-		if ($value > static::Long32Max) {
-			$value = $value - static::Long32Max - 1 + static::Long32Min;
+		if ($value > 0x7fffffff) {
+			$value = $value - 0x100000000;
 		}
 		return $value;
 	}

@@ -1,4 +1,4 @@
 /vendor/
 .idea
 .DS_Store
-/tests/Hessian/logs/
+/tests/local/logs/

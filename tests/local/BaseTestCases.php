@@ -80,8 +80,10 @@ class BaseTestCases extends TestCase {
 
     // Tests if sent and received values are equal
     function testEcho(){
+        //Á
         $values = array(
-            555.00, 666.00, 102456.5646, 'Hello', 'Ámbito', 546546, false, true
+            555.00, 666.00, 102456.5646, 'Hello', 'mbito', 546546, false, true,
+            1.0, -1.0, -9.0, -127.0, -128.0, -256.0, -257.0, -212.0, -1.1, -0, -1.2, -444.0
         );
         foreach($values as $value){
             $ret = $this->proxy->testEcho($value);

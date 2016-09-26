@@ -13,6 +13,7 @@ class ParamObject{
 class Service{
 
     function testEcho($value){
+        nLog(__METHOD__, $value);
         return $value;
     }
 

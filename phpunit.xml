@@ -9,13 +9,13 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-<!--
-        <testsuite name="Helpers Test Suite">
-            <directory suffix="Test.php">./tests</directory>
-        </testsuite> -->
-        <testsuite name="Hessian Test Suite">
-            <directory suffix="Test.php">./tests/Hessian</directory>
+        <testsuite name="Local Test Suite">
+            <directory suffix="Test.php">./tests/local</directory>
         </testsuite>
+        <testsuite name="Remote Test Suite">
+            <directory suffix="Test.php">./tests/remoteJava</directory>
+        </testsuite>
+
     </testsuites>
     <filter>
         <whitelist>

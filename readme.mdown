@@ -25,6 +25,12 @@ HessianHelpers::query($url, 'getDorm', [dormId], $options) // 返回的是result
 $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实例
 ```
 
+## 说明
+因为`PHP`64位中整数改为8字节，64位，在此中所有的负整数都以64位表示。
+而在`Hessian1`协议中int都为32位，long为64位，php实现的`Hessian1`有部分代码存在此问题还未修复
+，因此请谨慎使用。在64位下如有bug纯属正常。
+
+
 ## hessian修改记录
 
 [详情描述](http://code.59store.com/erp/lib-hessian/blob/master/src/Hessian/HessianPHP_v2.0.3/readme.md)
@@ -37,7 +43,10 @@ $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实�
 - fix:返回浮点数错误（写入错误）
 - fix:utf8mb4造成乱码（临时方案）
 - fix:long -2147483648 ~ -2048负值错误
+- fix:utf8mb4 增加4字节字符解析（Hessian1也修复）
 - fix:64位下，写入三位小数浮点数出错
+- fix:修复非64位负整浮点数bug
+
 
 ## TODO
 

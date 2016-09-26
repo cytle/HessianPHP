@@ -72,19 +72,43 @@ class JavaBaseTestCases extends TestCase
         $list = array_merge($list, array_values($this->intBoundary));
 
         $testModel = [
-
-            'longList' => array_map(function ($v) {
-                return floatval($v);
-            }, $list)
-            // 'longList' => $list,
+            'longList' => $list,
         ];
 
         $longList = $this->query($testModel)->longList;
 
-        print_r($longList);
 
         foreach ($list as $key => $value) {
             $this->assertEquals($value, $longList[$key]);
+        }
+    }
+
+    public function testDoubleList()
+    {
+        $list = $this->longBoundary;
+        $a = $this->longBoundary['max'];
+
+        while ($a > 1) {
+            $a = intval($a / 10);
+            array_unshift($list, $a);
+            $list[] = -1 * $a;
+        }
+
+        $list = array_values($list);
+        $list = array_merge($list, array_values($this->intBoundary));
+
+        $testModel = [
+
+            'doubleList' => array_map(function ($v) {
+                return floatval($v);
+            }, $list)
+        ];
+
+        $doubleList = $this->query($testModel)->doubleList;
+
+
+        foreach ($list as $key => $value) {
+            $this->assertEquals($value, $doubleList[$key]);
         }
     }
 
@@ -93,11 +117,8 @@ class JavaBaseTestCases extends TestCase
         $this->assertVaule(123.0, 'doubleNum', "testDouble");
 
         $this->assertVaule(5124567855432488.0, 'doubleNum', "testDouble");
-        $this->assertVaule(5124567855432488.0, 'doubleNum', "testDouble");
-
-        echo ($this->queryJson([
-            'doubleNum' => -92
-            ]));
+        $this->assertVaule(-126, 'doubleNum', "testDouble");
+        $this->assertVaule(-92.0, 'doubleNum', "testDouble");
     }
 
     public function testFloat()
@@ -195,33 +216,3 @@ class TestModel
     }
 }
 
-// public class TestModel extends BaseDTO {
-//     private static final long            serialVersionUID = 7612050336768655859L;
-//     private Long                         longNum;
-//     private Integer                      intNum;
-//     private Short                        shortNum;
-//     private Byte                         byteNum;
-//     private Boolean                      bool;
-//     private Double                       doubleNum;
-//     private Float                        floatNum;
-//     private Date                         date;
-//     private OrderStatusEnum              orderStatus;
-//     private Map<String, Long>            longmap;
-//     private Map<String, Integer>         intMap;
-//     private Map<String, Short>           shortMap;
-//     private Map<String, Byte>            byteMap;
-//     private Map<String, Boolean>         booleanMap;
-//     private Map<String, Double>          doubleMap;
-//     private Map<String, Float>           floatMap;
-//     private Map<String, Date>            dateMap;
-//     private Map<String, OrderStatusEnum> enumMap;
-//     private List<Long>                   longList;
-//     private List<Integer>                intList;
-//     private List<Short>                  shortList;
-//     private List<Byte>                   byteList;
-//     private List<Boolean>                boolList;
-//     private List<Double>                 doubleList;
-//     private List<Float>                  floatList;
-//     private List<Date>                   dateList;
-//     private List<OrderStatusEnum>        enumList;
-// }
