@@ -16,6 +16,7 @@ vegeta.ec(a)gmail.com
 ### isInternalUTF8 直接返回true
 2016年05月25日，详见`erp/base-support` 69bb75f360e5fdba47c0c6dc440fa6a35858e732 提交
 ```php
+<?php
     public static function isInternalUTF8(){
 
 
@@ -32,6 +33,7 @@ vegeta.ec(a)gmail.com
 ### fix:共享对象造成hessianRef问题（多个相同对象，除第一个外结果都为hessianRef对象）
 2016年06月24日
 ```php
+<?php
     function fillMap($index){
         if(!isset($this->refmap->classlist[$index]))
             throw new HessianParsingException("Class def index $index not found");
@@ -60,6 +62,7 @@ vegeta.ec(a)gmail.com
 ```
 
 ```php
+<?php
 // Hessian2Parser.php @typedMap @untypedMap
     // if(HessianRef::isRef($key)) $key = &$this->objectlist->reflist[$key->index];
     // if(HessianRef::isRef($value)) $value = &$this->objectlist->reflist[$value->index];
@@ -84,6 +87,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 修复
 
 ```php
+<?php
 // Hessian2parser
     function double64($code, $num){
         $bytes = $this->read(8);
@@ -104,6 +108,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 ```
 
 ```php
+<?php
 // Hessian1parser
     function parseDouble($code, $num){
         $bytes = $this->read(8);
@@ -124,6 +129,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 ### fix:长整形
 
 ```php
+<?php
 // Hessian2Writer 修改前
 
     function writeInt($value){
@@ -155,6 +161,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 ```
 
 ```php
+<?php
 // Hessian2Writer 修改后
     function writeInt($value){
         if($this->between($value, -16, 47)){
@@ -186,12 +193,13 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
             return $stream;
         }
     }
-
+```
 
 ### change:可以在对象中传递远程类型
 
 
 ```php
+<?php
 // Hessian2Writer 修改后
     function writeObjectData($value){
         $stream = '';
@@ -238,6 +246,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 ```
 
 ```php
+<?php
 // Hessian2Writer 修改后
     function writeObjectData($value){
         $stream = '';
@@ -304,6 +313,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 2016年09月01日
 
 ```php
+<?php
 // self::$littleEndian => static::isLittleEndian()
     /**
      * Serializes a float into its 32-bit float representation considering endianess
@@ -334,6 +344,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 
 2016年09月17日
 ```php
+<?php
 // Hessian2Parser@readUTF8Bytes
     // 修改前
     function readUTF8Bytes($len){
@@ -386,6 +397,7 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
         // utf8mb4忽略无法理解的编码
         return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
     }
+```
 
 ### fix:long -2147483648 ~ -2048负值错误
 *原因* 由于64位的php 负整数表示为64位（头位为1）。然而，service端在`-2147483648 ~ -2048`范
@@ -393,16 +405,20 @@ e.g. service返回0.7，但unpack后值为 1.9035985662652E+185
 字。当值大于32位最大值时，修改值为
 
 ```php
+<?php
 $value = $value - static::Long32Max - 1 + static::Long32Min;
 ```
 这和在其前补32位1的效果相同
 如 -2048
+
 ```
 11111111111111111111100000000000 // 4294965248
 1111111111111111111111111111111111111111111111111111100000000000 // -2048
+
 ```
 
 ```php
+<?php
 class Hessian2Parser{
     // ...
     // 修复long32位负数
@@ -435,5 +451,174 @@ class Hessian2Parser{
         return $value;
     }
 }
+```
 
+### fix:utf8mb4 增加4字节字符解析
+2016年09月26日
+
+```php
+<?php
+// Hessian2Parser@readUTF8Bytes
+    // 修改前
+    function readUTF8Bytes($len){
+        $string = $this->read($len);
+        $pos = 0;
+        $pass = 1;
+
+        while($pass <= $len){
+            $charCode = ord($string[$pos]);
+            if($charCode < 0x80){
+                $pos++;
+            } elseif(($charCode & 0xe0) == 0xc0){
+                $pos += 2;
+                $string .= $this->read(1);
+            } elseif (($charCode & 0xf0) == 0xe0) {
+                $pos += 3;
+                $string .= $this->read(2);
+            }
+            $pass++;
+        }
+
+        if(! HessianUtils::isInternalUTF8()){
+            $string = utf8_decode($string);
+        }
+
+        return $string;
+    }
+
+
+    // 修改后
+    function readUTF8Bytes($len){
+        $string = $this->read($len);
+        $pos = 0;
+        $pass = 1;
+
+        while($pass <= $len){
+            $charCode = ord($string[$pos]);
+            if($charCode < 0x80){
+                $pos++;
+            } elseif(($charCode & 0xe0) == 0xc0){
+                $pos += 2;
+                $string .= $this->read(1);
+            } elseif (($charCode & 0xf0) == 0xe0) {
+                $pos += 3;
+                $string .= $this->read(2);
+            } elseif (($charCode & 0xf8) == 0xf0) {
+                $pos += 4;
+                $string .= $this->read(3);
+            }
+            $pass++;
+        }
+
+        if(! HessianUtils::isInternalUTF8()){
+            $string = utf8_decode($string);
+        }
+
+        return $string;
+    }
+
+```
+
+```php
+<?php
+// Hessian2Parser@readUTF8Bytes
+    // 修改前
+    function readUTF8Bytes($len){
+        $string = $this->read($len);
+        $pos = 0;
+        $pass = 1;
+        while($pass <= $len){
+            $charCode = ord($string[$pos]);
+            if($charCode < 0x80){
+                $pos++;
+            } elseif(($charCode & 0xe0) == 0xc0){
+                $pos += 2;
+                $string .= $this->read(1);
+            } elseif (($charCode & 0xf0) == 0xe0) {
+                $pos += 3;
+                $string .= $this->read(2);
+            }
+            $pass++;
+        }
+        return $string;
+    }
+
+
+
+    // 修改后
+    function readUTF8Bytes($len){
+        $string = $this->read($len);
+        $pos = 0;
+        $pass = 1;
+        while($pass <= $len){
+            $charCode = ord($string[$pos]);
+            if($charCode < 0x80){
+                $pos++;
+            } elseif(($charCode & 0xe0) == 0xc0){
+                $pos += 2;
+                $string .= $this->read(1);
+            } elseif (($charCode & 0xf0) == 0xe0) {
+                $pos += 3;
+                $string .= $this->read(2);
+            } elseif (($charCode & 0xf8) == 0xf0) {
+                $pos += 4;
+                $string .= $this->read(3);
+            }
+            $pass++;
+        }
+        return $string;
+    }
+
+
+```
+
+### fix:64位下，写入三位小数浮点数出错
+2016年09月26日
+```php
+<?php
+// Hessian2Writer
+
+    function writeDouble($value){
+
+        $frac = abs($value) - floor(abs($value));
+        if($value == 0.0){
+            return pack('c', 0x5b);
+        }
+        if($value == 1.0){
+            return pack('c', 0x5c);
+        }
+
+        // Issue 10, Fix thanks to nesnnaho...@googlemail.com,
+        if($frac == 0 && $this->between($value, -127, 128)){
+            return pack('c', 0x5d) . pack('c', $value);
+        }
+        if($frac == 0 && $this->between($value, -32768, 32767)){
+            $stream = pack('c', 0x5e);
+            $stream .= HessianUtils::floatBytes($value);
+            return $stream;
+        }
+        // TODO double 4 el del 0.001, revisar
+        $mills = (int) ($value * 1000);
+        /**
+         * FIX 2016年09月26日18:58:21 64位下，写入浮点数出错
+         * @author 炒饭
+         */
+        // - if (0.001 * $mills == $value)
+        if (0.001 * $mills == $value
+            && $this->between($mills, -2147483648, 2147483647))
+        {
+            $stream = pack('c', 0x5f);
+            $stream .= pack('c', $mills >> 24);
+            $stream .= pack('c', $mills >> 16);
+            $stream .= pack('c', $mills >> 8);
+            $stream .= pack('c', $mills);
+            return $stream;
+        }
+
+        // 64 bit double
+        $stream = 'D';
+        $stream .= HessianUtils::doubleBytes($value);
+        return $stream;
+    }
+```
 
