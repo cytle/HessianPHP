@@ -338,6 +338,7 @@ class Hessian2Writer{
 	}
 
 	function writeDouble($value){
+
 		$frac = abs($value) - floor(abs($value));
 		if($value == 0.0){
 			return pack('c', 0x5b);
@@ -357,7 +358,14 @@ class Hessian2Writer{
 		}
 		// TODO double 4 el del 0.001, revisar
 		$mills = (int) ($value * 1000);
-		if (0.001 * $mills == $value) {
+		/**
+		 * FIX 2016年09月26日18:58:21 64位下，写入浮点数出错
+		 * @author 炒饭
+		 */
+		// - if (0.001 * $mills == $value)
+		if (0.001 * $mills == $value
+			&& $this->between($mills, -2147483648, 2147483647))
+		{
 			$stream = pack('c', 0x5f);
 			$stream .= pack('c', $mills >> 24);
 			$stream .= pack('c', $mills >> 16);
@@ -365,6 +373,7 @@ class Hessian2Writer{
 			$stream .= pack('c', $mills);
 			return $stream;
 		}
+
 		// 64 bit double
 		$stream = 'D';
 		$stream .= HessianUtils::doubleBytes($value);

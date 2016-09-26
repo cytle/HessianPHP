@@ -37,8 +37,8 @@ $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实�
 - fix:返回浮点数错误（写入错误）
 - fix:utf8mb4造成乱码（临时方案）
 - fix:long -2147483648 ~ -2048负值错误
+- fix:64位下，写入三位小数浮点数出错
 
 ## TODO
 
 - emoji 表情支持 [问题说明](https://cytle.github.io/2016/09/24/Hessian-utfmb4-emoji%E8%A1%A8%E6%83%85%E4%BC%A0%E8%BE%93/)
--
