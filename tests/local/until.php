@@ -12,6 +12,11 @@ if (! function_exists('nLog')) {
         $time = date("Y-m-d H:i:s");
         if ($msg instanceof Exception) {
             $msg = $msg->__toString();
+        } else if (is_numeric($msg)) {
+            // $msg = sprintf("%.2f", $msg);
+
+            $msg = strval($msg);
+
         } else if (! is_string($msg)) {
             $msg = var_export($msg, true);
         }

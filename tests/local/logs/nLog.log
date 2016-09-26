@@ -1,0 +1,2681 @@
+[2016-09-26 15:02:46]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:02:46]ServerManager: run
+[2016-09-26 15:02:46]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86545,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:02:47]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:02:47]ServerManager: terminate
+[2016-09-26 15:02:47]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:02:47]ServerManager: run
+[2016-09-26 15:02:47]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86546,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:02:47]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:02:47]ServerManager: terminate
+[2016-09-26 15:04:27]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:04:27]ServerManager: run
+[2016-09-26 15:04:27]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86595,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:04:27]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:04:27]ServerManager: terminate
+[2016-09-26 15:05:37]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:05:37]ServerManager: run
+[2016-09-26 15:05:37]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86634,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:05:37]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:05:37]ServerManager: terminate
+[2016-09-26 15:05:37]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:05:37]ServerManager: run
+[2016-09-26 15:05:37]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86635,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:05:37]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:05:38]ServerManager: terminate
+[2016-09-26 15:09:52]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:09:52]ServerManager: run
+[2016-09-26 15:09:52]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86709,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:09:52]ServerManager: run
+[2016-09-26 15:09:52]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86709,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:09:53]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:09:53]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:09:53]ServerManager: run
+[2016-09-26 15:09:53]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86709,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:09:53]Service: 5124567855432488
+[2016-09-26 15:09:53]Service: 9223372036854775807
+[2016-09-26 15:09:53]Service: -9223372036854775808
+[2016-09-26 15:09:53]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:09:53]ServerManager: terminate
+[2016-09-26 15:09:57]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:09:57]ServerManager: run
+[2016-09-26 15:09:57]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86724,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:09:57]ServerManager: run
+[2016-09-26 15:09:57]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86724,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:09:57]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:09:57]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:09:57]ServerManager: run
+[2016-09-26 15:09:57]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86724,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:09:57]Service: 5124567855432488
+[2016-09-26 15:09:57]Service: 9223372036854775807
+[2016-09-26 15:09:57]Service: -9223372036854775808
+[2016-09-26 15:09:57]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:09:57]ServerManager: terminate
+[2016-09-26 15:10:26]ServerManager: run
+[2016-09-26 15:10:26]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86755,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:10:27]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:10:27]ServerManager: run
+[2016-09-26 15:10:27]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86755,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:10:27]Service: 5124567855432488
+[2016-09-26 15:10:27]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:10:27]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:10:27]ServerManager: run
+[2016-09-26 15:10:27]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86755,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:10:27]Service: 5124567855432488
+[2016-09-26 15:10:27]Service: 9223372036854775807
+[2016-09-26 15:10:27]Service: -9223372036854775808
+[2016-09-26 15:10:27]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:10:27]ServerManager: terminate
+[2016-09-26 15:11:53]ServerManager: run
+[2016-09-26 15:11:53]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86888,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:11:53]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:11:53]ServerManager: run
+[2016-09-26 15:11:53]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86888,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:11:53]Service: 5124567855432488
+[2016-09-26 15:11:53]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:11:53]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:11:53]ServerManager: run
+[2016-09-26 15:11:53]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86888,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:11:53]Service: 5124567855432488
+[2016-09-26 15:11:53]Service: 9223372036854775807
+[2016-09-26 15:11:53]Service: -9223372036854775808
+[2016-09-26 15:11:53]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:11:53]ServerManager: terminate
+[2016-09-26 15:14:49]ServerManager: run
+[2016-09-26 15:14:49]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86983,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:14:50]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:14:50]ServerManager: run
+[2016-09-26 15:14:50]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86983,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:14:50]Service: 5124567855432488
+[2016-09-26 15:14:50]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:14:50]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:14:50]ServerManager: run
+[2016-09-26 15:14:50]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 86983,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:14:50]Service: 5124567855432488
+[2016-09-26 15:14:50]Service: 9223372036854775807
+[2016-09-26 15:14:50]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:14:50]ServerManager: terminate
+[2016-09-26 15:17:00]ServerManager: run
+[2016-09-26 15:17:00]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87046,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:17:00]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:17:00]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87046,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:17:00]Service: 5124567855432488
+[2016-09-26 15:17:00]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:17:00]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:17:00]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87046,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:17:00]Service: 5124567855432488
+[2016-09-26 15:17:00]Service: 9223372036854775807
+[2016-09-26 15:17:00]Service: -9223372036854775808
+[2016-09-26 15:17:01]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:17:01]ServerManager: terminate
+[2016-09-26 15:17:34]ServerManager: run
+[2016-09-26 15:17:34]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87077,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:17:34]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:17:34]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87077,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:17:34]Service: 5124567855432488
+[2016-09-26 15:17:34]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:17:34]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:17:34]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87077,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:17:34]Service: 5124567855432488
+[2016-09-26 15:17:34]Service: 9223372036854775807
+[2016-09-26 15:17:34]Service: -9223372036854775808
+[2016-09-26 15:17:34]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:17:34]ServerManager: terminate
+[2016-09-26 15:19:01]ServerManager: run
+[2016-09-26 15:19:01]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87124,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:19:01]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:19:01]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87124,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:19:01]Service: 5124567855432488
+[2016-09-26 15:19:01]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:19:01]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:19:01]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87124,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:20:54]ServerManager: run
+[2016-09-26 15:20:54]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87200,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[Mon Sep 26 15:20:54 2016] Failed to listen on localhost:8765 (reason: Address already in use)
+[2016-09-26 15:20:54]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:20:54]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87200,
+  'running' => false,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => 1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:20:54]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:20:54]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87200,
+  'running' => false,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:20:54]ServerManager: terminate
+[2016-09-26 15:21:20]ServerManager: run
+[2016-09-26 15:21:20]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87215,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[Mon Sep 26 15:21:20 2016] Failed to listen on localhost:8765 (reason: Address already in use)
+[2016-09-26 15:21:20]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:21:20]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87215,
+  'running' => false,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => 1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:21:20]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:21:20]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87215,
+  'running' => false,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:21:20]ServerManager: terminate
+[2016-09-26 15:22:19]ServerManager: run
+[2016-09-26 15:22:19]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87311,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:22:19]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:22:19]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87311,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:23:19]ServerManager: run
+[2016-09-26 15:23:19]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87347,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[Mon Sep 26 15:23:19 2016] Failed to listen on localhost:8765 (reason: Address already in use)
+[2016-09-26 15:23:19]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:23:19]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87347,
+  'running' => false,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => 1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:23:19]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:23:19]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87347,
+  'running' => false,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:23:20]ServerManager: terminate
+[2016-09-26 15:23:39]ServerManager: run
+[2016-09-26 15:23:39]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87394,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:23:39]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:23:39]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87394,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:23:39]BaseTestCases::BaseTestCases::testConcatStringUnicode: exception 'Exception' with message 'Error Processing Request' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/Hessian/BaseTestCases.php:107
+Stack trace:
+#0 [internal function]: BaseTestCases->testConcatStringUnicode()
+#1 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(909): ReflectionMethod->invokeArgs(Object(Hessian1Test), Array)
+#2 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(768): PHPUnit_Framework_TestCase->runTest()
+#3 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestResult.php(612): PHPUnit_Framework_TestCase->runBare()
+#4 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(724): PHPUnit_Framework_TestResult->run(Object(Hessian1Test))
+#5 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#7 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(440): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#8 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(149): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(100): PHPUnit_TextUI_Command->run(Array, true)
+#10 /Users/chen/.composer/vendor/phpunit/phpunit/phpunit(47): PHPUnit_TextUI_Command::main()
+#11 {main}
+[2016-09-26 15:23:39]Service: 5124567855432488
+[2016-09-26 15:23:39]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:23:39]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:23:39]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87394,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:23:39]BaseTestCases::BaseTestCases::testConcatStringUnicode: exception 'Exception' with message 'Error Processing Request' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/Hessian/BaseTestCases.php:107
+Stack trace:
+#0 [internal function]: BaseTestCases->testConcatStringUnicode()
+#1 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(909): ReflectionMethod->invokeArgs(Object(Hessian2Test), Array)
+#2 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(768): PHPUnit_Framework_TestCase->runTest()
+#3 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestResult.php(612): PHPUnit_Framework_TestCase->runBare()
+#4 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(724): PHPUnit_Framework_TestResult->run(Object(Hessian2Test))
+#5 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#7 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(440): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#8 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(149): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(100): PHPUnit_TextUI_Command->run(Array, true)
+#10 /Users/chen/.composer/vendor/phpunit/phpunit/phpunit(47): PHPUnit_TextUI_Command::main()
+#11 {main}
+[2016-09-26 15:23:39]Service: 5124567855432488
+[2016-09-26 15:23:39]Service: 9223372036854775807
+[2016-09-26 15:23:39]Service: -9223372036854775808
+[2016-09-26 15:23:39]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:23:39]ServerManager: terminate
+[2016-09-26 15:24:35]ServerManager: run
+[2016-09-26 15:24:35]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87444,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:24:35]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:24:35]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87444,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:24:35]Service: 5124567855432488
+[2016-09-26 15:24:35]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:24:35]BaseTestCases: setUpBeforeClass of new test
+[2016-09-26 15:24:35]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87444,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:24:35]Service: 5124567855432488
+[2016-09-26 15:24:35]Service: 9223372036854775807
+[2016-09-26 15:24:35]Service: -9223372036854775808
+[2016-09-26 15:24:35]BaseTestCases: BaseTestCases::testHashMap
+[2016-09-26 15:24:35]ServerManager: terminate
+[2016-09-26 15:26:13]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87504,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:26:13]Service: 5124567855432488
+[2016-09-26 15:26:13]Service: 5124567855432488
+[2016-09-26 15:26:13]Service: 9223372036854775807
+[2016-09-26 15:26:13]Service: -9223372036854775808
+[2016-09-26 15:31:48 ]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87621,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:32:09 4625714f]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87644,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:32:09 19ba254b]Service: 5124567855432488
+[2016-09-26 15:32:10 657a4076]Service: 5124567855432488
+[2016-09-26 15:32:10 5bdea495]Service: 9223372036854775807
+[2016-09-26 15:32:10 4e774782]Service: -9223372036854775808
+[2016-09-26 15:32:24 115422e8]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87666,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:32:24 daa0f97]Service: 5124567855432488
+[2016-09-26 15:32:24 20dc9cdd]Service: 5124567855432488
+[2016-09-26 15:32:24 73609c76]Service: 9223372036854775807
+[2016-09-26 15:32:24 5f6fcba0]Service: -9223372036854775808
+[2016-09-26 15:33:35 1b687f]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87702,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:33:35 2ea8f2]Service: 5124567855432488
+[2016-09-26 15:33:35 3c3f63]Service: 5124567855432488
+[2016-09-26 15:33:35 3f3ab0]Service: 9223372036854775807
+[2016-09-26 15:33:35 12ed57]Service: -9223372036854775808
+[2016-09-26 15:34:32 25420d]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87762,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:34:32 623020]Service::Service::testStringToLong: 5124567855432488
+[2016-09-26 15:34:32 25420d]BaseTestCases::BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:34:32 593973]Service::Service::testStringToLong: 5124567855432488
+[2016-09-26 15:34:32 25420d]BaseTestCases::BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:34:32 db672b]Service::Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:34:32 35e9d4]Service::Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:35:48 4eb047]ServerManager: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87799,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:35:48 6dc06b]Service::Service::testStringToLong: 5124567855432488
+[2016-09-26 15:35:48 4eb047]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:35:48 2695f5]Service::Service::testStringToLong: 5124567855432488
+[2016-09-26 15:35:48 4eb047]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:35:48 1ef4c9]Service::Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:35:48 e970a8]Service::Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:36:27 3a9174]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 87831,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:36:27 57d778]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:36:27 3a9174]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:36:27 18a7a4]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:36:27 3a9174]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:36:27 11ef0f]Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:36:27 47ad25]Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:43:27 4065d9]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88273,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:43:28 14deaf]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:43:28 4065d9]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:43:28 6e66f0]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:43:28 4065d9]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:43:28 3ff8f4]Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:43:28 73ed06]Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:49:24 1b3f41]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88368,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:49:24 453ee6]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:49:24 1b3f41]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:49:25 6480d3]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:49:25 1b3f41]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:49:25 216f2e]Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:49:25 33c037]Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:49:50 2064aa]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88396,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:49:50 490afc]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:49:50 2064aa]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:49:50 15b8bb]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:49:50 2064aa]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:49:50 3cffcc]Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:49:50 2905f7]Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:50:06 78e55a]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88418,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:50:06 75ba63]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:50:06 78e55a]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:50:07 2d4b45]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:50:07 78e55a]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:50:07 56b7b7]Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:50:07 71b627]Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:57:17 2f364c]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88595,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:57:17 152d26]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:57:17 2f364c]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:57:17 618c25]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:57:17 2f364c]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:57:17 385f44]Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:57:17 643bd5]Service::testStringToLong: -9223372036854775808
+[2016-09-26 15:57:54 240eba]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88625,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 15:57:54 1ef981]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:57:54 240eba]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 15:57:54 7117fd]Service::testStringToLong: 5124567855432488
+[2016-09-26 15:57:54 240eba]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 15:57:54 13741c]Service::testStringToLong: 9223372036854775807
+[2016-09-26 15:57:54 75cca6]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:02:30 2b5bcb]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88688,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:02:30 6e40d0]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:02:30 2b5bcb]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:02:30 6e4c9f]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:02:30 2b5bcb]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:02:30 5b1267]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:02:30 2d94fd]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:14:00 a7281b]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88851,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:14:00 13eb4c]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:14:00 a7281b]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:14:01 6dec58]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:14:01 a7281b]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:14:01 26cad3]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:14:01 376414]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:14:48 71692e]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88891,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:14:48 6fec4a]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:14:48 71692e]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:14:49 52c52c]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:14:49 71692e]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:14:49 40fb66]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:14:49 7b0b34]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:15:44 392572]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 88924,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:15:44 7d9287]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:15:44 392572]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:15:44 2c90a9]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:15:44 392572]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:15:44 122b53]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:15:44 48caf4]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:18:15 f09fcc]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 89006,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:38:11 6e5360]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 89870,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:38:12 83bb4f]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:38:12 6e5360]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:38:12 435a9d]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:38:12 6e5360]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:38:12 7d1b93]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:38:12 421e99]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:39:09 5a5aa2]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 89944,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:45:11 507228]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90070,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:45:22 10eddb]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90125,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:45:44 4c464f]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90147,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:45:45 89d989]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:45:45 4c464f]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:45:45 e1652a]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:45:45 4c464f]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:45:45 703753]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:45:45 7d9ea9]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:46:09 2af8ae]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90176,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:46:10 47512d]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:46:10 2af8ae]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:46:10 608b22]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:46:10 2af8ae]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:46:10 6acfaa]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:46:10 77969e]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:48:07 ad8858]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90229,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:48:07 189a2d]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:07 ad8858]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:48:07 1dab00]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:07 ad8858]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:48:07 22701c]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:48:07 18f927]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:48:21 5f3a49]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90249,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:48:21 2a4079]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:21 5f3a49]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:48:21 7740f1]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:21 5f3a49]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:48:21 247704]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:48:21 38e366]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:48:42 16cc32]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90276,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:48:42 28d948]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:42 16cc32]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:48:42 703528]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:42 16cc32]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:48:43 66f9cd]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:48:43 47b683]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:48:49 4cf4e5]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90295,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:48:49 4f36d0]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:49 4cf4e5]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:48:49 9df9dd]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:48:49 4cf4e5]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 16:48:49 2317f0]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:48:49 1d9744]Service::testStringToLong: -9223372036854775808
+[2016-09-26 16:53:58 297216]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90402,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:53:58 16619c]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:53:58 297216]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:55:10 6113b3]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90440,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[Mon Sep 26 16:55:10 2016] Failed to listen on localhost:8765 (reason: Address already in use)
+[2016-09-26 16:55:43 4dd899]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90499,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:55:43 367262]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:55:43 4dd899]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:56:41 6073b0]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90574,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:56:41 7c3014]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:56:41 6073b0]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:57:03 22a73b]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90597,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[Mon Sep 26 16:57:03 2016] Failed to listen on localhost:8765 (reason: Address already in use)
+[2016-09-26 16:57:26 7f4bed]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 90649,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:57:26 28c840]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:57:26 7f4bed]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:59:03 512568]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91247,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 16:59:03 7bb52a]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:59:03 512568]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 16:59:03 512568]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 7fe27f]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 5514f1]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 15d683]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 a357b3]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 4777b7]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 512568]BaseTestCases::testConcatStringUnicode: exception 'Exception' with message 'Server error, returned HTTP code: 500' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianTransport.php:91
+Stack trace:
+#0 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(66): HessianCURLTransport->getStream('http://localhos...', 'H\x02\x00C\x10testConcat...', Object(LibHessian\Hessian\HessianOptions))
+#1 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(111): HessianClient->__hessianCall('testConcatStrin...', Array)
+#2 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): HessianClient->__call('testConcatStrin...', Array)
+#3 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): LibHessian\Hessian\HessianClient->testConcatString('\xC3\xA1', '\xC3\xA9')
+#4 [internal function]: BaseTestCases->testConcatStringUnicode()
+#5 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(909): ReflectionMethod->invokeArgs(Object(Hessian2Test), Array)
+#6 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(768): PHPUnit_Framework_TestCase->runTest()
+#7 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestResult.php(612): PHPUnit_Framework_TestCase->runBare()
+#8 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(724): PHPUnit_Framework_TestResult->run(Object(Hessian2Test))
+#9 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#10 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#11 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(440): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#12 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(149): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#13 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(100): PHPUnit_TextUI_Command->run(Array, true)
+#14 /Users/chen/.composer/vendor/phpunit/phpunit/phpunit(47): PHPUnit_TextUI_Command::main()
+#15 {main}
+[2016-09-26 16:59:03 17268a]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 17268a]Service::testStringToLong: 5124567855432488
+[2016-09-26 16:59:03 30000f]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 30000f]Service::testStringToLong: 9223372036854775807
+[2016-09-26 16:59:03 24cb10]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 15775c]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 475780]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 2359e3]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 5f7d67]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 4df31c]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 783fe3]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 2e1823]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 3f0a3a]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 4cf21f]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 5a244d]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 28f54a]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 7a4065]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 21c5d1]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 1c133d]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 7c7dc8]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 31cfbf]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 3b50ff]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 61c559]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 584649]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 6476e2]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 ff1e7d]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 76dadb]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 69ded4]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 fd4672]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 4befcd]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 7fb557]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 1a09e2]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 136785]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 16dbe2]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 4a09f1]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 16:59:03 383296]/Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2: asd
+[2016-09-26 17:00:03 64d086]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91278,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:00:03 5fcf86]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:00:03 64d086]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:00:03 1c51e8]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:00:03 64d086]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:00:03 2e8b16]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:00:17 1f846c]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91312,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:00:18 163eb1]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:00:18 1f846c]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:00:18 7c6dfd]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:00:18 1f846c]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:00:18 6ec841]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:00:55 171e28]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91354,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:00:55 6fdb30]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:00:55 171e28]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:00:56 6f2105]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:00:56 171e28]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:00:56 1058e4]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:01:25 595778]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91385,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:01:25 155909]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:01:25 595778]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:01:25 595778]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:01:25 578161]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:01:26 7b5f55]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:01:26 595778]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:01:26 303e80]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:01:26 303e80]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:01:26 11a3d7]Service::testStringToLong: -9223372036854775808
+[2016-09-26 17:01:26 11a3d7]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:01:26 289d0d]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:01:32 c41c8a]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91412,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:01:32 c42d4e]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:01:32 c41c8a]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:01:33 c41c8a]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:01:33 7d6a59]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:01:33 35fea6]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:01:33 c41c8a]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:01:33 3af390]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:01:33 3af390]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:01:33 ffadca]Service::testStringToLong: -9223372036854775808
+[2016-09-26 17:01:33 ffadca]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:01:33 47c6d7]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:02:53 686ba2]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91577,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:02:53 62e0c9]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:02:53 686ba2]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:02:53 686ba2]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:02:53 54a9e8]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:02:53 6e83ea]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:02:53 686ba2]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:02:53 59959b]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:02:53 59959b]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:02:53 64ef34]Service::testStringToLong: -9223372036854775808
+[2016-09-26 17:02:53 64ef34]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:02:53 601a04]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:03:05 270463]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91619,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:03:05 35235f]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:03:05 270463]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:03:05 270463]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:03:05 427ede]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:03:05 51f2bb]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:03:05 270463]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:03:05 128437]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:03:05 128437]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:03:05 667b6d]Service::testStringToLong: -9223372036854775808
+[2016-09-26 17:03:05 667b6d]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:03:05 15e25b]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:04:43 630804]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91685,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:04:43 4527ac]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:04:43 1dcd13]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:04:43 630804]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:04:43 630804]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:04:43 d31898]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:04:43 423a01]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:04:43 5362b6]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:04:43 630804]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:04:43 455986]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:04:43 455986]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:04:43 315eab]Service::testStringToLong: -9223372036854775808
+[2016-09-26 17:04:43 315eab]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:04:43 24180a]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:05:05 628f40]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91726,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:05:06 6e2435]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:05:06 7cb349]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:05:06 628f40]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:05:06 628f40]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:05:06 671b19]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:05:06 1c5a91]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:05:06 729301]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:05:06 628f40]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:05:06 7a63b3]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:05:06 7a63b3]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:05:06 6ef6ae]Service::testStringToLong: -9223372036854775808
+[2016-09-26 17:05:06 6ef6ae]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:05:06 7c4af9]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:05:17 f57674]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91779,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:05:17 233ff7]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:05:17 7463da]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:05:17 f57674]BaseTestCases::testStringToLong: 5124567855432488
+[2016-09-26 17:05:18 f57674]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:05:18 41d354]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:05:18 a8a354]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:05:18 47b1fa]Service::testStringToLong: 5124567855432488
+[2016-09-26 17:05:18 f57674]BaseTestCases::testStringToLong: 980440.06400000001
+[2016-09-26 17:05:18 28bdf5]Service::testStringToLong: 9223372036854775807
+[2016-09-26 17:05:18 28bdf5]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:05:18 695241]Service::testStringToLong: -9223372036854775808
+[2016-09-26 17:05:18 695241]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:05:18 3fcb5d]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:07:01 1b19d0]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91824,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:07:01 42f49a]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:07:01 1b19d0]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:07:01 6c20b6]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:07:01 1e30d6]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:07:01 ab6875]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:07:01 88d2b6]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:07:01 76ced5]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:07:46 1d7005]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91875,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:07:46 6aac72]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 555
+[2016-09-26 17:07:46 1992b7]Hessian2Writer::writeDouble: 555
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 666
+[2016-09-26 17:07:46 3e9de5]Hessian2Writer::writeDouble: 666
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:07:46 18dd7f]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:07:46 4a2420]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:07:46 4a2420]Hessian2Writer::writeDouble: 5124567855432488
+[2016-09-26 17:07:46 702548]Hessian2Writer::writeDouble: 5124567855432488
+[2016-09-26 17:07:46 be58a7]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:07:46 b2744f]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:07:46 4cb5c0]Hessian2Writer::writeDouble: 545.53999999999996
+[2016-09-26 17:07:46 783268]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:07:46 66c92d]Hessian2Writer::writeDouble: 5124567855432488
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 123.40000000000001
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 0.10000000000000001
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 0.20000000000000001
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 0.29999999999999999
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 5.4000000000000004
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 0.10000000000000001
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 0.29999999999999999
+[2016-09-26 17:07:46 71499e]Hessian2Writer::writeDouble: 0.10000000000000001
+[2016-09-26 17:07:46 71499e]Hessian2Writer::writeDouble: 0.20000000000000001
+[2016-09-26 17:07:46 71499e]Hessian2Writer::writeDouble: 0.29999999999999999
+[2016-09-26 17:07:46 71499e]Hessian2Writer::writeDouble: 5.4000000000000004
+[2016-09-26 17:07:46 1d7005]Hessian2Writer::writeDouble: 4.5
+[2016-09-26 17:07:46 1ab023]Hessian2Writer::writeDouble: 4.5
+[2016-09-26 17:08:11 7bcddf]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91948,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:08:11 27b2ea]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 555
+[2016-09-26 17:08:12 2ed7cb]Hessian2Writer::writeDouble: 555
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 666
+[2016-09-26 17:08:12 530aab]Hessian2Writer::writeDouble: 666
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:08:12 4c8fbd]Hessian2Writer::writeDouble: 102456.5646
+[2016-09-26 17:08:12 e5658b]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:08:12 e5658b]Hessian2Writer::writeDouble: 5124567855432488
+[2016-09-26 17:08:12 1e2d85]Hessian2Writer::writeDouble: 5124567855432488
+[2016-09-26 17:08:12 c079bd]Hessian2Writer::writeDouble: 9.2233720368547758E+18
+[2016-09-26 17:08:12 412941]Hessian2Writer::writeDouble: -9.2233720368547758E+18
+[2016-09-26 17:08:12 3b929c]Hessian2Writer::writeDouble: 545.53999999999996
+[2016-09-26 17:08:12 12d088]Hessian2Writer::writeDouble: 0.33333299999999999
+[2016-09-26 17:08:12 56f7ed]Hessian2Writer::writeDouble: 5124567855432488
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 123.40000000000001
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 0.10000000000000001
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 0.20000000000000001
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 0.29999999999999999
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 5.4000000000000004
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 0.10000000000000001
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 0.29999999999999999
+[2016-09-26 17:08:12 32c67c]Hessian2Writer::writeDouble: 0.10000000000000001
+[2016-09-26 17:08:12 32c67c]Hessian2Writer::writeDouble: 0.20000000000000001
+[2016-09-26 17:08:12 32c67c]Hessian2Writer::writeDouble: 0.29999999999999999
+[2016-09-26 17:08:12 32c67c]Hessian2Writer::writeDouble: 5.4000000000000004
+[2016-09-26 17:08:12 7bcddf]Hessian2Writer::writeDouble: 4.5
+[2016-09-26 17:08:12 6ad703]Hessian2Writer::writeDouble: 4.5
+[2016-09-26 17:09:08 5e6b04]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 91997,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:09:08 5fdb82]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:09:08 18d33a]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:09:21 2dfbb6]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92017,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:09:21 24d998]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:09:21 5133ca]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:09:41 497ec8]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92040,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:09:41 6b3c2a]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:09:41 44f5cf]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:10:02 1be3fc]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92098,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:10:02 6a8d30]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:10:03 39c8cd]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:10:20 30060c]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92125,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:10:21 4c2624]Service::testGetDouble: 5124567855432488.21
+[2016-09-26 17:10:21 61e307]Service::testGetDouble: 5124567855432488.21
+[2016-09-26 17:10:39 1569a2]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92153,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:10:39 164ae1]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:10:39 164ae1]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:10:39 23f741]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:10:39 23f741]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:11:21 586004]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92178,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:11:21 10ae6b]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:11:21 10ae6b]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:11:21 7d97d1]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:11:21 7d97d1]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:11:52 3b6cd9]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92202,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:11:53 514b1f]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:11:53 514b1f]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:11:53 147c31]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:11:53 147c31]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:15:55 41d661]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92276,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:15:55 145914]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:15:55 145914]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:15:56 2fd05f]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:15:56 2fd05f]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:16:08 611312]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92298,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:16:08 161208]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:16:08 161208]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:16:09 4676e0]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:16:09 4676e0]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:17:27 4f7584]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92342,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:17:27 70fd1d]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:17:27 70fd1d]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:17:27 764c73]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:17:27 764c73]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:18:13 709b53]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92393,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:18:13 bf3d4d]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:18:14 61c19e]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:20:19 2551be]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92466,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[2016-09-26 17:20:19 2551be]BaseTestCases::testConcatStringUnicode: exception 'HessianParsingException' with message 'Unrecognized code < at the start of the stream' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian1/Hessian1ServiceParser.php:38
+Stack trace:
+#0 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(74): Hessian1ServiceParser->parseTop()
+#1 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(111): HessianClient->__hessianCall('testConcatStrin...', Array)
+#2 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): HessianClient->__call('testConcatStrin...', Array)
+#3 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): LibHessian\Hessian\HessianClient->testConcatString('\xC3\xA1', '\xC3\xA9')
+#4 [internal function]: BaseTestCases->testConcatStringUnicode()
+#5 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(909): ReflectionMethod->invokeArgs(Object(Hessian1Test), Array)
+#6 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(768): PHPUnit_Framework_TestCase->runTest()
+#7 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestResult.php(612): PHPUnit_Framework_TestCase->runBare()
+#8 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(724): PHPUnit_Framework_TestResult->run(Object(Hessian1Test))
+#9 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#10 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#11 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(440): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#12 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(149): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#13 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(100): PHPUnit_TextUI_Command->run(Array, true)
+#14 /Users/chen/.composer/vendor/phpunit/phpunit/phpunit(47): PHPUnit_TextUI_Command::main()
+#15 {main}
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[2016-09-26 17:20:19 2551be]BaseTestCases::testConcatStringUnicode: exception 'HessianFault' with message 'Code   not recognized as a top element' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2/Hessian2ServiceParser.php:38
+Stack trace:
+#0 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(74): Hessian2ServiceParser->parseTop()
+#1 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(111): HessianClient->__hessianCall('testConcatStrin...', Array)
+#2 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): HessianClient->__call('testConcatStrin...', Array)
+#3 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): LibHessian\Hessian\HessianClient->testConcatString('\xC3\xA1', '\xC3\xA9')
+#4 [internal function]: BaseTestCases->testConcatStringUnicode()
+#5 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(909): ReflectionMethod->invokeArgs(Object(Hessian2Test), Array)
+#6 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(768): PHPUnit_Framework_TestCase->runTest()
+#7 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestResult.php(612): PHPUnit_Framework_TestCase->runBare()
+#8 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(724): PHPUnit_Framework_TestResult->run(Object(Hessian2Test))
+#9 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#10 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#11 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(440): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#12 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(149): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#13 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(100): PHPUnit_TextUI_Command->run(Array, true)
+#14 /Users/chen/.composer/vendor/phpunit/phpunit/phpunit(47): PHPUnit_TextUI_Command::main()
+#15 {main}
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:20:19 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[2016-09-26 17:21:06 4274dc]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92539,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[2016-09-26 17:21:06 4274dc]BaseTestCases::testConcatStringUnicode: exception 'HessianParsingException' with message 'Unrecognized code < at the start of the stream' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian1/Hessian1ServiceParser.php:38
+Stack trace:
+#0 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(74): Hessian1ServiceParser->parseTop()
+#1 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(111): HessianClient->__hessianCall('testConcatStrin...', Array)
+#2 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): HessianClient->__call('testConcatStrin...', Array)
+#3 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): LibHessian\Hessian\HessianClient->testConcatString('\xC3\xA1', '\xC3\xA9')
+#4 [internal function]: BaseTestCases->testConcatStringUnicode()
+#5 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(909): ReflectionMethod->invokeArgs(Object(Hessian1Test), Array)
+#6 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(768): PHPUnit_Framework_TestCase->runTest()
+#7 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestResult.php(612): PHPUnit_Framework_TestCase->runBare()
+#8 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(724): PHPUnit_Framework_TestResult->run(Object(Hessian1Test))
+#9 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#10 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#11 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(440): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#12 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(149): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#13 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(100): PHPUnit_TextUI_Command->run(Array, true)
+#14 /Users/chen/.composer/vendor/phpunit/phpunit/phpunit(47): PHPUnit_TextUI_Command::main()
+#15 {main}
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[2016-09-26 17:21:06 4274dc]BaseTestCases::testConcatStringUnicode: exception 'HessianFault' with message 'Code   not recognized as a top element' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2/Hessian2ServiceParser.php:38
+Stack trace:
+#0 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(74): Hessian2ServiceParser->parseTop()
+#1 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianClient.php(111): HessianClient->__hessianCall('testConcatStrin...', Array)
+#2 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): HessianClient->__call('testConcatStrin...', Array)
+#3 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/BaseTestCases.php(113): LibHessian\Hessian\HessianClient->testConcatString('\xC3\xA1', '\xC3\xA9')
+#4 [internal function]: BaseTestCases->testConcatStringUnicode()
+#5 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(909): ReflectionMethod->invokeArgs(Object(Hessian2Test), Array)
+#6 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(768): PHPUnit_Framework_TestCase->runTest()
+#7 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestResult.php(612): PHPUnit_Framework_TestCase->runBare()
+#8 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestCase.php(724): PHPUnit_Framework_TestResult->run(Object(Hessian2Test))
+#9 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#10 /Users/chen/.composer/vendor/phpunit/phpunit/src/Framework/TestSuite.php(747): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#11 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(440): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#12 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(149): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#13 /Users/chen/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php(100): PHPUnit_TextUI_Command->run(Array, true)
+#14 /Users/chen/.composer/vendor/phpunit/phpunit/phpunit(47): PHPUnit_TextUI_Command::main()
+#15 {main}
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[Mon Sep 26 17:21:06 2016] PHP Parse error:  syntax error, unexpected ')' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php on line 21
+[2016-09-26 17:21:18 33887c]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92563,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:21:18 3a48bf]Service::testGetDouble: 5124567855432488.000000
+[2016-09-26 17:21:18 1f86a5]Service::testGetDouble: 5124567855432488.000000
+[2016-09-26 17:21:31 5be245]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92591,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:21:31 7beeb6]Service::testGetDouble: 5124567855432488.00
+[2016-09-26 17:21:32 35a015]Service::testGetDouble: 5124567855432488.00
+[2016-09-26 17:22:20 539be2]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92622,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:22:20 367c58]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:22:21 396afb]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:22:24 784fc0]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92642,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:22:24 487924]Service::testGetDouble: 5124567855432488.00
+[2016-09-26 17:22:24 213afd]Service::testGetDouble: 5124567855432488.00
+[2016-09-26 17:24:08 2ce780]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92687,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:24:08 49f700]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:24:08 226cb7]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:25:02 3584f8]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92719,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:25:02 42c72a]Service::testGetDouble: 5124567855432488.00
+[2016-09-26 17:25:02 97541e]Service::testGetDouble: 5124567855432488.00
+[2016-09-26 17:25:12 4f67de]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92740,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:25:12 278972]Service::testGetDouble: 5124567855.21
+[2016-09-26 17:25:13 4c5b53]Service::testGetDouble: 5124567855.21
+[2016-09-26 17:25:17 d28871]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92763,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:25:17 5aeefd]Service::testGetDouble: 512456785543248.19
+[2016-09-26 17:25:18 5e8739]Service::testGetDouble: 512456785543248.19
+[2016-09-26 17:25:44 6f88d4]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92797,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:25:44 33b1cf]Service::testGetDouble: 51245678554324815314944.00
+[2016-09-26 17:25:45 414527]Service::testGetDouble: 51245678554324815314944.00
+[2016-09-26 17:27:14 1b1147]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92842,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:27:14 712418]Service::testGetDouble: 512456785543248.19
+[2016-09-26 17:27:14 5ec967]Service::testGetDouble: 512456785543248.19
+[2016-09-26 17:27:25 5540b6]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92862,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:27:25 7f7329]Service::testGetDouble: 512456785543248.00
+[2016-09-26 17:27:25 65a350]Service::testGetDouble: 512456785543248.00
+[2016-09-26 17:27:37 37e5fa]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92884,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:27:37 66b715]Service::testGetDouble: 512456785543248
+[2016-09-26 17:27:37 7d4571]Service::testGetDouble: 512456785543248
+[2016-09-26 17:27:47 67518d]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92904,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:27:47 47093f]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:27:48 77c5e0]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:27:52 2f9b13]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92923,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:27:52 2fe3f1]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:27:52 1977e6]Service::testGetDouble: 5124567855432488
+[2016-09-26 17:28:28 1ed729]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92946,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:28:29 10e73c]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:28:29 265f73]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:28:38 f69d02]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92971,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:28:38 340f90]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:28:38 68b07d]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:28:41 42d7a8]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 92990,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:28:42 68079e]Service::testGetDouble: 5.1245678554325E+14
+[2016-09-26 17:28:42 222e8b]Service::testGetDouble: 5.1245678554325E+14
+[2016-09-26 17:28:52 403dc0]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93010,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:28:52 1df843]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:28:52 4ce038]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:29:39 6ec961]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93047,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:29:39 134e1c]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:29:39 48fe7e]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:29:48 363be8]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93104,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:29:48 408b54]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:29:48 7173ea]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:30:36 22d720]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93131,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:30:36 5fd239]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:30:36 36c134]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:30:36 36c134]Service::handle: exception 'HessianFault' with message 'Unknown error type: [8] Use of undefined constant __MOTHED__ - assumed '__MOTHED__'<br />
+on line 37 in file /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2/Hessian2Writer.php' in /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianService.php:273
+Stack trace:
+#0 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2/Hessian2Writer.php(37): hessianServiceErrorHandler(8, 'Use of undefine...', '/Users/chen/src...', 37, Array)
+#1 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2/Hessian2Writer.php(136): Hessian2Writer->writeValue('message')
+#2 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/Hessian2/Hessian2ServiceWriter.php(37): Hessian2Writer->writeMap(Array)
+#3 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianService.php(78): Hessian2ServiceWriter->writeFault(Object(HessianFault), 'Unknown error t...')
+#4 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/src/Hessian/HessianPHP_v2.0.3/src/HessianService.php(139): HessianService->writeFault(Object(HessianFault), Object(Hessian2ServiceWriter))
+#5 /Users/chen/src/php/59store/customer-service/vendor/store59/lib-hessian/tests/local/Service.php(209): HessianService->handle()
+#6 {main}
+[2016-09-26 17:30:50 1ee0f3]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93150,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:30:50 14d5a8]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:30:50 1a5f66]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:30:50 1a5f66]Hessian2Writer::writeValue: 5.1245678554325E+15
+[2016-09-26 17:30:50 1a5f66]Hessian2Writer::writeValue: double
+[2016-09-26 17:30:59 464f6b]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93179,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:30:59 6f4358]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:30:59 6cc8ac]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:30:59 6cc8ac]Hessian2Writer::writeValue: 5.1245678554325E+15
+[2016-09-26 17:30:59 6cc8ac]Hessian2Writer::writeValue: double
+[2016-09-26 17:31:47 55aca0]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93202,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:31:47 7cf568]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:31:47 86ca2c]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:31:47 86ca2c]Hessian2Writer::writeDouble: 5.1245678554325E+15
+[2016-09-26 17:32:07 809de3]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93227,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:32:07 13dc1f]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:32:07 3bad1e]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:32:07 3bad1e]Hessian2Writer::writeDouble: 5.1245678554325E+15
+[2016-09-26 17:32:20 5b23ad]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93248,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:32:20 e11d36]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:32:20 7cb39d]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:32:20 7cb39d]Hessian2Writer::writeDouble: 5.1245678554325E+15
+[2016-09-26 17:35:36 326918]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93322,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:35:37 999acd]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:35:37 70498a]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:48:45 20176a]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93494,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:48:46 1bbb26]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:48:46 4a584b]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:48:46 20176a]Hessian2Parser::double4: 980440064
+[2016-09-26 17:50:24 76f27a]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93544,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:50:24 374795]Service::testGetDouble: 2147483647
+[2016-09-26 17:50:24 6e0590]Service::testGetDouble: 2147483647
+[2016-09-26 17:50:24 76f27a]Hessian2Parser::double4: 4294966296
+[2016-09-26 17:50:28 3de6e1]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93561,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:50:28 17eb67]Service::testGetDouble: 2147483648
+[2016-09-26 17:50:28 21fdff]Service::testGetDouble: 2147483648
+[2016-09-26 17:50:28 3de6e1]Hessian2Parser::double4: 0
+[2016-09-26 17:50:35 2a47ac]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93578,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:50:36 59e738]Service::testGetDouble: 21474836488888
+[2016-09-26 17:50:36 1463a6]Service::testGetDouble: 21474836488888
+[2016-09-26 17:50:36 2a47ac]Hessian2Parser::double4: 8888000
+[2016-09-26 17:53:47 3ceccf]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93643,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:53:47 2109db]Service::testGetDouble: -21474836488888
+[2016-09-26 17:53:47 76814c]Service::testGetDouble: -21474836488888
+[2016-09-26 17:53:47 3ceccf]Hessian2Parser::double4: 4286079296
+[2016-09-26 17:54:30 6afddb]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93670,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:54:30 43f644]Service::testGetDouble: -21474836488888
+[2016-09-26 17:54:30 2b27e2]Service::testGetDouble: -21474836488888
+[2016-09-26 17:54:38 64840d]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93691,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:54:38 cb9014]Service::testGetDouble: -21474836488
+[2016-09-26 17:54:38 10d121]Service::testGetDouble: -21474836488
+[2016-09-26 17:54:42 387c7a]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93709,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:54:42 330eaa]Service::testGetDouble: -2147483648
+[2016-09-26 17:54:42 764442]Service::testGetDouble: -2147483648
+[2016-09-26 17:54:52 66999a]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93730,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:54:52 4c85f7]Service::testGetDouble: 2147483648
+[2016-09-26 17:54:52 7f7a20]Service::testGetDouble: 2147483648
+[2016-09-26 17:55:02 40391d]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93751,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:55:02 716813]Service::testGetDouble: 2147483647
+[2016-09-26 17:55:02 2ed530]Service::testGetDouble: 2147483647
+[2016-09-26 17:55:16 26f4d9]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93772,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:55:16 483bf1]Service::testGetDouble: 2147483647
+[2016-09-26 17:55:16 51b6f4]Service::testGetDouble: 2147483647
+[2016-09-26 17:55:16 51b6f4]Hessian2Writer::writeDouble: 2147483647
+[2016-09-26 17:55:16 26f4d9]Hessian2Parser::double4: 4294966296
+[2016-09-26 17:55:27 5a1662]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93794,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:55:27 3097b0]Service::testGetDouble: -2147483647
+[2016-09-26 17:55:27 3ff567]Service::testGetDouble: -2147483647
+[2016-09-26 17:55:27 3ff567]Hessian2Writer::writeDouble: -2147483647
+[2016-09-26 17:55:27 5a1662]Hessian2Parser::double4: 1000
+[2016-09-26 17:55:31 f327bf]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93811,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:55:31 7f59d6]Service::testGetDouble: -21474836478
+[2016-09-26 17:55:31 3f27a5]Service::testGetDouble: -21474836478
+[2016-09-26 17:55:31 3f27a5]Hessian2Writer::writeDouble: -21474836478
+[2016-09-26 17:55:31 f327bf]Hessian2Parser::double4: 2000
+[2016-09-26 17:55:41 8dcfd3]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93829,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:55:41 76dc1b]Service::testGetDouble: -2147483647899
+[2016-09-26 17:55:41 49eb3e]Service::testGetDouble: -2147483647899
+[2016-09-26 17:55:41 49eb3e]Hessian2Writer::writeDouble: -2147483647899
+[2016-09-26 17:55:41 8dcfd3]Hessian2Parser::double4: 101000
+[2016-09-26 17:55:45 56374b]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93846,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:55:45 5a0792]Service::testGetDouble: -21474836478999
+[2016-09-26 17:55:45 290422]Service::testGetDouble: -21474836478999
+[2016-09-26 17:55:45 290422]Hessian2Writer::writeDouble: -21474836478999
+[2016-09-26 17:55:45 56374b]Hessian2Parser::double4: 1001000
+[2016-09-26 17:56:13 329835]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93879,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:56:13 70e50c]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:56:13 5f3024]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:56:13 5f3024]Hessian2Writer::writeDouble: 5.1245678554325E+15
+[2016-09-26 17:56:13 329835]Hessian2Parser::double4: 980440064
+[2016-09-26 17:56:20 64e171]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93897,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:56:20 7b674e]Service::testGetDouble: 5.1245678554325E+14
+[2016-09-26 17:56:20 4e093c]Service::testGetDouble: 5.1245678554325E+14
+[2016-09-26 17:56:20 4e093c]Hessian2Writer::writeDouble: 5.1245678554325E+14
+[2016-09-26 17:56:20 64e171]Hessian2Parser::double4: 957036672
+[2016-09-26 17:56:32 318841]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93917,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:56:32 3dd7f1]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:56:32 24ef43]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:56:32 24ef43]Hessian2Writer::writeDouble: 5.1245678554325E+15
+[2016-09-26 17:56:32 318841]Hessian2Parser::double4: 980439040
+[2016-09-26 17:56:43 902f57]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93944,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:56:43 48b628]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:56:43 664050]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:56:43 664050]Hessian2Writer::writeDouble: 5.1245678554325E+15
+[2016-09-26 17:56:43 902f57]Hessian2Parser::double4: 980439040
+[2016-09-26 17:57:03 4d8c88]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93967,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:57:04 2acfa7]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:57:04 90363a]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:57:04 4d8c88]Hessian2Parser::double4: 980439040
+[2016-09-26 17:57:29 5e9c7d]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 93995,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:57:29 61bed0]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:57:29 5b735f]Service::testGetDouble: 5.1245678554325E+15
+[2016-09-26 17:57:29 5e9c7d]Hessian2Parser::double4: 980440064
+[2016-09-26 17:57:45 6c48ba]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94020,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:57:46 5a4aa0]Service::testGetDouble: 5124567855432
+[2016-09-26 17:57:46 6a1450]Service::testGetDouble: 5124567855432
+[2016-09-26 17:57:46 6c48ba]Hessian2Parser::double4: 1856405824
+[2016-09-26 17:57:57 4baa07]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94046,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 17:57:57 61e06c]Service::testGetDouble: 12324324234
+[2016-09-26 17:57:57 4e3109]Service::testGetDouble: 12324324234
+[2016-09-26 17:57:57 4baa07]Hessian2Parser::double4: 2063061776
+[2016-09-26 18:34:17 424ae5]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94216,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:34:17 14ceff]Service::testGetDouble: 2147483647
+[2016-09-26 18:34:17 7283c4]Service::testGetDouble: 2147483647
+[2016-09-26 18:34:17 424ae5]Hessian2Parser::double4: 4294966296
+[2016-09-26 18:34:33 3d2086]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94240,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:34:33 70fdc5]Service::testGetDouble: 214748364
+[2016-09-26 18:34:33 2b69a5]Service::testGetDouble: 214748364
+[2016-09-26 18:34:33 3d2086]Hessian2Parser::double4: 4294966496
+[2016-09-26 18:34:39 6b161c]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94257,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:34:39 3df112]Service::testGetDouble: 2147483647
+[2016-09-26 18:34:39 696015]Service::testGetDouble: 2147483647
+[2016-09-26 18:34:39 6b161c]Hessian2Parser::double4: 4294966296
+[2016-09-26 18:35:27 7070fc]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94287,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:35:27 329e2c]Service::testGetDouble: 21474836
+[2016-09-26 18:35:28 734fa5]Service::testGetDouble: 21474836
+[2016-09-26 18:35:28 7070fc]Hessian2Parser::double4: 4294966816
+[2016-09-26 18:35:56 3012a0]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94315,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:35:56 5d6e66]Service::testGetDouble: 2147483
+[2016-09-26 18:35:56 53f97f]Service::testGetDouble: 2147483
+[2016-09-26 18:35:56 3012a0]Hessian2Parser::double4: 2147483000
+[2016-09-26 18:37:15 41e02d]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94348,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:37:16 6a3132]Service::testGetDouble: 4294967295
+[2016-09-26 18:37:16 25c40c]Service::testGetDouble: 4294967295
+[2016-09-26 18:37:16 41e02d]Hessian2Parser::double4: 4294966296
+[2016-09-26 18:38:20 447fae]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94385,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:38:20 db997a]Service::testGetDouble: 42949.7295
+[2016-09-26 18:38:20 2bba45]Service::testGetDouble: 42949.7295
+[2016-09-26 18:38:34 6c5a2b]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94406,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:38:34 239af2]Service::testGetDouble: 42949.729
+[2016-09-26 18:38:34 7110ee]Service::testGetDouble: 42949.729
+[2016-09-26 18:38:34 6c5a2b]Hessian2Parser::double4: 42949729
+[2016-09-26 18:46:42 13f24f]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94513,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:46:42 6a9016]Service::testGetDouble: 429497295
+[2016-09-26 18:46:42 71a700]Service::testGetDouble: 429497295
+[2016-09-26 18:56:22 61441f]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94641,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:56:22 6b8446]Service::testGetDouble: 429497295
+[2016-09-26 18:56:22 c8a27a]Service::testGetDouble: 429497295
+[2016-09-26 18:56:41 3eb94b]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94668,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)
+[2016-09-26 18:56:41 74a4d9]Service::testGetDouble: 2147483.647
+[2016-09-26 18:56:41 7524e2]Service::testGetDouble: 2147483.647
+[2016-09-26 19:01:29 363d3e]ServerManager::run: array (
+  'command' => 'php -S localhost:8765 Service.php',
+  'pid' => 94782,
+  'running' => true,
+  'signaled' => false,
+  'stopped' => false,
+  'exitcode' => -1,
+  'termsig' => 0,
+  'stopsig' => 0,
+)

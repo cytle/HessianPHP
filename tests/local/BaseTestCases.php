@@ -60,7 +60,7 @@ class BaseTestCases extends TestCase {
         if (! $server->isRunning()) {
             throw new Exception("构建测试服务失败", 1);
         } else {
-            // echo "成功构建测试环境" , PHP_EOL;q
+            // echo "成功构建测试环境", PHP_EOL;q
         }
 
         self::$url = 'http://' . $server->getUrl();
@@ -77,6 +77,7 @@ class BaseTestCases extends TestCase {
 
     public static function tearDownAfterClass() {}
 
+
     // Tests if sent and received values are equal
     function testEcho(){
         $values = array(
@@ -84,24 +85,30 @@ class BaseTestCases extends TestCase {
         );
         foreach($values as $value){
             $ret = $this->proxy->testEcho($value);
-            $this->assertEquals($ret, $value);
+            $this->assertEquals($value, $ret);
         }
+    }
+
+    // tests emoji strings
+    function testEmojiString(){
+        $str = $this->proxy->testEcho("12ÁA😝C");
+        $this->assertEquals("12ÁA😝C", $str);
     }
 
     // tests simple strings
     function testConcatString(){
-        $str = $this->proxy->testConcatString("hello"," hessianphp");
-        $this->assertEquals($str, "hello hessianphp");
+        $str = $this->proxy->testConcatString("hello", " hessianphp");
+        $this->assertEquals("hello hessianphp", $str);
     }
 
     // tests unicode strings
     function testConcatStringUnicode(){
         try{
             $expected = "áé";
-            $str = $this->proxy->testConcatString("á","é");
+            $str = $this->proxy->testConcatString("á", "é");
             //var_dump($str);
             //var_dump($expected);
-            $this->assertEquals($str, $expected);
+            $this->assertEquals($expected, $str);
         }catch(Exception $e){
             nLog(__METHOD__, $e);
             throw $e;
@@ -110,7 +117,6 @@ class BaseTestCases extends TestCase {
 
     function testStringToLong() {
         $val = $this->proxy->testStringToLong('5124567855432488');
-        nLog(__METHOD__, $val);
 
         $this->assertEquals(5124567855432488, $val);
     }
@@ -127,147 +133,151 @@ class BaseTestCases extends TestCase {
             $val = $this->proxy->testStringToLong('-9223372036854775808');
             $this->assertEquals(-9223372036854775808, $val);
         }
-
-
     }
 
     function testStringToBoolean() {
         // fails with other values, works only with 'true' and 'false'
         $bool = $this->proxy->testStringToBoolean('true');
-        $this->assertEquals($bool,true);
+        $this->assertEquals(true, $bool);
     }
     function testStringToDouble() {
         // Different format for .net
         $double = $this->proxy->testStringToDouble('545.54');
-        $this->assertEquals($double,545.54);
+        $this->assertEquals(545.54, $double);
     }
     function testStringToShort() {
         $short = $this->proxy->testStringToShort('17');
-        $this->assertEquals($short,17);
+        $this->assertEquals(17, $short);
     }
     function testStringToInt(){
         $int = $this->proxy->testStringToInt('17');
-        $this->assertEquals($int,17);
+        $this->assertEquals(17, $int);
     }
     function testStringToFloat(){
         // Different format for .net
         $float = $this->proxy->testStringToFloat('0.333333');
-        $this->assertEquals($float,0.333333);
+        $this->assertEquals(0.333333, $float);
+
+        $float = $this->proxy->testStringToFloat('5124567855432488');
+        $this->assertEquals(5124567855432488, $float);
+
+        $float = $this->proxy->testStringToFloat('9223372036854775808');
+        $this->assertEquals(9223372036854775808, $float);
     }
     function testStringToByte(){
         // Just works with integers and returns integers
         $byte = $this->proxy->testStringToByte("01");
-        $this->assertEquals($byte , 1);
+        $this->assertEquals(1, $byte);
     }
 
     function testIntToString(){
         $str = $this->proxy->testIntToString(83);
-        $this->assertEquals($str , '83');
+        $this->assertEquals('83', $str);
     }
     function testDoubleToString(){
         $str = $this->proxy->testDoubleToString(123.4);
-        $this->assertEquals($str , '123.4');
+        $this->assertEquals('123.4', $str);
     }
     function testBoolToString(){
         $str = $this->proxy->testBoolToString(true);
-        $this->assertEquals($str , '1'); // returns 1 or 0, not true or false
+        $this->assertEquals('1', $str); // returns 1 or 0, not true or false
         $str = $this->proxy->testBoolToStringStrict(false);
-        $this->assertEquals($str , 'false');
+        $this->assertEquals('false', $str);
     }
 
     function testCharToString(){
         // the ascii code of the char
         $str = $this->proxy->testCharToString(65);
-        $this->assertEquals($str , '65');
+        $this->assertEquals('65', $str);
     }
 
     function testIntArrToString(){
-        $arr = $this->proxy->testIntArrToString(array(1,2,3,4));
-        $stringArr = array('1','2','3','4');
-        $this->assertEquals($arr , $stringArr);
+        $arr = $this->proxy->testIntArrToString(array(1, 2, 3, 4));
+        $stringArr = array('1', '2', '3', '4');
+        $this->assertEquals($stringArr, $arr);
     }
     function testStringArrToInt(){
         // only integers or mixed strings/integers
-        $arr = $this->proxy->testStringArrToInt(array('1',2,'3',4));
-        $intArr = array(1,2,3,4);
-        $this->assertEquals($arr , $intArr);
+        $arr = $this->proxy->testStringArrToInt(array('1', 2, '3', 4));
+        $intArr = array(1, 2, 3, 4);
+        $this->assertEquals($intArr, $arr);
     }
 
     function testDoubleArrToString(){
-        $arr = $this->proxy->testDoubleArrToString(array(0.1,0.2,0.3,5.4));
-        $doubleArr = array('0.1','0.2','0.3','5.4');
-        $this->assertEquals($arr , $doubleArr);
+        $arr = $this->proxy->testDoubleArrToString(array(0.1, 0.2, 0.3, 5.4));
+        $doubleArr = array('0.1', '0.2', '0.3', '5.4');
+        $this->assertEquals($doubleArr, $arr);
     }
 
     function testStringArrToDouble(){
         // same as above
-        $arr = $this->proxy->testStringArrToDouble(array(0.1,'0.2',0.3,'5.4'));
-        $doubleArr = array(0.1,0.2,0.3,5.4);
-        $this->assertEquals($arr , $doubleArr);
+        $arr = $this->proxy->testStringArrToDouble(array(0.1, '0.2', 0.3, '5.4'));
+        $doubleArr = array(0.1, 0.2, 0.3, 5.4);
+        $this->assertEquals($doubleArr, $arr);
     }
 
     function testHashMap(){
         // switches order of indexes
-        $map = $this->proxy->testHashMap(array('A','B','C'), array(1,2,3));
-        $testMap = array('A' => 1,'B' => 2,'C' => 3);
-        $this->assertEquals($map , $testMap);
+        $map = $this->proxy->testHashMap(array('A', 'B', 'C'), array(1, 2, 3));
+        $testMap = array('A' => 1, 'B' => 2, 'C' => 3);
+        $this->assertEquals($testMap, $map);
     }
 
     function testHashMapParam(){
         // same as above
-        $string = $this->proxy->testHashMapParam(array('A' => 1,'B'=>2,'C'=>3));
+        $string = $this->proxy->testHashMapParam(array('A' => 1, 'B'=>2, 'C'=>3));
         $testString = 'A 1B 2C 3';
-        $this->assertEquals($string , $testString);
+        $this->assertEquals($testString, $string);
     }
 
     function testNullParamObject(){
         $obj = $this->proxy->testParamObject(null);
         $this->assertNotNull($obj);
-        $this->assertEquals($obj->stringVar , "ParamObject was empty");
-        //$this->assertEquals($obj->hashVar['Message'] , "No Message");
+        $this->assertEquals("ParamObject was empty", $obj->stringVar);
+        //$this->assertEquals($obj->hashVar['Message'], "No Message");
     }
 
     function testParamObject(){
         $obj = $this->proxy->testParamObject(new ParamObject());
         $this->assertNotNull($obj);
-        $this->assertEquals($obj->stringVar , "ParamObject not empty");
-        //$this->assertEquals($obj->hashVar['Message'] , "vaca");
+        $this->assertEquals("ParamObject not empty", $obj->stringVar);
+        //$this->assertEquals($obj->hashVar['Message'], "vaca");
     }
 
     function testSendParamObject(){
         $str = $this->proxy->testSendParamObject(new ParamObject());
-        $this->assertEquals($str , "vaca");
+        $this->assertEquals("vaca", $str);
     }
 
     function testReceiveParamObject(){
         $obj = $this->proxy->testReceiveParamObject('burr');
         $this->assertNotNull($obj);
-        $this->assertEquals($obj->stringVar , "burr");
+        $this->assertEquals("burr", $obj->stringVar);
     }
 
     function testArrayListParam(){
         // as arraylist
-        $list = $this->proxy->testArrayListParam(array(1,2,3,4,5));
-        $this->assertEquals($list,'1 2 3 4 5 ');
+        $list = $this->proxy->testArrayListParam(array(1, 2, 3, 4, 5));
+        $this->assertEquals('1 2 3 4 5 ', $list);
     }
 
     function testArrayList(){
         // doesn't seem to care what I send in the array
-        $sendList = array(1,'2',3,4.5,5);
+        $sendList = array(1, '2', 3, 4.5, 5);
         $respList = $list = $this->proxy->testArrayList($sendList);
-        $this->assertEquals($sendList, $respList);
+        $this->assertEquals($respList, $sendList);
     }
 
     function testList(){
         // as IList (.net) / List (Java)
-        $count = $this->proxy->testList(array(1,'2'));
-        $this->assertEquals($count, 2);
+        $count = $this->proxy->testList(array(1, '2'));
+        $this->assertEquals(2, $count);
     }
 
     function testEmptyList(){
         // as IList (.net) / List (Java)
         $count = $this->proxy->testList(array());
-        $this->assertEquals($count, 0);
+        $this->assertEquals(0, $count);
     }
 
     function testStringToDate(){
@@ -290,15 +300,15 @@ class BaseTestCases extends TestCase {
         // .NET: Returns incorrect information
         $dt1 = new DateTime('1998-05-08 02:51:31');
         $string1 = $this->proxy->testDateToString($dt1);
-        $this->assertEquals($string1,'1998-05-08 02:51:31');
+        $this->assertEquals('1998-05-08 02:51:31', $string1);
 
         $dt2 = new DateTime('1970-01-01 12:00:01');
         $string2 = $this->proxy->testDateToString($dt2);
-        $this->assertEquals($string2,'1970-01-01 12:00:01');
+        $this->assertEquals('1970-01-01 12:00:01', $string2);
 
         $dt3 = new DateTime('2006-11-14 11:16:44');
         $string3 = $this->proxy->testDateToString($dt3);
-        $this->assertEquals($string3,'2006-11-14 11:16:44');
+        $this->assertEquals('2006-11-14 11:16:44', $string3);
     }
 
     function testCurlTransport(){
@@ -326,9 +336,9 @@ class BaseTestCases extends TestCase {
         $options->version = $this->version;
 
         $this->proxy = new HessianClient(self::$url, $options);
-        $str = $this->proxy->testConcatString("hello"," hessianphp");
+        $str = $this->proxy->testConcatString("hello", " hessianphp");
 
-        $file = dirname(__FILE__).'/logs/payload.bin';
+        $file = dirname(__FILE__) . '/logs/payload.bin';
         $this->assertTrue(file_exists($file));
     }
 

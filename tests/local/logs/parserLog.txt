@@ -1,0 +1,3 @@
+Parsing top element
+Parsing reply
+llamando string0 con code  y num 16 hex 0x10 offset 5

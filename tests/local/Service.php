@@ -16,6 +16,7 @@ class Service{
         return $value;
     }
 
+
     function testStringToBoolean($param){
         return (bool)$param;
     }
@@ -25,8 +26,6 @@ class Service{
     }
 
     function testStringToLong($param){
-        nLog(__METHOD__, $param);
-
         return floatval($param);
     }
 

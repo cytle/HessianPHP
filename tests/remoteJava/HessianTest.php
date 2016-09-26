@@ -1,6 +1,7 @@
 <?php
 
 use LibHessian\HessianHelpers;
+
 /**
 * 测试
 */
@@ -100,29 +101,29 @@ class HessianTest extends TestCase
     // }
 
 
-    public function testOrder()
-    {
-        $url = $this->orderServiceUrl;
+    // public function testOrder()
+    // {
+    //     $url = $this->orderServiceUrl;
 
-        // $order = HessianHelpers::query($url, 'queryOrdersPaging', [(object) [
-        //     'withOrderItems' => true,
-        //     'withOrderPays'  => true,
-        //     ], 1, 1]);
+    //     // $order = HessianHelpers::query($url, 'queryOrdersPaging', [(object) [
+    //     //     'withOrderItems' => true,
+    //     //     'withOrderPays'  => true,
+    //     //     ], 1, 1]);
 
 
-        $order = HessianHelpers::query($url, 'queryOrder', ['03605400850810982202195', (object) [
-            // 'withOrderItems' => true,
-            // 'withOrderPays'  => true,
-            ]]);
+    //     $order = HessianHelpers::query($url, 'queryOrder', ['03605400850810982202195', (object) [
+    //         // 'withOrderItems' => true,
+    //         // 'withOrderPays'  => true,
+    //         ]]);
 
-        $this->assertEquals(0, $order->status);
+    //     $this->assertEquals(0, $order->status);
 
-        $order = $order->data;
+    //     $order = $order->data;
 
-        echo PHP_EOL;
-        echo ($order->buyerRemark);
-        echo PHP_EOL;
-    }
+    //     // echo PHP_EOL;
+    //     // echo ($order->buyerRemark);
+    //     // echo PHP_EOL;
+    // }
 
     /**
      * @expectedException     LibHessian\Exceptions\HessianException

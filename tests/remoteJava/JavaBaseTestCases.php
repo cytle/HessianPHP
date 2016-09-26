@@ -5,9 +5,12 @@ use LibHessian\HessianHelpers;
 /**
 * 测试
 */
-class HessianToJavaTest extends TestCase
+class JavaBaseTestCases extends TestCase
 {
-    public $url = 'http://192.168.30.161:8088/phptest/phpApi';
+    var $version = 2;
+    var $options;
+    var $url = 'http://192.168.30.161:8088/phptest/phpApi';
+
 
     // java 数据边界
     public $intBoundary = [
@@ -23,6 +26,7 @@ class HessianToJavaTest extends TestCase
     public $longBoundary = [
         'max' => 9223372036854775807,
         'min' => -9223372036854775808,
+        'a' => 5124567855432488,
     ];
 
     public function testInt()
@@ -56,36 +60,50 @@ class HessianToJavaTest extends TestCase
     public function testLongList()
     {
         $list = $this->longBoundary;
-
         $a = $this->longBoundary['max'];
 
         while ($a > 1) {
             $a = intval($a / 10);
-
             array_unshift($list, $a);
-
             $list[] = -1 * $a;
         }
 
-
         $list = array_values($list);
-
         $list = array_merge($list, array_values($this->intBoundary));
 
-        // print_r($list);
         $testModel = [
-            // 'longList' => array_map('LibHessian\HessianHelpers::createLong', $list),
-            'longList' => $list,
+
+            'longList' => array_map(function ($v) {
+                return floatval($v);
+            }, $list)
+            // 'longList' => $list,
         ];
 
         $longList = $this->query($testModel)->longList;
+
+        print_r($longList);
 
         foreach ($list as $key => $value) {
             $this->assertEquals($value, $longList[$key]);
         }
     }
 
+    public function testDouble()
+    {
+        $this->assertVaule(123.0, 'doubleNum', "testDouble");
 
+        $this->assertVaule(5124567855432488.0, 'doubleNum', "testDouble");
+        $this->assertVaule(5124567855432488.0, 'doubleNum', "testDouble");
+
+        echo ($this->queryJson([
+            'doubleNum' => -92
+            ]));
+    }
+
+    public function testFloat()
+    {
+        $this->assertVaule(1223.0, 'doubleNum', "testFloat");
+    }
 
     public function testIntMap()
     {
@@ -98,23 +116,13 @@ class HessianToJavaTest extends TestCase
 
         $actual = $this->query($testModel)->intMap;
 
-        print_r($actual);
-
-
+        $this->assertArraySubset($value, $actual);
     }
-
 
 
     public function testString()
     {
-        // $testModel = [
-        //     'str' => 'za啊实打实大三'
-        // ];
-
-        // $actual = $this->query($testModel);
-
-        // print_r($actual);
-        // echo $actual, PHP_EOL;
+        $this->assertVaule('za啊实打实Á大三', 'str', "testString");
     }
 
 
@@ -130,7 +138,16 @@ class HessianToJavaTest extends TestCase
 
     public function query(array $testModel)
     {
-        return HessianHelpers::query($this->url, 'test', [ new TestModel($testModel) ]);
+        return HessianHelpers::query($this->url, 'test', [ new TestModel($testModel) ], [
+            'version' => $this->version
+        ]);
+    }
+
+    public function queryJson(array $testModel)
+    {
+        return HessianHelpers::query($this->url, 'toString', [ new TestModel($testModel) ], [
+            'version' => $this->version
+        ]);
     }
 
 }
