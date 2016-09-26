@@ -141,6 +141,7 @@ class Hessian2Parser{
 		return ((ord($code) - 0xd4) << 16) + ($b1 << 8) + $b0;
 	}
 
+	// 32位数字
 	function parseInt($code, $num){
 		$data = unpack('N', $this->read(4));
 		$value = $data[1];
@@ -309,6 +310,9 @@ class Hessian2Parser{
 		$string = $this->read($len);
 		$pos = 0;
 		$pass = 1;
+
+		$needIconv = false;
+
 		while($pass <= $len){
 			$charCode = ord($string[$pos]);
 			if($charCode < 0x80){
@@ -316,6 +320,7 @@ class Hessian2Parser{
 			} elseif(($charCode & 0xe0) == 0xc0){
 				$pos += 2;
 				$string .= $this->read(1);
+				$needIconv = true;
 			} elseif (($charCode & 0xf0) == 0xe0) {
 				$pos += 3;
 				$string .= $this->read(2);
@@ -332,7 +337,11 @@ class Hessian2Parser{
 
 		// return $string;
 		// utf8mb4忽略无法理解的编码
-		return iconv('GBK', 'UTF-8//TRANSLIT', iconv('UTF-8', 'GBK//IGNORE', $string));
+		if ($needIconv) {
+			return iconv('GBK', 'UTF-8//TRANSLIT', iconv('UTF-8', 'GBK//IGNORE', $string));
+		}
+
+		return $string;
 
 		/*$string = '';
 		for($i=0;$i<$len;$i++){
