@@ -53,6 +53,35 @@ class BaseTestCases extends TestCase {
     var $proxy;
     protected static $url;
 
+    // java 数据边界
+    public $intBoundary = [
+        'max'         => 2147483647,
+        // 'min'         => -2147483648,
+        'twoByteMin'  => -262144,
+        'twoByteMax'  => 262143,
+        'oneByteMin'  => -2048,
+        'oneByteMax'  => 2047,
+        '0x7f'        => 0x7f,
+        '0x80'        => 0x80,
+        '0xff'        => 0xff,
+        '0x100'       => 0x100,
+        '0x7fff'      => 0x7fff,
+        '0x8000'      => 0x8000,
+        '0xffff'      => 0xffff,
+        '0x10000'     => 0x10000,
+        '0x7fffffff'  => 0x7fffffff,
+        '0x80000000'  => 0x80000000,
+        '0xffffffff'  => 0xffffffff,
+        '0x100000000' => 0x100000000,
+    ];
+
+    public $longBoundary = [
+        'max' => 9223372036854775807,
+        'min' => -9223372036854775808,
+        'a'   => 5124567855432488,
+    ];
+
+
     public static function setUpBeforeClass()
     {
         $server = ServerManager::getInstance();
@@ -85,9 +114,11 @@ class BaseTestCases extends TestCase {
             555.00, 666.00, 102456.5646, 'Hello', 'mbito', 546546, false, true,
             1.0, -1.0, -9.0, -127.0, -128.0, -256.0, -257.0, -212.0, -1.1, -0, -1.2, -444.0
         );
-        foreach($values as $value){
+        $values = array_merge($this->intBoundary, $values);
+        $values = array_merge($this->longBoundary, $values);
+        foreach($values as $k => $value){
             $ret = $this->proxy->testEcho($value);
-            $this->assertEquals($value, $ret);
+            $this->assertEquals($value, $ret, $k);
         }
     }
 
