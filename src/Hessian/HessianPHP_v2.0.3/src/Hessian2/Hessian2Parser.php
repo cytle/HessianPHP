@@ -342,10 +342,10 @@ class Hessian2Parser{
 			} elseif(($charCode & 0xe0) == 0xc0){
 				$pos += 2;
 				$string .= $this->read(1);
-				$needIconv = true;
 			} elseif (($charCode & 0xf0) == 0xe0) {
 				$pos += 3;
 				$string .= $this->read(2);
+				$needIconv = true;
 			} elseif (($charCode & 0xf8) == 0xf0) {
 				$pos += 4;
 				$string .= $this->read(3);
