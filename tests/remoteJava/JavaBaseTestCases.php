@@ -20,7 +20,18 @@ class JavaBaseTestCases extends TestCase
         'twoByteMax' => 262143,
         'oneByteMin' => -2048,
         'oneByteMax' => 2047,
-
+        '0x7f' => 0x7f,
+        '0x80' => 0x80,
+        '0xff' => 0xff,
+        '0x100' => 0x100,
+        '0x7fff' => 0x7fff,
+        '0x8000' => 0x8000,
+        '0xffff' => 0xffff,
+        '0x10000' => 0x10000,
+        '0x7fffffff' => 0x7fffffff,
+        '0x80000000' => 0x80000000,
+        '0xffffffff' => 0xffffffff,
+        '0x100000000' => 0x100000000,
     ];
 
     public $longBoundary = [
@@ -31,6 +42,7 @@ class JavaBaseTestCases extends TestCase
 
     public function testInt()
     {
+        echo $this->queryJsonItem(0xffffffff, 'intNum'), PHP_EOL;
         foreach ($this->intBoundary as $key => $value) {
             $this->assertVaule($value, 'intNum', "intBoundary=>${key}");
         }
@@ -53,6 +65,30 @@ class JavaBaseTestCases extends TestCase
             $data = $this->query($testModel);
 
             $this->assertEquals($value, $data->longNum, "longBoundary=>${key}");
+        }
+    }
+
+    public function testIntList()
+    {
+        $list = $this->intBoundary;
+        $a = $this->intBoundary['max'];
+
+        while ($a > 1) {
+            $a = intval($a / 10);
+            array_unshift($list, $a);
+            $list[] = -1 * $a;
+        }
+
+        $list = array_values($list);
+
+        $testModel = [
+            'intList' => $list,
+        ];
+
+        $intList = $this->query($testModel)->intList;
+
+        foreach ($list as $key => $value) {
+            $this->assertEquals($value, $intList[$key]);
         }
     }
 
@@ -143,7 +179,7 @@ class JavaBaseTestCases extends TestCase
 
     public function testString()
     {
-        $this->assertVaule('za啊实打实Á大三', 'str', "testString");
+        $this->assertVaule('12ÁAC哈哈', 'str', "testString");
     }
 
 
@@ -163,6 +199,18 @@ class JavaBaseTestCases extends TestCase
             'version' => $this->version
         ]);
     }
+
+    public function queryJsonItem($value, $name)
+    {
+        $testModel = [
+            $name => $value
+        ];
+        $testModel = $this->queryJson($testModel);
+
+        return $testModel;
+
+    }
+
 
     public function queryJson(array $testModel)
     {
