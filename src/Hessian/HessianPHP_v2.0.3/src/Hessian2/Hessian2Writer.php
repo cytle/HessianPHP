@@ -83,10 +83,10 @@ class Hessian2Writer{
 			return $this->writeReference($refindex);
 		}
 
-		/* ::= x57 value* 'Z'        # variable-length untyped list
-     	::= x58 int value*        # fixed-length untyped list
-        ::= [x78-7f] value*       # fixed-length untyped list
-     	*/
+		/* ::= x57 value* 'Z'		# variable-length untyped list
+	 	::= x58 int value*		# fixed-length untyped list
+		::= [x78-7f] value*	   # fixed-length untyped list
+	 	*/
 
 		$total = count($array);
 		if(HessianUtils::isListFormula($array)){
@@ -114,7 +114,7 @@ class Hessian2Writer{
 
 		/*
 		::= 'M' type (value value)* 'Z'  # key, value map pairs
-	   ::= 'H' (value value)* 'Z'       # untyped key, value
+	   ::= 'H' (value value)* 'Z'	   # untyped key, value
 		 */
 
 		$refindex = $this->refmap->getReference($map);
@@ -258,6 +258,11 @@ class Hessian2Writer{
 	}
 
 	function writeInt($value){
+
+		/**
+		 * FIX 2016年08月20日 支持长整形
+		 * @author 炒饭
+		 */
 		if($this->between($value, -16, 47)){
 			return pack('c', $value + 0x90);
 		} else
@@ -272,6 +277,14 @@ class Hessian2Writer{
 			$b1 = $value >> 8;
 			$stream = pack('c', $b0);
 			$stream .= pack('c', $b1);
+			$stream .= pack('c', $value);
+			return $stream;
+		} else
+		if ($this->between($value, -2147483648, 2147483647)) {
+			$stream = 'I';
+			$stream .= pack('c', ($value >> 24));
+			$stream .= pack('c', ($value >> 16));
+			$stream .= pack('c', ($value >> 8));
 			$stream .= pack('c', $value);
 			return $stream;
 		} else {
@@ -290,6 +303,7 @@ class Hessian2Writer{
 
 	function writeString($value){
 		$len = HessianUtils::stringLength($value);
+
 		if($len < 32){
 			return pack('C', $len)
 				. $this->writeStringData($value);
@@ -329,6 +343,7 @@ class Hessian2Writer{
 	}
 
 	function writeDouble($value){
+
 		$frac = abs($value) - floor(abs($value));
 		if($value == 0.0){
 			return pack('c', 0x5b);
@@ -338,7 +353,13 @@ class Hessian2Writer{
 		}
 
 		// Issue 10, Fix thanks to nesnnaho...@googlemail.com,
-		if($frac == 0 && $this->between($value, -127, 128)){
+
+		/**
+		 * FIX 2016年10月06日 范围搞错，应该为[-128, 127]
+		 * @author 炒饭
+		 */
+		// if($frac == 0 && $this->between($value, -127, 128)){
+		if($frac == 0 && $this->between($value, -128, 127)){
 			return pack('c', 0x5d) . pack('c', $value);
 		}
 		if($frac == 0 && $this->between($value, -32768, 32767)){
@@ -346,16 +367,25 @@ class Hessian2Writer{
 			$stream .= HessianUtils::floatBytes($value);
 			return $stream;
 		}
+
 		// TODO double 4 el del 0.001, revisar
 		$mills = (int) ($value * 1000);
-	    if (0.001 * $mills == $value) {
-	    	$stream = pack('c', 0x5f);
-	      	$stream .= pack('c', $mills >> 24);
-	      	$stream .= pack('c', $mills >> 16);
-	      	$stream .= pack('c', $mills >> 8);
-	      	$stream .= pack('c', $mills);
+		/**
+		 * FIX 2016年09月26日18:58:21 64位下，写入浮点数出错
+		 * @author 炒饭
+		 */
+		// - if (0.001 * $mills == $value)
+		if (0.001 * $mills == $value
+			&& $this->between($mills, -2147483648, 2147483647))
+		{
+			$stream = pack('c', 0x5f);
+			$stream .= pack('c', $mills >> 24);
+			$stream .= pack('c', $mills >> 16);
+			$stream .= pack('c', $mills >> 8);
+			$stream .= pack('c', $mills);
 			return $stream;
-	    }
+		}
+
 		// 64 bit double
 		$stream = 'D';
 		$stream .= HessianUtils::doubleBytes($value);

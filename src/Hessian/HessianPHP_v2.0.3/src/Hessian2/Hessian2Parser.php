@@ -137,9 +137,15 @@ class Hessian2Parser{
 		return ((ord($code) - 0xd4) << 16) + ($b1 << 8) + $b0;
 	}
 
+	// 32位数字
 	function parseInt($code, $num){
 		$data = unpack('N', $this->read(4));
-		return $data[1];
+		$value = $data[1];
+
+		if ($value > 0x7fffffff) {
+			$value = $value - 0x100000000;
+		}
+		return $value;
 	}
 
 	function bool($code, $num){
@@ -174,13 +180,32 @@ class Hessian2Parser{
 		if($num == 0x5c)
 			return (float)1.0;
 		$bytes = $this->read(1);
-		return (float)ord($bytes);
+
+		/**
+		 * FIX 2016年09月26日20:47:38 修复负整数情况
+		 * @author 炒饭
+		 */
+		$num = ord($bytes);
+		if ($num > 0x7f) {
+			$num = $num - 0x100;
+		}
+		return (float)$num;
 	}
 
 	function double2($code, $num){
 		$bytes = $this->read(2);
 		$b = unpack('s', strrev($bytes));
-		return (float)$b[1];
+
+		/**
+		 * FIX 2016年09月26日20:47:38 修复负整数情况
+		 * @author 炒饭
+		 */
+		$num = $b[1];
+		if ($num > 0x7fff) {
+			$num = $num - 0x10000;
+		}
+
+		return (float)$num;
 	}
 
 	function double4($code, $num){
@@ -189,6 +214,14 @@ class Hessian2Parser{
 				(ord($b[1]) << 16) +
 				(ord($b[2]) << 8) +
 				ord($b[3]);
+
+		/**
+		 * FIX 2016年09月26日20:47:38 修复负整数情况
+		 * @author 炒饭
+		 */
+		if ($num > 0x7fffffff) {
+			$num = $num - 0x100000000;
+		}
 		return 0.001 * $num;
 		// from the java implementation, this makes no sense
 		// why not just use the float bytes as any sane language and pack it like 'f'?
@@ -230,10 +263,16 @@ class Hessian2Parser{
 	}
 
 	function long32($code, $num){
-		return ($this->readNum() << 24) +
+		$value = ($this->readNum() << 24) +
 				($this->readNum() << 16) +
 				($this->readNum() << 8) +
 				$this->readNum();
+
+		if ($value > 0x7fffffff) {
+			return $value - 0x100000000;
+		}
+
+		return $value;
 	}
 
 	function long64($code, $num){
@@ -294,6 +333,9 @@ class Hessian2Parser{
 		$string = $this->read($len);
 		$pos = 0;
 		$pass = 1;
+
+		$needIconv = false;
+
 		while($pass <= $len){
 			$charCode = ord($string[$pos]);
 			if($charCode < 0x80){
@@ -304,6 +346,10 @@ class Hessian2Parser{
 			} elseif (($charCode & 0xf0) == 0xe0) {
 				$pos += 3;
 				$string .= $this->read(2);
+				$needIconv = true;
+			} elseif (($charCode & 0xf8) == 0xf0) {
+				$pos += 4;
+				$string .= $this->read(3);
 			}
 			$pass++;
 		}
@@ -313,7 +359,11 @@ class Hessian2Parser{
 		}
 
 		// utf8mb4忽略无法理解的编码
-		return iconv('GBK', 'UTF-8//IGNORE', iconv('UTF-8', 'GBK//IGNORE', $string));
+		if ($needIconv) {
+			return iconv('GBK', 'UTF-8//TRANSLIT', iconv('UTF-8', 'GBK//IGNORE', $string));
+		}
+
+		return $string;
 
 		/*$string = '';
 		for($i=0;$i<$len;$i++){

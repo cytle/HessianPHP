@@ -17,9 +17,6 @@ use LibHessian\Hessian\HessianClient;
  */
 class HessianHelpers {
 
-    protected static $hessianClients = [];
-
-
     /**
      * 获取hessian客户端
      * @author xsp
@@ -29,20 +26,16 @@ class HessianHelpers {
      */
     public static function getClient($url, $options = [])
     {
-        if (! isset(static::$hessianClients[$url])) {
-            if (! isset($options['writeFilters'])) {
-                $options['writeFilters'] = BasicWriteFilters::getFilters();
-            } else if ($options['writeFilters']) {
-                $options['writeFilters'] = array_merge(
-                    BasicWriteFilters::getFilters(),
-                    $options['writeFilters']
-                );
-            }
-
-            static::$hessianClients[$url] = static::createClient($url, $options);
+        if (! isset($options['writeFilters'])) {
+            $options['writeFilters'] = BasicWriteFilters::getFilters();
+        } else if ($options['writeFilters']) {
+            $options['writeFilters'] = array_merge(
+                BasicWriteFilters::getFilters(),
+                $options['writeFilters']
+            );
         }
 
-        return static::$hessianClients[$url];
+        return static::createClient($url, $options);
     }
 
     /**
