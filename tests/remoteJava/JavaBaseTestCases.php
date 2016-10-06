@@ -49,13 +49,13 @@ class JavaBaseTestCases extends TestCase
     ];
 
     public $longBoundary = [
-        'max'         => 9223372036854775807,
-        'min'         => -9223372036854775808,
-        '2147483648'  => 2147483648,
-        '4294967295'  => 4294967295,
-        '-4294967295' => -4294967295,
-        'a'           => 5124567855432488,
-        '0x100000000' => 0x100000000,
+        'max'              => 9223372036854775807,
+        'min'              => -9223372036854775808,
+        '2147483648'       => 2147483648,
+        '4294967295'       => 4294967295,
+        '-4294967295'      => -4294967295,
+        '5124567855432488' => 5124567855432488,
+        '0x100000000'      => 0x100000000,
     ];
 
     public function testInt()
@@ -67,36 +67,45 @@ class JavaBaseTestCases extends TestCase
 
     public function testLong()
     {
-        foreach ($this->longBoundary as $key => $value) {
-            $this->assertVaule($value, 'longNum', "longBoundary=>${key}");
+        $list = array_unique(array_merge(
+            array_values($this->longBoundary),
+            array_values($this->intBoundary)
+        ));
+
+        foreach ($list as $key => $value) {
+            $this->assertVaule($value, 'longNum');
         }
     }
 
     public function testCreateLong()
     {
-        foreach ($this->longBoundary as $key => $value) {
+        $list = array_unique(array_merge(
+            array_values($this->longBoundary),
+            array_values($this->intBoundary)
+        ));
 
+        foreach ($list as $key => $value) {
             $testModel = [
                 'longNum' => HessianHelpers::createLong($value)
             ];
+
             $data = $this->query($testModel);
 
-            $this->assertEquals($value, $data->longNum, "longBoundary=>${key}");
+            $this->assertEquals($value, $data->longNum);
         }
     }
 
     public function testIntList()
     {
-        $list = $this->intBoundary;
+        $list = array_values($this->intBoundary);
+
         $a = $this->intBoundary['max'];
 
         while ($a > 1) {
-            $a = intval($a / 10);
+            $a = intval($a / 13);
             array_unshift($list, $a);
             $list[] = -1 * $a;
         }
-
-        $list = array_values($list);
 
         $testModel = [
             'intList' => $list,
@@ -112,20 +121,21 @@ class JavaBaseTestCases extends TestCase
 
     public function testLongList()
     {
-        $list = $this->longBoundary;
+        $list = array_merge(
+            array_values($this->longBoundary),
+            array_values($this->intBoundary)
+        );
+
         $a = $this->longBoundary['max'];
 
         while ($a > 1) {
-            $a = intval($a / 10);
+            $a = intval($a / 13);
             array_unshift($list, $a);
             $list[] = -1 * $a;
         }
 
-        $list = array_values($list);
-        $list = array_merge($list, array_values($this->intBoundary));
-
         $testModel = [
-            'longList' => $list,
+            'longList' => ($list),
         ];
 
         $longList = $this->query($testModel)->longList;
@@ -138,22 +148,29 @@ class JavaBaseTestCases extends TestCase
 
     public function testDoubleList()
     {
-        $list = $this->longBoundary;
+        // 0点边际值
+        $list = array_merge(
+            array_values($this->longBoundary),
+            array_values($this->intBoundary)
+        );
+
+        $list[] = 0;
+
+        // 以13为间隔测试
         $a = $this->longBoundary['max'];
 
         while ($a > 1) {
-            $a = intval($a / 10);
+            $a = $a / 13;
             array_unshift($list, $a);
             $list[] = -1 * $a;
         }
 
-        $list = array_values($list);
-        $list = array_merge($list, array_values($this->intBoundary));
+        $list = array_map(function ($v) {
+            return floatval($v);
+        }, $list);
 
         $testModel = [
-            'doubleList' => array_map(function ($v) {
-                return floatval($v);
-            }, $list)
+            'doubleList' => $list
         ];
 
         $doubleList = $this->query($testModel)->doubleList;
@@ -165,7 +182,6 @@ class JavaBaseTestCases extends TestCase
 
     public function testDouble()
     {
-
         $this->assertVaule(127.0, 'doubleNum', "testDouble");
         $this->assertVaule(-128.0, 'doubleNum', "testDouble");
 
@@ -195,7 +211,6 @@ class JavaBaseTestCases extends TestCase
         $this->assertArraySubset($value, $actual);
     }
 
-
     public function testString()
     {
         // Á
@@ -208,9 +223,19 @@ class JavaBaseTestCases extends TestCase
         $testModel = [
             $name => $value
         ];
-        $actual = $this->query($testModel)->{$name};
+        $actual = $this->queryItem($value, $name)->{$name};
 
         $this->assertEquals($value, $actual, $message);
+    }
+
+    protected function queryItem($value, $name)
+    {
+        $testModel = [
+            $name => $value
+        ];
+        $testModel = $this->query($testModel);
+
+        return $testModel;
     }
 
     protected function query(array $testModel)
@@ -228,7 +253,6 @@ class JavaBaseTestCases extends TestCase
         $testModel = $this->queryJson($testModel);
 
         return $testModel;
-
     }
 
 
