@@ -685,3 +685,23 @@ class Hessian2Parser{
     }
 
 ```
+
+
+## fix:修复写入double 128 -128 边际值错误
+2016年10月06日15:49:13
+
+```php
+<?php
+// Hessian2Write@writeDouble
+        /**
+         * FIX 2016年10月06日 范围搞错，应该为[-128, 127]
+         * 此处原为 $frac == 0 && $this->between($value, -127, 128)
+         * 而实际上边际应该为 [-0x80, 0x7f] 即 [-128, 127]
+         *
+         * @author 炒饭
+         */
+        if($frac == 0 && $this->between($value, -128, 127)){
+            return pack('c', 0x5d) . pack('c', $value);
+        }
+
+```

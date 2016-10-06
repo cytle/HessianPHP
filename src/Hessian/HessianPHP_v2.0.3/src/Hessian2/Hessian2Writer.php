@@ -353,7 +353,13 @@ class Hessian2Writer{
 		}
 
 		// Issue 10, Fix thanks to nesnnaho...@googlemail.com,
-		if($frac == 0 && $this->between($value, -127, 128)){
+
+		/**
+		 * FIX 2016年10月06日 范围搞错，应该为[-128, 127]
+		 * @author 炒饭
+		 */
+		// if($frac == 0 && $this->between($value, -127, 128)){
+		if($frac == 0 && $this->between($value, -128, 127)){
 			return pack('c', 0x5d) . pack('c', $value);
 		}
 		if($frac == 0 && $this->between($value, -32768, 32767)){

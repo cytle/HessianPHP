@@ -46,6 +46,7 @@ $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实�
 - fix:utf8mb4 增加4字节字符解析（Hessian1也修复）
 - fix:64位下，写入三位小数浮点数出错
 - fix:修复非64位负整浮点数bug
+- fix:修复写入double 128 -128 边际值错误
 
 
 ## TODO
