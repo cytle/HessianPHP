@@ -9,7 +9,8 @@ class HessianTest extends TestCase
 {
 
     protected $orderServiceUrl = 'http://192.168.30.126:8080/orderservice/querySellerOrder';
-    protected $dormServiceUrl = 'http://192.168.30.207:8080/dormservice/dorm';
+    protected $dormServiceUrl = 'http://192.168.30.88:8080/dormservice/dorm';
+    protected $dormShopServiceUrl = 'http://192.168.30.196:8080/dormservice/dormshop';
     protected $purchaseOrderServiceUrl = 'http://192.168.30.200:8080/purchaseservice/purchaseorder';
 
      public function testOne()
@@ -111,19 +112,49 @@ class HessianTest extends TestCase
         //     ], 1, 1]);
 
 
-        $order = HessianHelpers::query($url, 'queryOrder', ['03605400850810982202195', (object) [
+        $re = HessianHelpers::query($url, 'queryOrder', ['03605400850810982202195', (object) [
             // 'withOrderItems' => true,
             // 'withOrderPays'  => true,
             ]]);
 
-        $this->assertEquals(0, $order->status);
+        $this->assertEquals(0, $re->status);
 
-        $order = $order->data;
-
-        // echo PHP_EOL;
-        // echo ($order->buyerRemark);
-        // echo PHP_EOL;
+        $order = $re->data;
+        echo PHP_EOL;
+        // print_r($re);
+        echo ($order->buyerRemark);
+        echo PHP_EOL;
     }
+
+    // public function testDormShop()
+    // {
+    //     $url = $this->dormShopServiceUrl;
+
+    //     // $order = HessianHelpers::query($url, 'queryOrdersPaging', [(object) [
+    //     //     'withOrderItems' => true,
+    //     //     'withOrderPays'  => true,
+    //     //     ], 1, 1]);
+
+
+    //     $re = HessianHelpers::query($url, 'findByShopId', [
+    //         32777,
+    //         false,
+    //         false,
+    //         false,
+    //         false
+    //         ]);
+
+    //     $this->assertEquals(0, $re->status);
+
+    //     $dormShop = $re->data;
+
+    //     print_r($re);
+
+
+    //     // echo PHP_EOL;
+    //     // echo ($order->buyerRemark);
+    //     // echo PHP_EOL;
+    // }
 
     /**
      * @expectedException     LibHessian\Exceptions\HessianException

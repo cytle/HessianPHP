@@ -327,7 +327,16 @@ class Hessian2Parser{
 		} while (!$final);
 		return $data;
 	}
-
+	function unicode_to_utf8($unicode_str) {
+	    $utf8_str = '';
+	    $code = intval(hexdec($unicode_str));
+	    //这里注意转换出来的code一定得是整形，这样才会正确的按位操作
+	    $ord_1 = decbin(0xe0 | ($code >> 12));
+	    $ord_2 = decbin(0x80 | (($code >> 6) & 0x3f));
+	    $ord_3 = decbin(0x80 | ($code & 0x3f));
+	    $utf8_str = chr(bindec($ord_1)) . chr(bindec($ord_2)) . chr(bindec($ord_3));
+	    return $utf8_str;
+	}
 	function readUTF8Bytes($len){
 		$string = $this->read($len);
 		$pos = 0;
@@ -344,8 +353,13 @@ class Hessian2Parser{
 				$string .= $this->read(1);
 			} elseif (($charCode & 0xf0) == 0xe0) {
 				$pos += 3;
+				// $ch1 = $this->read(1);
+				// $ch2 = $this->read(1);
+
+				// $string .= $this->unicode_to_utf8($this->read(2));
+				// $string .= $this->read(2);
 				$string .= $this->read(2);
-				$needIconv = true;
+				// $needIconv = true;
 			} elseif (($charCode & 0xf8) == 0xf0) {
 				$pos += 4;
 				$string .= $this->read(3);
@@ -356,6 +370,7 @@ class Hessian2Parser{
 		if(! HessianUtils::isInternalUTF8()){
 			$string = utf8_decode($string);
 		}
+		// $string = str_replace("�", "------", $string );
 
 		// return $string;
 		// utf8mb4忽略无法理解的编码
