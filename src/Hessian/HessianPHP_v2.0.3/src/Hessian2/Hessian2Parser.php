@@ -200,11 +200,12 @@ class Hessian2Parser{
 		 * FIX 2016年09月26日20:47:38 修复负整数情况
 		 * @author 炒饭
 		 */
-		if ($b[1] > 0x7fff) {
-			$b[1] = $b[1] - 0x10000;
+		$num = $b[1];
+		if ($num > 0x7fff) {
+			$num = $num - 0x10000;
 		}
 
-		return (float)$b[1];
+		return (float)$num;
 	}
 
 	function double4($code, $num){
@@ -267,8 +268,8 @@ class Hessian2Parser{
 				($this->readNum() << 8) +
 				$this->readNum();
 
-		if ($num > 0x7fffffff) {
-			$num = $num - 0x100000000;
+		if ($value > 0x7fffffff) {
+			return $value - 0x100000000;
 		}
 
 		return $value;
