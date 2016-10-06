@@ -188,6 +188,9 @@ class Hessian1Parser{
 			} elseif (($charCode & 0xf0) == 0xe0) {
 				$pos += 3;
 				$string .= $this->read(2);
+			} elseif (($charCode & 0xf8) == 0xf0) {
+				$pos += 4;
+				$string .= $this->read(3);
 			}
 			$pass++;
 		}

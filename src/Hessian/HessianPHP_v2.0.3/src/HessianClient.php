@@ -11,14 +11,14 @@ include_once 'HessianFactory.php';
 include_once 'HessianTransport.php';
 
 /**
- * Proxy to issue RPC calls to remote Hessian services 
+ * Proxy to issue RPC calls to remote Hessian services
  */
 class HessianClient{
 	private $url;
 	private $options;
 	private $typemap;
 	protected $factory;
-	
+
 	/**
 	 * Creates a new Client proxy, takes an url and an optional options object
 	 * that can also be an array
@@ -31,9 +31,9 @@ class HessianClient{
 		$this->typemap = new HessianTypeMap($this->options->typeMap);
 		$this->factory = new HessianFactory();
 	}
-	
+
 	/**
-	 * Issues a call to a remote service. It will raise a HessianFault exception if 
+	 * Issues a call to a remote service. It will raise a HessianFault exception if
 	 * there is an error
 	 * @param string $method Name of the method in the remote service
 	 * @param array $arguments Optional arguments
@@ -46,8 +46,8 @@ class HessianClient{
 		$writer = $this->factory->getWriter(null, $this->options);
 		$writer->setTypeMap($this->typemap);
 
-			
-		
+
+
 		$ctx = new HessianCallingContext();
 		$ctx->writer = $writer;
 		$ctx->transport = $transport;
@@ -57,19 +57,19 @@ class HessianClient{
 		$ctx->url = $this->url;
 		$ctx->payload = $writer->writeCall($method, $arguments);
 		$args = array($ctx);
-		
+
 		foreach($this->options->interceptors as $interceptor){
 			$interceptor->beforeRequest($ctx);
 		}
 		$this->__handleCallbacks($this->options->before, $args);
-		
+
 		$stream = $transport->getStream($this->url, $ctx->payload, $this->options);
 		$parser = $this->factory->getParser($stream, $this->options);
 		$parser->setTypeMap($this->typemap);
 		// TODO deal with headers, packets and the rest of aditional stuff
 		$ctx->parser = $parser;
 		$ctx->stream = $stream;
-		
+
 		try{
 			$result = $parser->parseTop();
 		} catch(Exception $e){
@@ -79,12 +79,12 @@ class HessianClient{
 			$interceptor->afterRequest($ctx);
 		}
 		$this->__handleCallbacks($this->options->after, $args);
-		
+
 		if($ctx->error instanceof Exception)
 			throw $ctx->error;
 		return $result;
 	}
-	
+
 	private function __handleCallbacks($callbacks, $arguments){
 		if(!$callbacks)
 			return;
@@ -99,7 +99,7 @@ class HessianClient{
 			}
 		}
 	}
-	
+
 	/**
 	 * Magic function wrapper for the remote call. It will fail if called
 	 * with methods that start with __ which are conventionally private
@@ -108,9 +108,9 @@ class HessianClient{
 	 * @return mixed Result of the remote call
 	 */
 	public function __call($method, $arguments){
-		return $this->__hessianCall($method, $arguments); 
+		return $this->__hessianCall($method, $arguments);
 	}
-	
+
 	/**
 	 * Returns this client's current options
 	 * @return HessianOptions
@@ -118,7 +118,7 @@ class HessianClient{
 	public function __getOptions(){
 		return $this->options;
 	}
-	
+
 	/**
 	 * Returns the current typemap for this client
 	 * @return HessianTypeMap

@@ -12,7 +12,7 @@ include_once 'Hessian2Writer.php';
 class Hessian2ServiceWriter extends Hessian2Writer{
 
 	// web services
-	
+
 	function writeCall($method, $params = array()){
 		$this->logMsg("call $method");
 		$stream = $this->writeVersion();
@@ -24,7 +24,7 @@ class Hessian2ServiceWriter extends Hessian2Writer{
 		}
 		return $stream;
 	}
-	
+
 	function writeFault(Exception $ex, $detail = null){
 		$this->logMsg("fault");
 		$stream = $this->writeVersion();
@@ -37,7 +37,7 @@ class Hessian2ServiceWriter extends Hessian2Writer{
 		$stream .= $this->writeMap($arr);
 		return $stream;
 	}
-	
+
 	function writeReply($value){
 		$this->logMsg("reply");
 		$stream = $this->writeVersion();
@@ -45,7 +45,7 @@ class Hessian2ServiceWriter extends Hessian2Writer{
 		$stream .= $this->writeValue($value);
 		return $stream;
 	}
-	
+
 	function writeVersion(){
 		return "H\x02\x00";
 	}
