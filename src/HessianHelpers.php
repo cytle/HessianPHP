@@ -17,14 +17,17 @@ use LibHessian\Hessian\HessianClient;
  */
 class HessianHelpers {
 
+    protected static $clients = [];
+
     /**
      * 获取hessian客户端
      * @author xsp
      *
-     * @param  string $url
+     * @param  string  $url
+     * @param  array   $options  配置
      * @return object
      */
-    public static function getClient($url, $options = [])
+    public static function getClient($url, array $options = [])
     {
         if (! isset($options['writeFilters'])) {
             $options['writeFilters'] = BasicWriteFilters::getFilters();
@@ -38,6 +41,24 @@ class HessianHelpers {
         return static::createClient($url, $options);
     }
 
+
+    /**
+     * 根据缓存情况获取hessian客户端
+     * @author xsp
+     *
+     * @param  string  $url
+     * @param  array   $options  配置
+     * @return object
+     */
+    public static function getClientByCacheOfUrlAndMethod($url, $method = '', array $options = [])
+    {
+        if (! isset(static::$clients[$url][$method])) {
+            static::$clients[$url][$method] = static::getClient($url, $options);
+        }
+
+        return static::$clients[$url][$method];
+    }
+
     /**
      * 使用hessian查询
      * @author xsp
@@ -47,11 +68,10 @@ class HessianHelpers {
      * @param  array $arguments
      * @return object
      */
-    public static function query($url, $method, array $arguments = [], $options = [])
+    public static function query($url, $method, array $arguments = [], array $options = [])
     {
         try {
-
-            $hessian = static::getClient($url, $options);
+            $hessian = static::getClientByCacheOfUrlAndMethod($url, $method, $options);
             $result = $hessian->__hessianCall($method, $arguments);
 
             return $result;
@@ -77,7 +97,7 @@ class HessianHelpers {
      * @param  HessianOptions|array $options 配置
      * @return object
      */
-    public static function createClient($url, $options = [])
+    public static function createClient($url, array $options = [])
     {
         return new HessianClient($url, $options);
     }
