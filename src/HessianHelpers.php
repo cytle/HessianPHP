@@ -25,31 +25,38 @@ class HessianHelpers {
      *
      * @param  string  $url
      * @param  array   $options  配置
-     * @param  boolean $cache    是否使用缓存
      * @return object
      */
-    public static function getClient($url, array $options = [], $cache = true)
+    public static function getClient($url, array $options = [])
     {
-        if (! $cache || ! isset(static::$clients[$url])) {
-            if (! isset($options['writeFilters'])) {
-                $options['writeFilters'] = BasicWriteFilters::getFilters();
-            } else if ($options['writeFilters']) {
-                $options['writeFilters'] = array_merge(
-                    BasicWriteFilters::getFilters(),
-                    $options['writeFilters']
-                );
-            }
+        if (! isset($options['writeFilters'])) {
+            $options['writeFilters'] = BasicWriteFilters::getFilters();
+        } else if ($options['writeFilters']) {
+            $options['writeFilters'] = array_merge(
+                BasicWriteFilters::getFilters(),
+                $options['writeFilters']
+            );
         }
 
-        if (! $cache) {
-            return static::createClient($url, $options);
+        return static::createClient($url, $options);
+    }
+
+
+    /**
+     * 根据缓存情况获取hessian客户端
+     * @author xsp
+     *
+     * @param  string  $url
+     * @param  array   $options  配置
+     * @return object
+     */
+    public static function getClientByCacheOfUrlAndMethod($url, $method = '', array $options = [])
+    {
+        if (! isset(static::$clients[$url][$method])) {
+            static::$clients[$url][$method] = static::getClient($url, $options);
         }
 
-        if (! isset(static::$clients[$url])) {
-            static::$clients[$url] = static::createClient($url, $options);
-        }
-
-        return static::$clients[$url];
+        return static::$clients[$url][$method];
     }
 
     /**
@@ -61,10 +68,10 @@ class HessianHelpers {
      * @param  array $arguments
      * @return object
      */
-    public static function query($url, $method, array $arguments = [], $options = [])
+    public static function query($url, $method, array $arguments = [], array $options = [])
     {
         try {
-            $hessian = static::getClient($url, $options);
+            $hessian = static::getClientByCacheOfUrlAndMethod($url, $method, $options);
             $result = $hessian->__hessianCall($method, $arguments);
 
             return $result;
