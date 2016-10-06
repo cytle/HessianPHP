@@ -51,15 +51,14 @@ class Interceptor implements IHessianInterceptor{
 class BaseTestCases extends TestCase {
     var $version = 2;
     var $proxy;
+    // 是否为64位
+    var $isOn64bitsSystem = PHP_INT_SIZE === 8;
     protected static $url;
 
     // java 数据边界
     public $intBoundary = [
         'max'         => 2147483647,
-        // 'min'         => -2147483648,
-        'twoByteMin'  => -262144,
         'twoByteMax'  => 262143,
-        'oneByteMin'  => -2048,
         'oneByteMax'  => 2047,
         '0x7f'        => 0x7f,
         '0x80'        => 0x80,
@@ -72,13 +71,17 @@ class BaseTestCases extends TestCase {
         '0x7fffffff'  => 0x7fffffff,
         '0x80000000'  => 0x80000000,
         '0xffffffff'  => 0xffffffff,
-        '0x100000000' => 0x100000000,
+
+        'min'         => -2147483648,
+        'twoByteMin'  => -262144,
+        'oneByteMin'  => -2048,
     ];
 
     public $longBoundary = [
         'max' => 9223372036854775807,
         'min' => -9223372036854775808,
         'a'   => 5124567855432488,
+        '0x100000000' => 0x100000000,
     ];
 
 
@@ -109,13 +112,24 @@ class BaseTestCases extends TestCase {
 
     // Tests if sent and received values are equal
     function testEcho(){
-        //Á
+        //
         $values = array(
-            555.00, 666.00, 102456.5646, 'Hello', 'mbito', 546546, false, true,
+            555.00, 666.00, 102456.5646, 'Hello', 'mbÁito', 546546, false, true,
             1.0, -1.0, -9.0, -127.0, -128.0, -256.0, -257.0, -212.0, -1.1, -0, -1.2, -444.0
         );
         $values = array_merge($this->intBoundary, $values);
-        $values = array_merge($this->longBoundary, $values);
+
+        if ($this->version === 1 && $this->isOn64bitsSystem) {
+            // version 1 64位下测试剔除负数
+            $values = array_filter($values, function ($v) {
+                return ! is_numeric($v) || $v >= 0;
+            });
+        }
+
+        if ($this->version === 2) {
+           $values = array_merge($this->longBoundary, $values);
+        }
+
         foreach($values as $k => $value){
             $ret = $this->proxy->testEcho($value);
             $this->assertEquals($value, $ret, $k);
@@ -139,19 +153,11 @@ class BaseTestCases extends TestCase {
         try{
             $expected = "áé";
             $str = $this->proxy->testConcatString("á", "é");
-            //var_dump($str);
-            //var_dump($expected);
             $this->assertEquals($expected, $str);
         }catch(Exception $e){
             nLog(__METHOD__, $e);
             throw $e;
         }
-    }
-
-    function testStringToLong() {
-        $val = $this->proxy->testStringToLong('5124567855432488');
-
-        $this->assertEquals(5124567855432488, $val);
     }
 
     function testStringTo64Long() {
@@ -160,11 +166,17 @@ class BaseTestCases extends TestCase {
               'version 1 不支持 64位数字'
             );
         } else {
-            $val = $this->proxy->testStringToLong('9223372036854775807');
-            $this->assertEquals(9223372036854775807, $val);
+            $values = [
+                '9223372036854775807'  => 9223372036854775807,
+                '-9223372036854775808' => -9223372036854775808,
+                '5124567855432488'     => 5124567855432488,
+                '4294967296'           => 4294967296,
+            ];
 
-            $val = $this->proxy->testStringToLong('-9223372036854775808');
-            $this->assertEquals(-9223372036854775808, $val);
+            foreach($values as $k => $value){
+                $ret = $this->proxy->testStringToLong($k);
+                $this->assertEquals($value, $ret, $k);
+            }
         }
     }
 
@@ -182,9 +194,61 @@ class BaseTestCases extends TestCase {
         $short = $this->proxy->testStringToShort('17');
         $this->assertEquals(17, $short);
     }
+
     function testStringToInt(){
-        $int = $this->proxy->testStringToInt('17');
-        $this->assertEquals(17, $int);
+
+        $values       = [
+            '127'         => 127,
+            '128'         => 128,
+            '255'         => 255,
+            '256'         => 256,
+            '2047'        => 2047,
+            '2048'        => 2048,
+            '32767'       => 32767,
+            '32768'       => 32768,
+            '65535'       => 65535,
+            '65536'       => 65536,
+            '262144'      => 262144,
+            '262143'      => 262143,
+            '2147483647'  => 2147483647,
+            '2147483648'  => 2147483648,
+            '4294967295'  => 4294967295,
+        ];
+
+        foreach($values as $k => $value){
+            $ret = $this->proxy->testStringToInt($k);
+            $this->assertEquals($value, $ret, $k);
+        }
+    }
+    function testStringToNegativeInt() {
+         if ($this->version === 1 && $this->isOn64bitsSystem) {
+            $this->markTestSkipped(
+              'version 1 不支持 64位下负整数无法完成'
+            );
+        } else {
+            $values = [
+                '-127'        => -127,
+                '-128'        => -128,
+                '-255'        => -255,
+                '-256'        => -256,
+                '-2047'       => -2047,
+                '-2048'       => -2048,
+                '-32767'      => -32767,
+                '-32768'      => -32768,
+                '-65535'      => -65535,
+                '-65536'      => -65536,
+                '-262144'     => -262144,
+                '-262143'     => -262143,
+                '-2147483647' => -2147483647,
+                '-2147483648' => -2147483648,
+                '-4294967295' => -4294967295,
+            ];
+
+            foreach($values as $k => $value){
+                $ret = $this->proxy->testStringToInt($k);
+                $this->assertEquals($value, $ret, $k);
+            }
+        }
     }
     function testStringToFloat(){
         // Different format for .net

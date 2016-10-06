@@ -9,40 +9,57 @@ class JavaBaseTestCases extends TestCase
 {
     var $version = 2;
     var $options;
+
+    // 是否为64位
+    var $isOn64bitsSystem = PHP_INT_SIZE === 8;
     var $url = 'http://192.168.30.161:8088/phptest/phpApi';
 
 
     // java 数据边界
     public $intBoundary = [
-        'max'        => 2147483647,
-        'min'        => -2147483648,
-        'twoByteMin' => -262144,
-        'twoByteMax' => 262143,
-        'oneByteMin' => -2048,
-        'oneByteMax' => 2047,
-        '0x7f' => 0x7f,
-        '0x80' => 0x80,
-        '0xff' => 0xff,
-        '0x100' => 0x100,
-        '0x7fff' => 0x7fff,
-        '0x8000' => 0x8000,
-        '0xffff' => 0xffff,
-        '0x10000' => 0x10000,
-        '0x7fffffff' => 0x7fffffff,
-        '0x80000000' => 0x80000000,
-        '0xffffffff' => 0xffffffff,
-        '0x100000000' => 0x100000000,
+        'max'         => 2147483647,
+        'min'         => -2147483648,
+        '127'         => 127,
+        '128'         => 128,
+        '255'         => 255,
+        '256'         => 256,
+        '2047'        => 2047,
+        '2048'        => 2048,
+        '32767'       => 32767,
+        '32768'       => 32768,
+        '65535'       => 65535,
+        '65536'       => 65536,
+        '262144'      => 262144,
+        '262143'      => 262143,
+        '-127'        => -127,
+        '-128'        => -128,
+        '-255'        => -255,
+        '-256'        => -256,
+        '-2047'       => -2047,
+        '-2048'       => -2048,
+        '-32767'      => -32767,
+        '-32768'      => -32768,
+        '-65535'      => -65535,
+        '-65536'      => -65536,
+        '-262144'     => -262144,
+        '-262143'     => -262143,
+        '2147483647'  => 2147483647,
+        '-2147483647' => -2147483647,
+        '-2147483648' => -2147483648,
     ];
 
     public $longBoundary = [
-        'max' => 9223372036854775807,
-        'min' => -9223372036854775808,
-        'a' => 5124567855432488,
+        'max'         => 9223372036854775807,
+        'min'         => -9223372036854775808,
+        '2147483648'  => 2147483648,
+        '4294967295'  => 4294967295,
+        '-4294967295' => -4294967295,
+        'a'           => 5124567855432488,
+        '0x100000000' => 0x100000000,
     ];
 
     public function testInt()
     {
-        echo $this->queryJsonItem(0xffffffff, 'intNum'), PHP_EOL;
         foreach ($this->intBoundary as $key => $value) {
             $this->assertVaule($value, 'intNum', "intBoundary=>${key}");
         }
@@ -134,14 +151,12 @@ class JavaBaseTestCases extends TestCase
         $list = array_merge($list, array_values($this->intBoundary));
 
         $testModel = [
-
             'doubleList' => array_map(function ($v) {
                 return floatval($v);
             }, $list)
         ];
 
         $doubleList = $this->query($testModel)->doubleList;
-
 
         foreach ($list as $key => $value) {
             $this->assertEquals($value, $doubleList[$key]);
@@ -150,6 +165,10 @@ class JavaBaseTestCases extends TestCase
 
     public function testDouble()
     {
+
+        $this->assertVaule(127.0, 'doubleNum', "testDouble");
+        $this->assertVaule(-128.0, 'doubleNum', "testDouble");
+
         $this->assertVaule(123.0, 'doubleNum', "testDouble");
 
         $this->assertVaule(5124567855432488.0, 'doubleNum', "testDouble");
@@ -165,7 +184,7 @@ class JavaBaseTestCases extends TestCase
     public function testIntMap()
     {
         $value = [
-            'asd@' => 123
+            'asd' => 123
         ];
         $testModel = [
             'intMap' => (object) $value
@@ -179,11 +198,12 @@ class JavaBaseTestCases extends TestCase
 
     public function testString()
     {
-        $this->assertVaule('12ÁAC哈哈', 'str', "testString");
+        // Á
+        $this->assertVaule('12AC哈哈', 'str', "testString");
     }
 
 
-    public function assertVaule($value, $name, $message = '')
+    protected function assertVaule($value, $name, $message = '')
     {
         $testModel = [
             $name => $value
@@ -193,14 +213,14 @@ class JavaBaseTestCases extends TestCase
         $this->assertEquals($value, $actual, $message);
     }
 
-    public function query(array $testModel)
+    protected function query(array $testModel)
     {
         return HessianHelpers::query($this->url, 'test', [ new TestModel($testModel) ], [
             'version' => $this->version
         ]);
     }
 
-    public function queryJsonItem($value, $name)
+    protected function queryJsonItem($value, $name)
     {
         $testModel = [
             $name => $value
@@ -212,11 +232,13 @@ class JavaBaseTestCases extends TestCase
     }
 
 
-    public function queryJson(array $testModel)
+    protected function queryJson(array $testModel)
     {
-        return HessianHelpers::query($this->url, 'toString', [ new TestModel($testModel) ], [
+        $json = HessianHelpers::query($this->url, 'toString', [ new TestModel($testModel) ], [
             'version' => $this->version
         ]);
+
+        return json_decode($json);
     }
 
 }
