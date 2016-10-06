@@ -17,25 +17,39 @@ use LibHessian\Hessian\HessianClient;
  */
 class HessianHelpers {
 
+    protected static $clients = [];
+
     /**
      * 获取hessian客户端
      * @author xsp
      *
-     * @param  string $url
+     * @param  string  $url
+     * @param  array   $options  配置
+     * @param  boolean $cache    是否使用缓存
      * @return object
      */
-    public static function getClient($url, $options = [])
+    public static function getClient($url, array $options = [], $cache = true)
     {
-        if (! isset($options['writeFilters'])) {
-            $options['writeFilters'] = BasicWriteFilters::getFilters();
-        } else if ($options['writeFilters']) {
-            $options['writeFilters'] = array_merge(
-                BasicWriteFilters::getFilters(),
-                $options['writeFilters']
-            );
+        if (! $cache || ! isset(static::$clients[$url])) {
+            if (! isset($options['writeFilters'])) {
+                $options['writeFilters'] = BasicWriteFilters::getFilters();
+            } else if ($options['writeFilters']) {
+                $options['writeFilters'] = array_merge(
+                    BasicWriteFilters::getFilters(),
+                    $options['writeFilters']
+                );
+            }
         }
 
-        return static::createClient($url, $options);
+        if (! $cache) {
+            return static::createClient($url, $options);
+        }
+
+        if (! isset(static::$clients[$url])) {
+            static::$clients[$url] = static::createClient($url, $options);
+        }
+
+        return static::$clients[$url];
     }
 
     /**
@@ -50,7 +64,6 @@ class HessianHelpers {
     public static function query($url, $method, array $arguments = [], $options = [])
     {
         try {
-
             $hessian = static::getClient($url, $options);
             $result = $hessian->__hessianCall($method, $arguments);
 
@@ -77,7 +90,7 @@ class HessianHelpers {
      * @param  HessianOptions|array $options 配置
      * @return object
      */
-    public static function createClient($url, $options = [])
+    public static function createClient($url, array $options = [])
     {
         return new HessianClient($url, $options);
     }
