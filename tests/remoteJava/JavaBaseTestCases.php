@@ -61,7 +61,7 @@ class JavaBaseTestCases extends TestCase
     public function testInt()
     {
         foreach ($this->intBoundary as $key => $value) {
-            $this->assertVaule($value, 'intNum', "intBoundary=>${key}");
+            $this->assertVaule($value, 'intNum', "testInt ${key}");
         }
     }
 
@@ -73,7 +73,7 @@ class JavaBaseTestCases extends TestCase
         ));
 
         foreach ($list as $key => $value) {
-            $this->assertVaule($value, 'longNum');
+            $this->assertVaule($value, 'longNum', "testLong ${key}");
         }
     }
 
@@ -213,8 +213,10 @@ class JavaBaseTestCases extends TestCase
 
     public function testString()
     {
-        // Á
         $this->assertVaule('12AC哈哈', 'str', "testString");
+
+        // 没有3字节字符（如，汉字）不进行过滤
+        $this->assertVaule('12ACÁ', 'str', "testString");
     }
 
 
