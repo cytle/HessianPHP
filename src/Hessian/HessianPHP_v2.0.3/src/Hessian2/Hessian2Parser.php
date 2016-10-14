@@ -339,10 +339,13 @@ class Hessian2Parser{
 			return ord($v);
 		}, $bytes);
 
+		// 获取第一个utf-8码
 		$v0 = (($bytes[0] & 0xf) << 12) + (($bytes[1] & 0x3f) << 6) + ($bytes[2] & 0x3f);
+
+		// 获取第二个utf-8码
 		$v1 = (($bytes[3] & 0xf) << 12) + (($bytes[4] & 0x3f) << 6) + ($bytes[5] & 0x3f);
 
-		// utf-16
+		// 合并为一个utf-16
 		$code = ($v0 << 16) + $v1;
 
 		// to hex
