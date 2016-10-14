@@ -38,6 +38,14 @@ class HessianTest extends TestCase
 
     }
 
+    public function testQuery()
+    {
+        $url = $this->dormServiceUrl;
+        $result = HessianHelpers::query($url, 'getDorm', [218]);
+        $this->assertEquals($result->status, 0);
+        $this->assertEquals($result->data->dormId, 218);
+    }
+
     /**
      * @expectedException     LibHessian\Exceptions\HessianException
      * @expectedExceptionCode 10000

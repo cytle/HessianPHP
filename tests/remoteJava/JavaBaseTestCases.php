@@ -213,10 +213,9 @@ class JavaBaseTestCases extends TestCase
 
     public function testString()
     {
-        $this->assertVaule('12AC哈哈', 'str', "testString");
+        // TODO 写Emoji
+        $this->assertVaule('12ACÁ。哈哈', 'str', "testString");
 
-        // 没有3字节字符（如，汉字）不进行过滤
-        $this->assertVaule('12ACÁ', 'str', "testString");
     }
 
 
@@ -247,6 +246,7 @@ class JavaBaseTestCases extends TestCase
         ]);
     }
 
+    // 通过 queryJson 渠道获取数据
     protected function queryJsonItem($value, $name)
     {
         $testModel = [
@@ -257,7 +257,7 @@ class JavaBaseTestCases extends TestCase
         return $testModel;
     }
 
-
+    // 查询，获取的数据为json字符串
     protected function queryJson(array $testModel)
     {
         $json = HessianHelpers::query($this->url, 'toString', [ new TestModel($testModel) ], [
