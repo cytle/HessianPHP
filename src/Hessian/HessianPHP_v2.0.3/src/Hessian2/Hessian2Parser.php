@@ -332,28 +332,33 @@ class Hessian2Parser{
 	function readUTF8FromBadStr($bytes)
 	{
 		if (count($bytes) !== 6) {
-			return '「?」';
+			return '?';
 		}
 
-		$bytes = array_map(function ($v) {
-			return ord($v);
-		}, $bytes);
+		try {
+			$bytes = array_map(function ($v) {
+				return ord($v);
+			}, $bytes);
 
-		// 获取第一个utf-8码
-		$v0 = (($bytes[0] & 0xf) << 12) + (($bytes[1] & 0x3f) << 6) + ($bytes[2] & 0x3f);
+			// 获取第一个utf-8码
+			$v0 = (($bytes[0] & 0xf) << 12) + (($bytes[1] & 0x3f) << 6) + ($bytes[2] & 0x3f);
 
-		// 获取第二个utf-8码
-		$v1 = (($bytes[3] & 0xf) << 12) + (($bytes[4] & 0x3f) << 6) + ($bytes[5] & 0x3f);
+			// 获取第二个utf-8码
+			$v1 = (($bytes[3] & 0xf) << 12) + (($bytes[4] & 0x3f) << 6) + ($bytes[5] & 0x3f);
 
-		// 合并为一个utf-16
-		$code = ($v0 << 16) + $v1;
+			// 合并为一个utf-16
+			$code = ($v0 << 16) + $v1;
 
-		// to hex
-		$code = base_convert($code, 10, 16);
+			// to hex
+			$code = base_convert($code, 10, 16);
 
-		$code = mb_convert_encoding(pack('H*', $code), 'UTF-8', 'UTF-16BE');
+			$code = mb_convert_encoding(pack('H*', $code), 'UTF-8', 'UTF-16BE');
 
-		return $code;
+			return $code;
+
+		} catch (Exception $e) {
+			return '?';
+		}
 	}
 
 	function readUTF8Bytes($len){
