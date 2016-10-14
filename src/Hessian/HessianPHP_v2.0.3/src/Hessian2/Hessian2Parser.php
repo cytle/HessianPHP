@@ -329,7 +329,65 @@ class Hessian2Parser{
 		return $data;
 	}
 
+	function readUTF8FromBadStr($s)
+	{
+		return '「?」';
+	}
+
 	function readUTF8Bytes($len){
+		$string = '';
+
+		for($i = 0; $i < $len; $i++){
+			$ch = $this->read(1);
+			$charCode = ord($ch);
+
+			if ($charCode < 0x80) {
+				$string .= $ch;
+			} else if (($charCode & 0xe0) == 0xc0) {
+				$string .= $ch.$this->read(1);
+			} else if (($charCode & 0xf0) == 0xe0) {
+				/*
+				 * 以毒攻毒
+				 * 0xD800..0xDBFF
+				 * 解出的字符，在[0xD8, 0xDC)区间内，即为U+10000到U+10FFFF码位的字符
+				 */
+
+				// 第二个字节
+				$ch1 = $this->read();
+
+				// 判断第一个4位是否为0xed(11101101)
+				if ($charCode == 0xed) {
+
+					$charCode1 = ord($ch1);
+					$secondFourBit = ($charCode1 & 0x3c) >> 2;
+
+					if ($secondFourBit >= 0x8 && $secondFourBit < 0xC) {
+						$s = $ch . $ch1 . $this->read(4);
+						$i++;
+						$string .= $this->readUTF8FromBadStr($s);
+
+						continue;
+					}
+				}
+
+				$string .= $ch . $ch1 . $this->read();
+
+			} else if (($charCode & 0xf8) == 0xf0) {
+				// 4字节字符识别
+				$string .= $ch . $this->read(3);
+			} else {
+				throw new HessianParsingException("Bad utf-8 encoding at pos ".$this->stream->pos);
+			}
+		}
+
+		if(HessianUtils::isInternalUTF8())
+			return $string;
+
+		return utf8_decode($string);
+	}
+
+	// 正确方法，但是不能支持在错误java端下获取辅助平面字符
+	function readUTF8BytesQuick($len){
 		$string = $this->read($len);
 		$pos = 0;
 		$pass = 1;
@@ -364,24 +422,6 @@ class Hessian2Parser{
 		}
 
 		return $string;
-
-		/*$string = '';
-		for($i=0;$i<$len;$i++){
-			$ch = $this->read(1);
-			$charCode = ord($ch);
-			if($charCode < 0x80)
-				$string .= $ch;
-			elseif(($charCode & 0xe0) == 0xc0) {
-				$string .= $ch.$this->read(1);
-			} elseif (($charCode & 0xf0) == 0xe0) {
-				$string .= $ch.$this->read(2);
-			} else {
-				throw new HessianParsingException("Bad utf-8 encoding at pos ".$this->stream->pos);
-			}
-		}
-		if(HessianUtils::isInternalUTF8())
-			return $string;
-		return utf8_decode($string);*/
 	}
 
 	//-- list
