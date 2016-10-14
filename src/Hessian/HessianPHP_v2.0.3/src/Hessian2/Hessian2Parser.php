@@ -329,6 +329,13 @@ class Hessian2Parser{
 		return $data;
 	}
 
+
+	/**
+	 * 从Java端返回错误的字符，进行解析
+	 *
+	 * @author 炒饭
+	 * 2016年10月14日17:18:54
+	 */
 	function readUTF8FromBadStr($bytes)
 	{
 		if (count($bytes) !== 6) {
@@ -361,6 +368,13 @@ class Hessian2Parser{
 		}
 	}
 
+
+	/**
+	 * 修复支持在错误java端下获取辅助平面字符，原本方法修改名称为readUTF8BytesQuick
+	 *
+	 * @author 炒饭
+	 * 2016年10月14日17:18:54
+	 */
 	function readUTF8Bytes($len){
 		$string = '';
 
@@ -384,12 +398,11 @@ class Hessian2Parser{
 
 				// 判断第一个4位是否为0xed(11101101)
 				if ($charCode == 0xed) {
-
 					$charCode1 = ord($ch1);
-					$secondFourBit = ($charCode1 & 0x3c) >> 2;
 
+					// 判断第二个4位是否为在[0x8, 0xC)区间内
+					$secondFourBit = ($charCode1 & 0x3c) >> 2;
 					if ($secondFourBit >= 0x8 && $secondFourBit < 0xC) {
-						$i++;
 						$bytes = [
 							$ch,
 							$ch1,
@@ -400,6 +413,8 @@ class Hessian2Parser{
 						];
 						$string .= $this->readUTF8FromBadStr($bytes);
 
+						// 字符串位置后移一位
+						$i++;
 						continue;
 					}
 				}
