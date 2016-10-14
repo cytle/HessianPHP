@@ -329,9 +329,28 @@ class Hessian2Parser{
 		return $data;
 	}
 
-	function readUTF8FromBadStr($s)
+	function readUTF8FromBadStr($bytes)
 	{
-		return '「?」';
+		if (count($bytes) !== 6) {
+			return '「?」';
+		}
+
+		$bytes = array_map(function ($v) {
+			return ord($v);
+		}, $bytes);
+
+		$v0 = (($bytes[0] & 0xf) << 12) + (($bytes[1] & 0x3f) << 6) + ($bytes[2] & 0x3f);
+		$v1 = (($bytes[3] & 0xf) << 12) + (($bytes[4] & 0x3f) << 6) + ($bytes[5] & 0x3f);
+
+		// utf-16
+		$code = ($v0 << 16) + $v1;
+
+		// to hex
+		$code = base_convert($code, 10, 16);
+
+		$code = mb_convert_encoding(pack('H*', $code), 'UTF-8', 'UTF-16BE');
+
+		return $code;
 	}
 
 	function readUTF8Bytes($len){
@@ -362,9 +381,16 @@ class Hessian2Parser{
 					$secondFourBit = ($charCode1 & 0x3c) >> 2;
 
 					if ($secondFourBit >= 0x8 && $secondFourBit < 0xC) {
-						$s = $ch . $ch1 . $this->read(4);
 						$i++;
-						$string .= $this->readUTF8FromBadStr($s);
+						$bytes = [
+							$ch,
+							$ch1,
+							$this->read(1),
+							$this->read(1),
+							$this->read(1),
+							$this->read(1),
+						];
+						$string .= $this->readUTF8FromBadStr($bytes);
 
 						continue;
 					}
