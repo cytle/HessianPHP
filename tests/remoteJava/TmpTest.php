@@ -7,7 +7,7 @@ use LibHessian\HessianHelpers;
 */
 class TmpTest extends TestCase
 {
-
+    // 都是dev的Service
     protected $orderServiceUrl = 'http://192.168.30.126:8080/orderservice/querySellerOrder';
     protected $dormServiceUrl = 'http://192.168.30.88:8080/dormservice/dorm';
     protected $dormShopServiceUrl = 'http://192.168.30.196:8080/dormservice/dormshop';
@@ -70,29 +70,20 @@ class TmpTest extends TestCase
     }
 
 
-    public function testOrder()
+    public function testString()
     {
         $url = $this->orderServiceUrl;
 
-        // $order = HessianHelpers::query($url, 'queryOrdersPaging', [(object) [
-        //     'withOrderItems' => true,
-        //     'withOrderPays'  => true,
-        //     ], 1, 1]);
-
-
         $re = HessianHelpers::query($url, 'queryOrder', ['03605400850810982202195', (object) [
-            // 'withOrderItems' => true,
-            // 'withOrderPays'  => true,
             ]]);
 
         $this->assertEquals(0, $re->status);
 
         $order = $re->data;
-        // echo PHP_EOL;
-        // print_r($re);
-        // echo ($order->buyerRemark);
-        // echo PHP_EOL;
+
+        $this->assertEquals('你好，🌍!123aB🇧🇿🀅ǎξㄉ╬Чぬu:ædz……', $order->buyerRemark);
     }
+
 
     public function testDormShop()
     {

@@ -47,8 +47,8 @@ $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实�
 - fix:64位下，写入三位小数浮点数出错
 - fix:修复非64位负整浮点数bug
 - fix:修复写入double 128 -128 边际值错误
-
+- fix:支持在错误java端下获取辅助平面字符(hessian2)
 
 ## TODO
 
-- emoji 表情支持 [问题说明](https://cytle.github.io/2016/09/24/Hessian-utfmb4-emoji%E8%A1%A8%E6%83%85%E4%BC%A0%E8%BE%93/)
+- 错误java端下，写入辅助平面字符，问题说明:[HessianJava从U+10000到U+10FFFF的码位传输错误](https://cytle.github.io/2016/10/13/HessianJava%E4%BB%8EU+10000%E5%88%B0U+10FFFF%E7%9A%84%E7%A0%81%E4%BD%8D%E4%BC%A0%E8%BE%93%E9%94%99%E8%AF%AF/)

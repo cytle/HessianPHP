@@ -705,3 +705,11 @@ class Hessian2Parser{
         }
 
 ```
+
+## fix:支持在错误java端下获取辅助平面字符(hessian2)
+2016年10月14日
+
+原因: [HessianJava从U+10000到U+10FFFF的码位传输错误](https://cytle.github.io/2016/10/13/HessianJava%E4%BB%8EU+10000%E5%88%B0U+10FFFF%E7%9A%84%E7%A0%81%E4%BD%8D%E4%BC%A0%E8%BE%93%E9%94%99%E8%AF%AF/)
+
+readUTF8Bytes方法重写
+
