@@ -17,6 +17,10 @@ use LibHessian\Hessian\HessianClient;
  */
 class HessianHelpers {
 
+    // 执行异常
+    CONST EXECUTION_ERROR = 10000;
+
+
     protected static $clients = [];
 
     /**
@@ -43,15 +47,30 @@ class HessianHelpers {
 
 
     /**
-     * 根据缓存情况获取hessian客户端
+     * 获取hessian客户端
      * @author xsp
      *
      * @param  string  $url
      * @param  array   $options  配置
      * @return object
      */
-    public static function getClientByCacheOfUrlAndMethod($url, $method = '', array $options = [])
+    public static function getClientWithCache($url, $method = '', array $options = [])
     {
+        return static::getClientByCacheOfUrlAndMethod($url, $method, $options);
+    }
+
+    /**
+     * 根据缓存情况获取hessian客户端
+     * @author xsp
+     *
+     * @param  string  $url
+     * @param  string  $method
+     * @param  array   $options  配置
+     * @return object
+     */
+    protected static function getClientByCacheOfUrlAndMethod($url, $method = '', array $options = [])
+    {
+        // cache
         if (! isset(static::$clients[$url][$method])) {
             static::$clients[$url][$method] = static::getClient($url, $options);
         }
@@ -71,13 +90,13 @@ class HessianHelpers {
     public static function query($url, $method, array $arguments = [], array $options = [])
     {
         try {
-            $hessian = static::getClientByCacheOfUrlAndMethod($url, $method, $options);
+            $hessian = static::getClientWithCache($url, $method, $options);
             $result = $hessian->__hessianCall($method, $arguments);
 
             return $result;
         } catch (Exception $e) {
 
-            $hessianException = new HessianException('Hessian execution error', 10000, $e);
+            $hessianException = new HessianException('Hessian execution error', static::EXECUTION_ERROR, $e);
 
             $hessianException
                 ->setUrl($url)
