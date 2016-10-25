@@ -33,6 +33,7 @@ class HessianHelpers {
      */
     public static function getClient($url, array $options = [])
     {
+        // 配置writeFilters，写入前回调
         if (! isset($options['writeFilters'])) {
             $options['writeFilters'] = BasicWriteFilters::getFilters();
         } else if ($options['writeFilters']) {
@@ -47,19 +48,6 @@ class HessianHelpers {
 
 
     /**
-     * 获取hessian客户端
-     * @author xsp
-     *
-     * @param  string  $url
-     * @param  array   $options  配置
-     * @return object
-     */
-    public static function getClientWithCache($url, $method = '', array $options = [])
-    {
-        return static::getClientByCacheOfUrlAndMethod($url, $method, $options);
-    }
-
-    /**
      * 根据缓存情况获取hessian客户端
      * @author xsp
      *
@@ -68,7 +56,7 @@ class HessianHelpers {
      * @param  array   $options  配置
      * @return object
      */
-    protected static function getClientByCacheOfUrlAndMethod($url, $method = '', array $options = [])
+    public static function getClientWithCache($url, $method = '', array $options = [])
     {
         // cache
         if (! isset(static::$clients[$url][$method])) {
@@ -141,7 +129,8 @@ class HessianHelpers {
      * @param  int $name
      * @return object
      */
-    public static function createLong($value) {
+    public static function createLong($value)
+    {
 
         return new Long($value);
     }
@@ -153,7 +142,8 @@ class HessianHelpers {
      * @param  string $time
      * @return object
      */
-    public static function createDateTime($time) {
+    public static function createDateTime($time)
+    {
         return new DateTime($time);
     }
 }
