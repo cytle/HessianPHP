@@ -4,8 +4,9 @@ namespace LibHessian\Configs;
 use LibHessian\Contracts\BasicWriteContract;
 
 /**
-*
-*/
+ * 在写入某些类型前回调
+ * 现在只有long需要
+ */
 class BasicWriteFilters
 {
     private static $filters = [
@@ -34,4 +35,3 @@ class BasicWriteFilters
         return $obj;
     }
 }
-
