@@ -17,6 +17,10 @@ use LibHessian\Hessian\HessianClient;
  */
 class HessianHelpers {
 
+    // 执行异常
+    CONST EXECUTION_ERROR = 10000;
+
+
     protected static $clients = [];
 
     /**
@@ -29,6 +33,7 @@ class HessianHelpers {
      */
     public static function getClient($url, array $options = [])
     {
+        // 配置writeFilters，写入前回调
         if (! isset($options['writeFilters'])) {
             $options['writeFilters'] = BasicWriteFilters::getFilters();
         } else if ($options['writeFilters']) {
@@ -47,11 +52,13 @@ class HessianHelpers {
      * @author xsp
      *
      * @param  string  $url
+     * @param  string  $method
      * @param  array   $options  配置
      * @return object
      */
-    public static function getClientByCacheOfUrlAndMethod($url, $method = '', array $options = [])
+    public static function getClientWithCache($url, $method = '', array $options = [])
     {
+        // cache
         if (! isset(static::$clients[$url][$method])) {
             static::$clients[$url][$method] = static::getClient($url, $options);
         }
@@ -71,13 +78,13 @@ class HessianHelpers {
     public static function query($url, $method, array $arguments = [], array $options = [])
     {
         try {
-            $hessian = static::getClientByCacheOfUrlAndMethod($url, $method, $options);
+            $hessian = static::getClientWithCache($url, $method, $options);
             $result = $hessian->__hessianCall($method, $arguments);
 
             return $result;
         } catch (Exception $e) {
 
-            $hessianException = new HessianException('Hessian execution error', 10000, $e);
+            $hessianException = new HessianException('Hessian execution error', static::EXECUTION_ERROR, $e);
 
             $hessianException
                 ->setUrl($url)
@@ -122,7 +129,8 @@ class HessianHelpers {
      * @param  int $name
      * @return object
      */
-    public static function createLong($value) {
+    public static function createLong($value)
+    {
 
         return new Long($value);
     }
@@ -134,7 +142,8 @@ class HessianHelpers {
      * @param  string $time
      * @return object
      */
-    public static function createDateTime($time) {
+    public static function createDateTime($time)
+    {
         return new DateTime($time);
     }
 }
