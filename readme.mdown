@@ -3,7 +3,11 @@
 [![HessianPHP-version](https://img.shields.io/badge/HessianPHP-v2.0.3-green.svg)](http://code.google.com/p/hessianphp/)
 ![license-MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Hessian是基于http的跨语言传输协议和开源项目,在阿里巴巴知名开源项目dubbo中作为底层传输工具之一.但是遗憾的是PHP实现版本在2011年起就已不在维护，在传输long、非BMP的unicode字符（emoji表情）、类型对象、double等数据存在bug.熟读源码后,修复了所有已知的bug.
+Hessian是基于http的跨语言传输协议和开源项目,在阿里巴巴知名开源项目dubbo中作为底层传输工具之一.但是遗憾的是PHP实现版本在2011年起就已不在维护，在传输long、非BMP的unicode字符（emoji表情）、类型对象、double等数据存在bug.
+
+**此项目修复了所有已知的bug,并不排除可能有其他bug,欢迎提issues.**
+
+修改记录可能看[详情描述](https://github.com/cytle/HessianPHP/blob/master/src/Hessian/HessianPHP_v2.0.3/readme.md)
 
 ## 快速开始
 
