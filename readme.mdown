@@ -1,4 +1,4 @@
-# LibHessian
+# HessianPHP
 
 [![HessianPHP-version](https://img.shields.io/badge/HessianPHP-v2.0.3-green.svg)](http://code.google.com/p/hessianphp/)
 ![license-MIT](https://img.shields.io/badge/license-MIT-blue.svg)
