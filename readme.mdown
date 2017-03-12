@@ -33,7 +33,7 @@ $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实�
 
 ## hessian修改记录
 
-[详情描述](http://code.59store.com/erp/lib-hessian/blob/master/src/Hessian/HessianPHP_v2.0.3/readme.md)
+[详情描述](https://github.com/cytle/HessianPHP/blob/master/src/Hessian/HessianPHP_v2.0.3/readme.md)
 
 - isInternalUTF8 直接返回true
 - fix:共享对象造成hessianRef问题（多个相同对象，除第一个外结果都为hessianRef对象）
