@@ -3,14 +3,14 @@
 [![HessianPHP-version](https://img.shields.io/badge/HessianPHP-v2.0.3-green.svg)](http://code.google.com/p/hessianphp/)
 ![license-MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-修复hessian存在的问题，以及简化使用
+修复HessianPHP存在的问题，以及简化使用
 
 ## 快速开始
 
 ### 1. 添加依赖
 
 ```shell
-$ composer require store59/LibHessian
+$ composer require cytle/HessianPHP
 ```
 
 ### 2. 调用
