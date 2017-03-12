@@ -20,6 +20,7 @@ $ composer require cytle/HessianPHP
 $url = 'http://xxx.xx.xx.xx:8080/dormservice/dorm';
 
 $dormId = 218;
+// 参数分别表示: 服务地址, 调用方法, 调用方法的参数列表(注意参数类型), sessionPHP配置
 HessianHelpers::query($url, 'getDorm', [dormId], $options) // 返回的是result
 
 $client = HessianHelpers::getClient($url, $options); // 获取HessianClient实例
