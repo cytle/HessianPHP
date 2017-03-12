@@ -1,6 +1,6 @@
 {
-    "name": "store59/lib-hessian",
-    "description": "修复hessian存在的问题，以及简化使用",
+    "name": "cytle/HessianPHP",
+    "description": "Fix HessianPHP some bugs, and easy to use.修复hessian存在的问题，以及简化使用",
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "~4.0"
